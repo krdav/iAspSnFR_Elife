@@ -10,6 +10,7 @@
 
 \usepackage{lipsum} % Required to insert dummy text
 \usepackage[version=4]{mhchem}
+\usepackage{fancyvrb}
 \usepackage{siunitx}
 \DeclareSIUnit\Molar{M}
 
@@ -92,8 +93,31 @@ The sensor does not respond to other decoys considered relevant to aspartate met
 It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescence due to changes in [aspartate] far exceed what one might expect from changes in fluorescence due to changes in pH (Supp Fig S1h).
 
 
+\begin{figure}[ht!]
+\centering
+\fbox{\includegraphics[width=0.68\linewidth]{figures/Fig1.pdf}}
+\caption{qwerty}
+\label{fig:Fig1}
+%\figsupp{qwerty}{\includegraphics[width=0.98\linewidth]{figures/Fig1S1.pdf}}
+\end{figure}
+
+
+
+
+
+
+
 \subsection{iAspSnFR reveals the temporal dynamics of aspartate limitation}
 \lipsum[5]
+
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=0.95\linewidth]{figures/Fig2.pdf}
+%\caption{qwerty}
+%\label{fig:Fig2}
+%\figsupp{qwerty}{\includegraphics[width=5cm]{figures/Fig2S1.pdf}}
+%\figsupp{qwerty}{\includegraphics[width=5cm]{figures/Fig2S2.pdf}}
+%\end{figure}
 
 
 
@@ -101,8 +125,19 @@ It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescen
 \subsection{Steady-state iAspSnFR signal correlates with intracellular aspartate concentration}
 \lipsum[7]
 
+\begin{figure}[ht!]
+\centering
+\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3.pdf}}
+\caption{qwerty}
+\label{fig:Fig3}
+\figsupp{qwerty}{\includegraphics[width=0.98\linewidth]{figures/Fig3S1.pdf}}
+\end{figure}
 
-And look here is a duck \FIG{fig1}.
+
+
+
+
+And look here is a figure \FIG{Fig1}.
 
 
 
@@ -128,63 +163,6 @@ Arbitrary unit (AU) RFP normalized iAspSnFR signal at steady-state, following va
 
 Fig3S1:
 Arbitrary unit (AU) RFP normalized iAspSnFR signal at steady-state, following various perturbations to live cells, is not correlated with the LCMS measured intracellular glutamate concentration. Datapoints are fitted to a local linear regression, shown by the black line; otherwise, these plots are identical to those in Fig 3.
-
-
-
-
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[height=2cm]{figures/duck.jpg}
-\caption{
-First figure: method summary, oligo design (maybe just illustrations)
-}
-\label{fig:fig1}
-\end{figure}
-
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[height=2cm]{figures/duck.jpg}
-\caption{
-Second figure: method optimization, improved Whitfeld reaction, ligation completion etc. (mostly gel images)
-}
-\label{fig:fig2}
-\end{figure}
-
-\figsupp[Shorter caption for main text.]
-{This is a supplementary figure's full caption, which will be used at the end of the manuscript. 
-  \figsuppdata{A data source; see \url{https://doi.org/xxx}}
-  \figsuppdata{Another data source.}
-  \figsuppsrccode{And the source code.}}
-{\includegraphics[width=6cm]{figures/duck.jpg}}\label{figsupp:sfig2_1}
-
-\figsupp[Shorter caption for main text.]
-{This is a supplementary figure's full caption, which will be used at the end of the manuscript. 
-  \figsuppdata{A data source; see \url{https://doi.org/xxx}}
-  \figsuppdata{Another data source.}
-  \figsuppsrccode{And the source code.}}
-{\includegraphics[width=6cm]{figures/duck.jpg}}\label{figsupp:sfig2_2}
-
-
-
-
-
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[height=2cm]{figures/duck.jpg}
-\caption{
-Third figure: alignment optimization, comparison to Behrens, coverage and mutation plots etc.
-}
-\label{fig:fig3}
-\end{figure}
-
-
-
-
-
-
 
 
 
@@ -370,7 +348,7 @@ We (Sullivan lab) have pENTR and pLenti, pLX304 w/wo mRuby fusion and w/wo MTS (
 Additional information can be given in the template, such as to not include funder information in the acknowledgments section.
 
 \nocite{*} % This command displays all refs in the bib file. PLEASE DELETE IT BEFORE YOU SUBMIT YOUR MANUSCRIPT!
-\bibliography{elife-sample}
+\bibliography{main}
 
 
 \end{document}
