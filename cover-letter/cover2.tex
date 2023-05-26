@@ -1,0 +1,76 @@
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{hyperref}
+
+
+
+\begin{document}
+
+High-throughput sequencing of our T cell receptor (TCR) repertoires is revolutionizing our understanding of how we respond to disease and vaccination, and holds great promise for cancer immunotherapy.
+
+Probabilistic models are a key tool for deriving understanding from these sequences.
+For example, we recently used a probabilistic model of TCR generation to show that HLA-associated TCRs have lower generation probability than non-HLA associated TCRs, implicating functional selection (DeWitt et.\ al, \emph{eLife} 2018).
+Pogorelyy et.\ al (\emph{eLife} 2018) used a similar probabilistic model to identify TCRs responsive to an immune perturbation such as viral infection.
+Elhanati et.\ al (\emph{PNAS} 2014) used a related probabilistic model to infer the selective constraints of thymic selection.
+
+The probabilistic models used thus far are classical, formalizing a mental model of VDJ recombination.
+As such, they are expressed in terms of conditional probabilities of germline genes, trimming amounts, and nucleotide additions.
+Such probabilistic models have been used for over a decade (Ga\"eta et.\ al, \emph{Bioinformatics} 2007), and the current line of work for TCRs follows from the beautiful work of the Mora-Walczak-Callan group (Murugan et.\ al, \emph{PNAS} 2012).
+This work has been very successful, leading to many applications and extensions.
+However, it is not the only way to proceed in 2019.
+We wondered: \emph{can probabilistic models built on deep neural networks learn the rules of VDJ recombination and capture TCR diversity in a generalizable way?}
+
+In our manuscript ``Deep generative models for T cell receptor protein sequences'' we clearly answer this question in the affirmative.
+We show that appropriately trained simple deep learning models:
+\vspace{-4pt}
+\begin{itemize}
+  \item can perform accurate cohort frequency estimation for TCRs
+  \item can learn the rules of VDJ recombination
+  \item generalize well to unseen sequences
+  \item are able to distinguish between real sequences and sequences generated according to the Mora-Walczak-Callan model of recombination with a simple selection step, even though this was not a training objective
+  \item have similar summary characteristics to real sequences.
+\end{itemize}
+
+Turning now to the questions posed on the eLife website:
+\textit{How will your work make others in the field think differently and move the field forward?}
+All previous probabilistic models, which have played an essential role in understanding T cell receptor diversity, have been classical models developed from a mathematical model of VDJ recombination.
+Here we introduce a paradigm shift by showing that very simple deep models, which have no built-in concepts from immunology, perform as well or better than models which incorporate considerable immunological knowledge.
+We expect that deep models, with their greater accuracy, will replace existing models for many applications.
+
+\vspace{4pt} \textit{How does your work relate to the current literature on the topic?}
+We compare our model rigorously to the Mora-Walczak-Callan model, which is clearly the dominant probabilistic model for TCRs, showing superiority of the deep model to this previous model in many respects.
+
+There is one preprint we know of that does deep learning on TCRs:
+
+\url{qwety}
+
+Sidhom, J.-W., Benjamin Larman, H., Pardoll, D. M., \& Baras, A. S. (2018). DeepTCR: a deep learning framework for revealing structural concepts within TCR Repertoire. \emph{bioRxiv}. 
+
+Sidhom, J.-W., Benjamin Larman, H., Pardoll, D. M., \& Baras, A. S. (2018). DeepTCR: a deep learning framework for revealing structural concepts within TCR Repertoire. \emph{bioRxiv}. \url{https://doi.org/10.1101/464107}
+
+Although this preprint uses some of the same tools as our manuscript, it has a different goal.
+Rather than evaluate the probability of seeing a TCR in a repertoire, these authors work to develop tools that can be used for discriminating TCRs based on function.
+Furthermore, we do not think that this work is of sufficiently high quality to merit citation.
+It makes unsubstantiated claims such as that their tool is ``allowing for the first time a direct and wholistic [sic] comparison of antigen-specific repertoires that leverages a collection of sequences to identify common structural signatures within an antigen-specific response.''
+We honestly cannot find any meaningful and non-trivial structure in the figure they are describing (Figure 2).
+In fact, the mixing of the colored bars in their Figure 2a and 2e clearly show that their model is not learning meaningful structure in the latent space.
+
+On the other hand, we have cited works by Sinai et.\ al (\emph{NeurIPS}, 2017) and Riesselman et.\ al (\emph{Nature Methods}, 2018) which are stronger papers concerning generative models for proteins in general.
+
+
+\vspace{4pt} \textit{Who do you consider to be the most relevant audience for this work?}
+Immunologists studying the adaptive immune system will wish to use our models to understand TCR frequency expansion and predict TCR naive frequency.
+We also believe that computational researchers in other fields will want to learn from our experience on how to use deep neural networks for protein sequences.
+
+\vspace{4pt} \textit{Have you made clear in the letter what the work has and has not achieved?}
+We have summarized the strengths of our model above.
+However, it has a clear drawback of being uninterpretable.
+Certainly the network weights do not have an easy interpretation, and the basic design of the models means that they offer little mechanistic insight.
+In addition, the models are exclusively about amino acids and thus cannot shed light on the VDJ recombination process, which happens in terms of nucleotides.
+
+We also highlight some shortcomings of the model in the manuscript, which show that there are further opportunities to improve our deep generative model.
+
+\vspace{4pt}
+Thank you for considering our manuscript for publication in eLife.
+\end{document}
