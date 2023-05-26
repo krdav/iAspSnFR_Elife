@@ -89,16 +89,22 @@ The sensor is yellow-shifted in excitation and emission from typical GFP-based s
 This yellow-shift will facilitate observation deeper into tissues using 2-photon microscopy, as the sensor has high ∆F/F and significant 2-photon cross-section at 1040 nm (Supp Fig S1c).
 It has a Kd for aspartate of about 50 µM and binds glutamate and asparagine with Kd greater than 5 mM (Fig 1b). It does not appreciably change its green fluorescence in response to other amino acids (Supp Fig S1d).
 Surprisingly, the mRuby3 component responds to all amino acids at high millimolar concentrations, indicating a non-specific effect (potentially interacting with the C-terminal histidine tag) (Supp Fig S1e), although this increase in fluorescence is still an order of magnitude lower than the green fluorescence response.
-The sensor does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (Supp Fig S1f). Unlike a recently reported sensor for aspartate [https://www.biorxiv.org/content/10.1101/2023.05.04.537313v1], our iAspSnFR responds to aspartate at 37°C with slightly higher ∆F/F than at 23°C (Supp. Fig S1g).
+The sensor does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (Supp Fig S1f). Unlike a recently reported sensor for aspartate \citep{Hellweg2023}, our iAspSnFR responds to aspartate at 37°C with slightly higher ∆F/F than at 23°C (Supp. Fig S1g).
 It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescence due to changes in [aspartate] far exceed what one might expect from changes in fluorescence due to changes in pH (Supp Fig S1h).
 
 
 \begin{figure}[ht!]
 \centering
 \fbox{\includegraphics[width=0.68\linewidth]{figures/Fig1.pdf}}
-\caption{qwerty}
+\caption{
+Protein engineering and in vitro characterization.
+(A) Structure of the binding pocket of glutamate-bound GltI (2VHA.pdb) with residues S72 (left) and S27 (right) shown as sticks and bound glutamate as sticks inside transparent spheres.
+(B) Fluorescence response of purified iAspSnFR.mRuby3 when titrated with aspartate (black) or glutamate or asparagine (grey tones). Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass). Error bars are s.d. of three technical replicates.
+(C) Live cell imaging in the phase contrast, GFP and RFP channels of H1299 Nuclear-RFP cells expressing iAspSnFR after 24h with/without glutamine.
+}
 \label{fig:Fig1}
-%\figsupp{qwerty}{\includegraphics[width=0.98\linewidth]{figures/Fig1S1.pdf}}
+\figsupp{qwerty}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig1S1.pdf}}}
+\figsupp{qwerty}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig1S2.pdf}}}
 \end{figure}
 
 
@@ -110,14 +116,43 @@ It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescen
 \subsection{iAspSnFR reveals the temporal dynamics of aspartate limitation}
 \lipsum[5]
 
-%\begin{figure}[ht!]
-%\centering
-%\includegraphics[width=0.95\linewidth]{figures/Fig2.pdf}
-%\caption{qwerty}
-%\label{fig:Fig2}
-%\figsupp{qwerty}{\includegraphics[width=5cm]{figures/Fig2S1.pdf}}
-%\figsupp{qwerty}{\includegraphics[width=5cm]{figures/Fig2S2.pdf}}
-%\end{figure}
+\begin{figure}[ht!]
+\centering
+\fbox{\includegraphics[width=0.95\linewidth]{figures/Fig2.pdf}}
+\caption{
+iAspSnFR resolves temporal aspartate changes in live cells.
+Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following various perturbations in live cells.
+All experiments shown are normalized to a pre-treatment scan, then treated with the specified drug or amino acid and scanned 30 min following treatment.
+Grey dashed lines indicate the time of treatment.
+(A) H1299 cells treated with a rotenone titration and rescued using pyruvate.
+(B) H1299 GOT double knockout swapped into a titration of media aspartate.
+(C) H1299 cells treated with either rotenone or metformin at the same time to show the faster kinetics of rotenone.
+(D) H1299 cells swapped into a titration of media glutamine with or without 1 mM asparagine to show that asparagine salvage diverts aspartate consumption. 
+Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
+}
+\label{fig:Fig2}
+\figsupp{
+iAspSnFR temporal response after rotenone treatment.
+Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following rotenone treatment of live cells.
+Related to panel A in \FIG{Fig2}; however, these experiments are not normalized to a pre-treatment scan.
+First scan occurs 30 min after the treatment.
+Grey dashed lines indicate the time of treatment.
+(A) HT1080 cells using nuclear RFP to normalize the iAspSnFR signal.
+(B) HT1080 cells using an RFP fused to iAspSnFR for normalization.
+(C) Comparison between the steady-state signal of (A) and (B) with a linear regression shown as a red dashed line to show that nuclear RFP and RFP fusion normalizations are equivalent.
+(D) HEK293t cells using an RFP fused to iAspSnFR for normalization. For plots (A), (B) and (D) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
+For plot (C) markers indicate the average using available well replicates and errorbars are drawn as +/- the standard deviation of the replicates.
+}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig2S1.pdf}}}
+\figsupp{
+Aspartate depletes when glutamine is limiting.
+Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following glutamine depletion in H1299 cells.
+Identical to panel E \FIG{Fig2} but with more well replicates.
+}{\fbox{\includegraphics[width=0.5\linewidth]{figures/Fig2S2.pdf}}}
+\end{figure}
+
+
+
+
 
 
 
@@ -128,9 +163,21 @@ It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescen
 \begin{figure}[ht!]
 \centering
 \fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3.pdf}}
-\caption{qwerty}
+\caption{
+Steady-state iAspSnFR level predicts intracellular aspartate concentration.
+Arbitrary unit (AU) RFP normalized iAspSnFR signal at steady-state, following various perturbations to live cells, can predict the LCMS measured intracellular aspartate concentration.
+Datapoints are fitted to the Hill equation, shown by the black line, with top and bottom asymptotes, midpoint and slope as free variables.
+The intracellular aspartate concentration at the inferred half maximum of RFP normalized iAspSnFR signal is reported in the red inserts.
+(A) Rotenone titration in HEK293t cells.
+(B) Rotenone and metformin titrations in HT1080 cells.
+(C) Rotenone, metformin and antimycin A titrations in H1299 cells.
+Markers indicate a single well from which both LCMS and iAspSnFR data was collected. Replicate wells have identical color and marker shape.
+}
 \label{fig:Fig3}
-\figsupp{qwerty}{\includegraphics[width=0.98\linewidth]{figures/Fig3S1.pdf}}
+\figsupp{
+Arbitrary unit (AU) RFP normalized iAspSnFR signal at steady-state, following various perturbations to live cells, is not correlated with the LCMS measured intracellular glutamate concentration.
+Datapoints are fitted to a local linear regression, shown by the black line; otherwise, these plots are identical to those in \FIG{Fig3}.
+}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3S1.pdf}}}
 \end{figure}
 
 
@@ -141,28 +188,8 @@ And look here is a figure \FIG{Fig1}.
 
 
 
-Fig 2:
-iAspSnFR resolves temporal aspartate changes in live cells
-Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following various perturbations in live cells. All experiments shown are normalized to a pre-treatment scan, then treated with the specified drug or amino acid and scanned 30 min following treatment. Grey dashed lines indicate the time of treatment. (A) H1299 cells treated with a rotenone titration and rescued using pyruvate. (B) H1299 GOT double knockout swapped into a titration of media aspartate. (C) H1299 cells treated with either rotenone or metformin at the same time to show the faster kinetics of rotenone. (D) H1299 cells swapped into a titration of media glutamine with or without 1 mM asparagine to show that asparagine salvage diverts aspartate consumption. Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
 
 
-Fig2S1:
-iAspSnFR temporal response after rotenone treatment
-Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following rotenone treatment of live cells. Related to Fig 2A; however, these experiments are not normalized to a pre-treatment scan. First scan occurs 30 min after the treatment. Grey dashed lines indicate the time of treatment. (A) HT1080 cells using nuclear RFP to normalize the iAspSnFR signal. (B) HT1080 cells using an RFP fused to iAspSnFR for normalization. (C) Comparison between the steady-state signal of (A) and (B) with a linear regression shown as a red dashed line to show that nuclear RFP and RFP fusion normalizations are equivalent. (D) HEK293t cells using an RFP fused to iAspSnFR for normalization. For plots (A), (B) and (D) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers. For plot (C) markers indicate the average using available well replicates and errorbars are drawn as +/- the standard deviation of the replicates.
-
-
-Fig2S2:
-Aspartate depletes when glutamine is limiting
-Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following glutamine depletion in H1299 cells. Identical to Fig 2D but with more well replicates.
-
-
-Fig3:
-Steady-state iAspSnFR level predicts intracellular aspartate concentration
-Arbitrary unit (AU) RFP normalized iAspSnFR signal at steady-state, following various perturbations to live cells, can predict the LCMS measured intracellular aspartate concentration. Datapoints are fitted to the Hill equation, shown by the black line, with top and bottom asymptotes, midpoint and slope as free variables. The intracellular aspartate concentration at the inferred half maximum of RFP normalized iAspSnFR signal is reported in the red inserts. (A) Rotenone titration in HEK293t cells. (B) Rotenone and metformin titrations in HT1080 cells. (C) Rotenone, metformin and antimycin A titrations in H1299 cells. Markers indicate a single well from which both LCMS and iAspSnFR data was collected. Replicate wells have identical color and marker shape.
-
-
-Fig3S1:
-Arbitrary unit (AU) RFP normalized iAspSnFR signal at steady-state, following various perturbations to live cells, is not correlated with the LCMS measured intracellular glutamate concentration. Datapoints are fitted to a local linear regression, shown by the black line; otherwise, these plots are identical to those in Fig 3.
 
 
 
