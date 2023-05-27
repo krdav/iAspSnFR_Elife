@@ -41,11 +41,11 @@
 \maketitle
 
 \begin{abstract}
-Aspartate is an important metabolite in the biology of cancer cells, derived primarily from action of glutaminase on glutamine, and subsequent conversion to aspartate.
-Detection of aspartate has primarily been from mass spectrometry, which is limited by its spatial and temporal resolution.
-We have developed multiple generations and variants of intensity-based glutamate sensing fluorescent reporters (iGluSnFRs), which have proven useful for studying glutamate release from neurons in vivo. iGluSnFRs also bind aspartate, but with higher Kd.
-To make an intensity-based aspartate sensing fluorescent reporter, we made two mutations to an iGluSnFR3 variant, resulting in a sensor with 50 µM affinity for aspartate, > 5 mM affinity for glutamate and asparagine, with an over 20-fold total increase in fluorescence upon saturation with aspartate.
-We validate the sensors ability to quantify the concentration of aspartate in cells by correlating fluorescence to mass spectrometry results, and then use the sensor to resolve temporal changes in intracellular aspartate using both genetic and pharmacological manipulations.
+Intracellular aspartate is an important variable to understand the metabolism of cancer cells.
+However, a comprehensive understanding of aspartate metabolism has been limited by throughput and cost of the mass spectrometry based sampling employed to measure aspartate levels.
+To address these issues, we have developed a GFP-based sensor of aspartate (iAspSnFR) that increases in fluorescence intensity with higher concentrations of aspartate.
+In bacterial lysate, the sensor has a 20-fold total increase in fluorescence upon aspartate saturation, with the half-maximal response at 50 µM aspartate and no significant off target binding.
+Expressed in cell lines, the sensor intensity correlated with aspartate levels determined using mass spectrometry and was used to resolve temporal changes in intracellular aspartate using both genetic and pharmacological manipulations.
 \end{abstract}
 
 
@@ -56,18 +56,19 @@ Metabolite extraction also consume precious samples that might otherwise be desi
 Development of genetically encoded protein sensors (biosensors) over the past two decades has provided new opportunities to visualize the release, production, and depletion of important signaling molecules and metabolites with subsecond and subcellular resolution (reviewed in \cite{Kostyuk2019-qc, Koveal2020-cl}).
 Thus, biosensors provide a solution to many of the problems with metabolite extraction and LCMS, however; at the price of monitoring only one metabolite per sensor.
 
-Aspartate is amongst the most concentrated metabolites in cells [ref], yet it is one of only two amino acids that is not predominantly acquired from the environment.
-While the other, glutamate, is made from glutamine by the enzyme glutaminase, no analogous enzyme exists in humans to convert asparagine to aspartate [refs].
+Aspartate is amongst the most concentrated metabolites in cells \citep{Park2016-ap}, yet it is one of only two amino acids that is not predominantly acquired from the environment.
+While the other, glutamate, is made from glutamine by the enzyme glutaminase, no analogous enzyme exists in humans to convert asparagine to aspartate \citep{Sullivan2018-gz}.
 Instead, aspartate must be synthesized by transamination of tricarboxylic acid (TCA) cycle metabolite oxaloacetate by the cytosolic enzyme GOT1 or the mitochondrial enzyme GOT2.
-Notably, aspartate synthesis can occur from multiple metabolic sources via complex metabolic reactions occurring in the mitochondria and cytosol, rendering aspartate levels at the whole cell and subcellular levels dependent on multiple metabolic variables [refs].
-For example, impairments to mitochondrial respiration can deplete aspartate levels and aspartate restoration can reestablish proliferation in cells with defective mitochondria [references].
+Notably, aspartate synthesis can occur from multiple metabolic sources via complex metabolic reactions occurring in the mitochondria and cytosol, rendering aspartate levels at the whole cell and subcellular levels dependent on multiple metabolic variables.
+For example, impairments to mitochondrial respiration can deplete aspartate levels and aspartate restoration can reestablish proliferation in cells with defective mitochondria \citep{Sullivan2015-xf, Birsoy2015-pg}.
 Alterations to aspartate levels can also modify cell function in multiple biological processes, including stem cells [ref], immune cells [ref], and endothelial cells [ref], and others [ref].
-In addition, genetic methods to elevate intracellular aspartate can impact biology in vivo, increasing tumor growth [refs] and improving hematopoietic function [ref].
-Therefore, the understanding of metabolism could be improved with the availability of an aspartate biosensor. 
+In addition, genetic methods to elevate intracellular aspartate can impact biology in vivo, increasing tumor growth \citep{Sullivan2018-gz, Garcia-Bermudez2018-mj} and improving hematopoietic function [ref].
+Therefore, the understanding of metabolism could be improved with the availability of an aspartate biosensor.
 
 We have previously developed a biosensor for glutamate using the E.coli glutamate/aspartate binding domain GltI linked to circularly permutated GFP (iGluSnFR) \citep{Marvin2013-qq}, and subsequently optimized it by modulating its affinity, kinetics, color, and total fluorescence change (iGluSnFR3) \citep{Marvin2018-ks, Aggarwal2023-pi}.
 Since mutations to the GltI domain can confer glutamate specificity, we reasoned that suitable mutations could also infer aspartate specificity.
-We achieved this using a small mutagenesis screen on iGluSnFR3, guided by the crystal structure of glutamate bound GltI. The resulting biosensor, iAspSnFR, was then characterized biochemically and in cells with matched LCMS determination of aspartate, showing that it accurately reports genetic and pharmacological modulation of intracellular aspartate.
+We achieved this using a small mutagenesis screen on iGluSnFR3, guided by the crystal structure of glutamate bound GltI.
+The resulting biosensor, iAspSnFR, was then characterized biochemically and in cells with matched LCMS determination of aspartate, showing that it accurately reports genetic and pharmacological modulation of intracellular aspartate.
 
 
 
@@ -75,22 +76,29 @@ We achieved this using a small mutagenesis screen on iGluSnFR3, guided by the cr
 \section{Results}
 
 \subsection{Protein engineering}
-We observed that original iGluSnFR bound both glutamate and aspartate, with higher affinity for the former \citep{Marvin2013-qq}, as expected from previous identification of GltI \citep{Hu2008-nd}.
+We observed that the original iGluSnFR bound both glutamate and aspartate, with higher affinity for the former \citep{Marvin2013-qq}, as expected from previous identification of GltI \citep{Hu2008-nd}.
+%KD: what is OE1 and OE2?
 To shift the relative affinities of the two ligands, we looked at the structure of the binding pocket and sampled all possible amino acid substitutions of residue S72, which interacts with the OE1 and OE2 of bound glutamate.
-By simply expressing mutant sensors in bacteria and measuring the fluorescence of bacterial lysate in response to aspartate or glutamate, we identified S72A and S72P as having switched aspartate/glutamate specificity.
-S72T, identified in a faster version of iGluSnFR \citep{Helassa2018-fb} also preferably binds aspartate over glutamate. 
+By expressing mutant sensors in bacteria and measuring the fluorescence of bacterial lysate in response to aspartate or glutamate, we identified S72A and S72P as having switched specificity from glutamate to aspartate.
+S72T, identified in a faster version of iGluSnFR \citep{Helassa2018-fb} also preferably binds aspartate over glutamate.
 
-As iGluSnFR3 was being developed \citep{Aggarwal2023-pi}, we took a variant from that process and queried the effect of S72A, S72T, and S72P on aspartate/glutamate affinity.
-In bacterial cell lysate, S72P maintained the expected shift to a preference for aspartate, and had a higher ∆F/F than either S72A or S72T (Supp Fig S1a).
-To further separate the aspartate/glutamate specificity, we sampled mutations at S27, which also interacts with OE1 and OE2 of bound glutamate, in the background of S72P.
-One of those, S27A, had even lower affinity for Glut (Supp Fig S1b). We named this variant iAspSnFR. Since we expected to be using this sensor in cell culture studies, and potentially in vivo, over the course of hours or even days, we included a C-terminal red fluorescence protein, mRuby3, to correct for expression and movement artefacts. All data reported are with iAspSnFR.mRuby3.
+As an improved glutamate sensor (iGluSnFR3) was being developed \citep{Aggarwal2023-pi}, we took a variant from that process and queried the effect of S72A, S72T, and S72P on aspartate/glutamate affinity.
+In bacterial cell lysate, S72P maintained the expected shift to a preference for aspartate, and had a higher fluorescence fold increase (∆F/F) than either S72A or S72T.
+To further increase specificity, we sampled mutations at S27, which also interacts with OE1 and OE2 of bound glutamate, in the background of S72P.
+One of those, S27A, had lower affinity for glutamate while mostly maintaining affinity for aspartate (\FIGSUPP[Fig1]{f1S1}, panel A).
+We named this variant iAspSnFR.
+Since we expected to be using this sensor in cell culture studies, and potentially in vivo, over the course of hours or even days, we added a C-terminal red fluorescence protein, mRuby3, to correct for expression and movement artefacts.
+All biochemical characterization is reported with iAspSnFR.mRuby3.
+For iAspSnFR signal normalization in cells we used a mix of iAspSnFR.mRuby3 and nuclear expressed RFP.
 
-The sensor is yellow-shifted in excitation and emission from typical GFP-based sensors (Supp Fig S1c), since its chromophore is formed by the triad of GYG and has the T203Y pi-stacking mutations of Venus.
-This yellow-shift will facilitate observation deeper into tissues using 2-photon microscopy, as the sensor has high ∆F/F and significant 2-photon cross-section at 1040 nm (Supp Fig S1c).
-It has a Kd for aspartate of about 50 µM and binds glutamate and asparagine with Kd greater than 5 mM (Fig 1b). It does not appreciably change its green fluorescence in response to other amino acids (Supp Fig S1d).
-Surprisingly, the mRuby3 component responds to all amino acids at high millimolar concentrations, indicating a non-specific effect (potentially interacting with the C-terminal histidine tag) (Supp Fig S1e), although this increase in fluorescence is still an order of magnitude lower than the green fluorescence response.
-The sensor does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (Supp Fig S1f). Unlike a recently reported sensor for aspartate \citep{Hellweg2023}, our iAspSnFR responds to aspartate at 37°C with slightly higher ∆F/F than at 23°C (Supp. Fig S1g).
-It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescence due to changes in [aspartate] far exceed what one might expect from changes in fluorescence due to changes in pH (Supp Fig S1h).
+The sensor is yellow-shifted in excitation and emission compared to typical GFP-based sensors, since its chromophore is formed by the triad of GYG and has the T203Y pi-stacking mutations of the Venus yellow fluorescent protein.
+This yellow-shift will facilitate observation deeper into tissues using 2-photon microscopy, as the sensor has high ∆F/F and significant 2-photon cross-section at 1040 nm (\FIGSUPP[Fig1]{f1S1}, panel B).
+It has a Kd for aspartate of about 50 µM and binds glutamate and asparagine with Kd greater than 5 mM (\FIG{Fig1}, panel B).
+It does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
+Surprisingly, the mRuby3 component responds to all amino acids at high millimolar concentrations, indicating a non-specific effect (potentially interacting with the C-terminal histidine tag) (\FIGSUPP[Fig1]{f1S2}, panel B), although this increase in fluorescence is still an order of magnitude lower than the green fluorescence response.
+The sensor does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (\FIGSUPP[Fig1]{f1S2}, panel C).
+Unlike a recently reported sensor for aspartate \citep{Hellweg2023}, our iAspSnFR responds to aspartate at 37°C with slightly higher ∆F/F than at 23°C (\FIGSUPP[Fig1]{f1S2}, panel D).
+It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescence due to changes in aspartate far exceed what one might expect from changes in fluorescence due to changes in pH (\FIGSUPP[Fig1]{f1S2}, panel E).
 
 
 \begin{figure}[ht!]
@@ -99,22 +107,85 @@ It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescen
 \caption{
 Protein engineering and in vitro characterization.
 (A) Structure of the binding pocket of glutamate-bound GltI (2VHA.pdb) with residues S72 (left) and S27 (right) shown as sticks and bound glutamate as sticks inside transparent spheres.
-(B) Fluorescence response of purified iAspSnFR.mRuby3 when titrated with aspartate (black) or glutamate or asparagine (grey tones). Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass). Error bars are s.d. of three technical replicates.
+(B) Fluorescence response of purified iAspSnFR.mRuby3 when titrated with aspartate (black) or glutamate or asparagine (grey tones).
+Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass).
+Error bars are s.d. of three technical replicates.
 (C) Live cell imaging in the phase contrast, GFP and RFP channels of H1299 Nuclear-RFP cells expressing iAspSnFR after 24h with/without glutamine.
 }
 \label{fig:Fig1}
-\figsupp{qwerty}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig1S1.pdf}}}
-\figsupp{qwerty}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig1S2.pdf}}}
+\figsupp[Aspartate specificity and excitation/emission spectra.]{
+(A) Switching iGluSnFR3 specificity from glutamate to aspartate using S72X library (left) and S72P, S27X library (right), using bacterial lysate.
+Titrations with aspartate (solid lines) and glutamate (dashed lines).
+(B) Excitation and emission spectra of iAspSnFR.mRuby3.
+Left, 1-photon spectra.
+Excitation wavelength was varied from 400 nm to 520 nm (7.5 nm bandpass) while observing emission at 535 nm (10 nm bandpass).
+Emission wavelength was varied from 510 nm to 600 nm (10 nm bandpass) while exciting at 510 nm (7.5 nm bandpass).
+Fluorescence was measured in the both the absence (dashed lines) and presence of 10 mM aspartate (solid lines).
+Right, 2-photon cross-sections.
+Vertical bar indicates 1040 nm.
+}{\fbox{\includegraphics[width=0.7\linewidth]{figures/Fig1S1.pdf}}}\label{figsupp:f1S1}
+\figsupp[Decoy, temperature and pH sensitivity.]{
+(A) iAspSnFR.mRuby3 does not appreciably change its green fluorescence in response to other amino acids (alanine, phenylalanine, glycine, histidine (red line), isoleucine, leucine, methionine, proline, glutamine, arginine, serine, threonine, valine, or tryptophan).
+Insert with aspartate in black and glutamate/asparagine in grey for comparison.
+Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass).
+(B) iAspSnFR.mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids, with apparent responses to histidine at 100 µM (red trace).
+Ex. 587 nm (20 nm bandpass), Em. 662 nm (20 nm bandpass).
+(C) iAspSnFR.mRuby3 does not respond to other decoys: citrate, lactate, pyruvate, malate, alpha-ketoglutarate, cis-aconitate, succinate, fumarate, or oxaloacetate (orange squares); nor to relevant pharmacological treatments: rotenone (green squares) or metformin.
+The small increase in fluorescence from rotenone is likely due to the scattering of a visibly turbid solution; rotenone has very low solubility in water.
+Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass).
+(D) iAspSnFR.mRuby3 is not adversely affected by temperature.
+Fluorescence as a function of aspartate titration at 23°C (light grey), 30°C (medium grey), and 37°C (black).
+Error bars are standard deviation of three technical replicates.
+(E) pH sensitivity of iAspSnFR.mRuby3 (green component).
+Ex 485 nm (5 nm bp), Em 515 nm (10 nm bp).
+Error bars are standard deviation of 5 technical replicates.
+Solid line is with 3 mM aspartate, dashed line is without aspartate.
+}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig1S2.pdf}}}\label{figsupp:f1S2}
 \end{figure}
 
 
 
 
-
-
-
 \subsection{iAspSnFR reveals the temporal dynamics of aspartate limitation}
-\lipsum[5]
+Having shown that iAspSnFR protein in bacterial lysates can measure the concentration of aspartate, through standard equilibrium ligand binding kinetics, we wanted to test the usefulness of the sensor in cells.
+To that end, we generated stable cell lines with constitutive expression of iAspSnFR.mRuby3 or iAspSnFR and nuclear localized RFP.
+Normalizing the sensor signal to the RFP signal, we adjusted for expression differences between cells.
+We observed that normalization with nuclear RFP and RFP fusion were highly correlated (\FIGSUPP[Fig2]{f2S1}, panel C).
+An important motivation for using a biosensor for tracking aspartate changes is to enable temporal measurements on the same subset of live cells.
+To achieve this, we used an Incucyte S3 which performs live cell imaging under native cell line growth conditions.
+
+As aspartate is a product from several metabolic pathways [overview figure ref] there are many ways of perturbing aspartate metabolism.
+A frequently used method is inhibition of mitochondrial respiration to decrease the NAD+/NADH ratio and thereby decreasing the cells aspartate synthesis capacity [refs].
+We use the mitochondrial complex I inhibitor rotenone to decrease aspartate synthesis and as a control rescue the effect of rotenone by pyruvate supplementation.
+Pyruvate increases the NAD+/NADH ratio and thereby rescues aspartate synthesis.
+Titrating rotenone in H1299 cells, we observe a decrease in sensor signal with increasing rotenone, corresponding to the expected decrease in aspartate synthesis capacity (\FIG{Fig2}, panel A).
+This observation was extended to different cell lines with different rotenone sensitivity, corroborating the observation of decreased sensor signal upon rotenone treatment and rescue with pyruvate supplementation (\FIGSUPP[Fig2]{f2S1}, panel A, B and D).
+
+An alternative strategy for testing the sensor would be to control intracellular aspartate levels through media supplementation.
+Therefore, we used CRISPR to knockout the GOT1 and GOT2 genes of H1299 cells to generate an aspartate auxotroph unable to synthesize aspartate.
+Using these H1299 GOT1/2 DKO cells, we titrated media aspartate to observe the sensor response over time and found that the sensor signal reaches steady-state after approx. 11 hours (\FIG{Fig2}, panel B).
+We note that 10 mM media aspartate, a higher concentration than any other amino acid in media, is unable to rescue sensor signal significantly above aspartate depleted media.
+This confirms previous observations that aspartate has poor cell permeability \citep{Sullivan2018-gz}.
+
+
+\subsubsection{Metformin is acting slow compared to rotenone}
+Metformin is also a known mitochondrial complex I inhibitors [ref] and known to decrease intracellular aspartate levels in a dose responsive ways \citep{Gui2016-ca}.
+Whereas rotenone is a lipophilic molecule that can cross the cell membrane and act rapidly, metformin is hydrophilic and needs a transporter to act inside the cells [ref].
+As rotenone and metformin are often used interchangeably as complex I inhibitors we wondered whether they have an equivalent temporal effect on aspartate.
+To test this, we treated cells with two doses of each rotenone and metformin with roughly equivalent aspartate lowering effect and followed the sensor signal over time (\FIG{Fig2}, panel D).
+We observed that metformin was acting much slower than rotenone with 30 nM rotenone reaching steady-state after ~20h and 2 mM metformin reaching the same sensor response after almost 40h.
+
+
+\subsubsection{Asparagine salvage diverts glutamine consumption}
+In most cancer cell lines, intracellular aspartate is derived primarily from glutamine oxidation and therefore glutamine depletion can be used as a method to target aspartate metabolism.
+It has previously been reported that asparagine, a product of aspartate metabolism, becomes essential upon glutamine starvation \citep{Pavlova2018-nl}.
+We hypothesize that asparagine becomes essential as a result of a decrease in aspartate, however; it has been difficult to produce consistent aspartate/asparagine levels during glutamine starvation because of the continuous decrease in glutamine.
+One solution is the use of a chemostat and sample at steady-state [ref] another is to measure the temporal change in aspartate over the whole course of glutamine starvation.
+Our aspartate sensor allow us to do the latter.
+We found that glutamine depletion has a rapid and drastic effect on sensor signal and that this effect was delayed by adding back increasing amounts of glutamine (\FIG{Fig2}, panel E).
+Furthermore, we found that adding 1 mM asparagine also delayed the decrease in sensor signal suggesting that when asparagine can be salvaged from the media it diverts glutamine consumption purposed for asparagine synthesis.
+We note that, as this data is produced in real-time, the method can be used to find the optimal sampling times to measure and compare intracellular levels of all the metabolites relevant to glutamine starvation.
+
 
 \begin{figure}[ht!]
 \centering
@@ -125,29 +196,31 @@ Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following va
 All experiments shown are normalized to a pre-treatment scan, then treated with the specified drug or amino acid and scanned 30 min following treatment.
 Grey dashed lines indicate the time of treatment.
 (A) H1299 cells treated with a rotenone titration and rescued using pyruvate.
-(B) H1299 GOT double knockout swapped into a titration of media aspartate.
-(C) H1299 cells treated with either rotenone or metformin at the same time to show the faster kinetics of rotenone.
-(D) H1299 cells swapped into a titration of media glutamine with or without 1 mM asparagine to show that asparagine salvage diverts aspartate consumption. 
+(B) H1299 GOT1/2 double knockout swapped into a titration of media aspartate.
+(C) Western blot verification of H1299 GOT1/2 double knockout.
+(D) H1299 cells treated with either rotenone or metformin at the same time to show the faster kinetics of rotenone.
+(E) H1299 cells swapped into a titration of media glutamine with or without 1 mM asparagine to show that asparagine salvage diverts aspartate consumption.
 Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
 }
 \label{fig:Fig2}
-\figsupp{
+\figsupp[Rotenone titration in different cell lines.]{
 iAspSnFR temporal response after rotenone treatment.
 Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following rotenone treatment of live cells.
-Related to panel A in \FIG{Fig2}; however, these experiments are not normalized to a pre-treatment scan.
+Related to \FIG{Fig2}, panel A; however, these experiments are not normalized to a pre-treatment scan.
 First scan occurs 30 min after the treatment.
 Grey dashed lines indicate the time of treatment.
 (A) HT1080 cells using nuclear RFP to normalize the iAspSnFR signal.
 (B) HT1080 cells using an RFP fused to iAspSnFR for normalization.
 (C) Comparison between the steady-state signal of (A) and (B) with a linear regression shown as a red dashed line to show that nuclear RFP and RFP fusion normalizations are equivalent.
-(D) HEK293t cells using an RFP fused to iAspSnFR for normalization. For plots (A), (B) and (D) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
+(D) HEK293t cells using an RFP fused to iAspSnFR for normalization.
+For plots (A), (B) and (D) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
 For plot (C) markers indicate the average using available well replicates and errorbars are drawn as +/- the standard deviation of the replicates.
-}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig2S1.pdf}}}
-\figsupp{
+}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig2S1.pdf}}}\label{figsupp:f2S1}
+\figsupp[Narrow range glutamine limitation.]{
 Aspartate depletes when glutamine is limiting.
 Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following glutamine depletion in H1299 cells.
-Identical to panel E \FIG{Fig2} but with more well replicates.
-}{\fbox{\includegraphics[width=0.5\linewidth]{figures/Fig2S2.pdf}}}
+Identical to \FIG{Fig2}, panel E but with more well replicates.
+}{\fbox{\includegraphics[width=0.65\linewidth]{figures/Fig2S2.pdf}}}\label{figsupp:f2S2}
 \end{figure}
 
 
@@ -155,59 +228,74 @@ Identical to panel E \FIG{Fig2} but with more well replicates.
 
 
 
+\subsection{iAspSnFR signal correlates with intracellular aspartate concentration}
+It is an important requirement for an aspartate sensor that it reflects the intracellular concentration of aspartate over a biologically relevant range for several cell lines.
+A reference points for the intracellular aspartate concentration can be generated using metabolite extraction and LCMS, although; it is important to note that this yields a number for the total amount of aspartate summed across all compartments.
+The LCMS derived concentration also does not reflect protein crowding, aspartate binding to enzymes or others factors that would effect the apparent aspartate concentration.
+Nevertheless, this is the standard approach in studying metabolism and have previously been used to correlate aspartate levels to cell proliferation \citep{Gui2016-ca}.
+Thus, we titrated mitochondrial inhibitors of complex I (rotenone and metformin) and complex III (antimycin A), including pyruvate rescue, in three different cell lines and waited 24 hours until near steady-state aspartate levels before measuring sensor signal followed by immediate metabolite extraction.
+We then compared sensor signals to LCMS derived aspartate concentrations and fitted a Hill curve to infer the intracellular aspartate concentrations at half-maximum sensor signal (\FIG{Fig3}).
+For all three cell lines, we observe a monotonically increasing relationship between sensor signal and intracellular aspartate concentration covering around two orders of magnitude.
+We also observe no relationship between sensor signal and intracellular glutamate levels (\FIGSUPP[Fig3]{f3S1}).
+These observations validate the utility of our sensor in a biologically relevant range of aspartate concentrations without inference from glutamate.
+
+Interestingly, the intracellular aspartate concentrations at half-maximum sensor signal is more than 17 fold higher than the aspartate Kd derived from the biochemical characterization.
+While the numbers inferred for intracellular aspartate are uncertain point estimates, it is highly unlikely that they are wrong by 17 fold and thus we can conclude that the apparent cytoplasmic intracellular aspartate concentration is lower than the total aspartate concentration summed across all compartments.
+This suggests that binding of aspartate by iAspSnFR is in competition with other proteins and highlights that another advantage of a biosensor is that metabolite levels are measured in their native environment.
 
 
-\subsection{Steady-state iAspSnFR signal correlates with intracellular aspartate concentration}
-\lipsum[7]
+
 
 \begin{figure}[ht!]
 \centering
 \fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3.pdf}}
 \caption{
-Steady-state iAspSnFR level predicts intracellular aspartate concentration.
-Arbitrary unit (AU) RFP normalized iAspSnFR signal at steady-state, following various perturbations to live cells, can predict the LCMS measured intracellular aspartate concentration.
+iAspSnFR level predicts intracellular aspartate concentration.
+Arbitrary unit (AU) RFP normalized iAspSnFR signal, following various perturbations to live cells, can predict the LCMS measured intracellular aspartate concentration.
 Datapoints are fitted to the Hill equation, shown by the black line, with top and bottom asymptotes, midpoint and slope as free variables.
 The intracellular aspartate concentration at the inferred half maximum of RFP normalized iAspSnFR signal is reported in the red inserts.
 (A) Rotenone titration in HEK293t cells.
 (B) Rotenone and metformin titrations in HT1080 cells.
 (C) Rotenone, metformin and antimycin A titrations in H1299 cells.
-Markers indicate a single well from which both LCMS and iAspSnFR data was collected. Replicate wells have identical color and marker shape.
+Markers indicate a single well from which both LCMS and iAspSnFR data was collected.
+Replicate wells have identical color and marker shape.
 }
 \label{fig:Fig3}
-\figsupp{
-Arbitrary unit (AU) RFP normalized iAspSnFR signal at steady-state, following various perturbations to live cells, is not correlated with the LCMS measured intracellular glutamate concentration.
+\figsupp[iAspSnFR does not correlate with glutamate concentration.]{
+Arbitrary unit (AU) RFP normalized iAspSnFR signal, following various perturbations to live cells, is not correlated with the LCMS measured intracellular glutamate concentration.
 Datapoints are fitted to a local linear regression, shown by the black line; otherwise, these plots are identical to those in \FIG{Fig3}.
-}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3S1.pdf}}}
+}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3S1.pdf}}}\label{figsupp:f3S1}
 \end{figure}
-
-
-
-
-
-And look here is a figure \FIG{Fig1}.
-
-
-
-
-
-
-
-
 
 
 
 
 
 \section{Discussion}
+The importance of knowing temporal aspartate response.
+Most studies perform metabolite extraction 6-16h after treatment and therefore not at steady-state.
+This can lead to either over or under estimates of the treatment effect on aspartate levels.
+Measuring apparent concentration of intracellular aspartate might be more biologically relevant.
+
+
 Other/future uses for the sensor.
+For FACS based screening.
+Higher throughput of experiments.
+Compartmentalization.
+
 
 Compare to other paper:
-They have different Asp/Glu affinities; higher Asp (probably higher than relevant low levels) but also very high Glu (thus great specificity). Temperature is not an issue with our sensor, fold change also appear higher.
-DMS screening is necessary to achieve the goal of switching substrate specificity; sensitivity and specificity can be modulated in ways predictable from crystal structure. Our rational design only required two mutations. While not necessary for switching substrate specificity in this case, DMS is in important tool for protein engineering and potentially switching the substrate specificity beyond what can be tested using low throughput rational design.
+They have different Asp/Glu affinities; higher Asp (probably higher than relevant low levels) but also very high Glu (thus great specificity).
+Temperature is not an issue with our sensor, fold change also appear higher.
+DMS screening is necessary to achieve the goal of switching substrate specificity; sensitivity and specificity can be modulated in ways predictable from crystal structure.
+Our rational design only required two mutations.
+While not necessary for switching substrate specificity in this case, DMS is in important tool for protein engineering and potentially switching the substrate specificity beyond what can be tested using low throughput rational design.
 
-Apparent Asp affinity is higher in cells than in lysate. Probably, Asp is bound by other proteins in the cell.
+Apparent Asp affinity is higher in cells than in lysate.
+Probably, Asp is bound by other proteins in the cell.
 
-General caveats of biosensors (French mito temperature sensor disaster is a good example). Cell line sensitive, not measuring concentration, sensitivity in a limited (smaller) concentration range, pH sensitive (mito use), generally sensitive to a plethora of possible external factors and thus should always be used with caution.
+General caveats of biosensors (French mito temperature sensor disaster is a good example).
+Cell line sensitive, not measuring concentration, sensitivity in a limited (smaller) concentration range, pH sensitive (mito use), generally sensitive to a plethora of possible external factors and thus should always be used with caution.
 
 Room for development:
 Sometime we encounter better expression of the non-RFP fused sensor.
@@ -248,10 +336,10 @@ Nuclear expressing cell lines were generated using 1e5 transducing units of EF1A
 Cells were seeded at 50\% confluency in 6 well dishes and lentivirus was added to fresh media with 8 µg/µL polybrene and added to cells followed by centrifugation (900g, 90 mins, 30°C).
 Two days after infection, cells were sorted for high RFP expression using fluorescence-activated cell sorting (FACS).
 High RFP cells were then expanded and single-cell cloned by limiting dilution, plating 0.5 cells/well on a 96 well plate.
-Plates were then screened for RFP expression and localization using Incucyte S3 (Sartorius) and a suitable clone chosen, expanded, and used for all subsequent experiments. 
+Plates were then screened for RFP expression and localization using Incucyte S3 (Sartorius) and a suitable clone chosen, expanded, and used for all subsequent experiments.
 
 \subsection{Lentiviral production and stable cell line generation}
-iAspSnFR and iAspSnFR-RFP (iASPSnFR with a C-termal fusion to mRuby) were first cloned into entry vector pENTR1A (Fisher, A10462) using NEBuilder HiFI DNA Assembly Cloning Kit (New England BioLabs, E2621).
+iAspSnFR and iAspSnFR-RFP (iASPSnFR with a C-termal fusion to mRuby3) were first cloned into entry vector pENTR1A (Fisher, A10462) using NEBuilder HiFI DNA Assembly Cloning Kit (New England BioLabs, E2621).
 These donor constructs were then used to transfer their insert into destination vectors: pLX304-CMV-Blast (Addgene, 25890), pLenti-CMV-Hygro (w117-1) (Addgene, 17454 a gift from Eric Campeau \& Paul Kaufman), or pLX304-CAG-Blast using LR Clonase II (Fisher, 11791100).
 pLX304-CAG-Blast was generated in house by swapping the CMV promoter region of pLX304-CMV-Blast with a CAG promoter provided on synthetic DNA (Integrated DNA Technologies).
 Each plasmid sequence was verified by whole plasmid sequencing (Plasmidsaurus).
@@ -259,20 +347,22 @@ Lentivirus was generated by transfection of HEK293T cells with destination vecto
 The supernatant containing lentiviral particles was filtered through a 0.45 µM membrane (Fisher, 9720514) and was supplemented with 8 µg/µL polybrene (Sigma, TR-1003-G) prior to infection.
 For infection, cells were seeded at 50\% confluency in 6 well dishes and centrifuged with lentivirus (900g, 90 mins, 30°C).
 After 24 hours the media was replaced with fresh media and after 48 hours cells were treated with either 1 µg/mL blasticidin (Fisher, R21001) or 150 µg/mL hygromycin (Sigma-Aldrich, H7772-1G) and maintained in selection media until all uninfected control cells died.
-After selection, cells were expanded and single-cell cloned by limiting dilution, plating 0.5 cells/well using 2-3 96 well plates. These clones were incubated until 10-30\% confluency and screened for high GFP and RFP signal using Incucyte S3 (Sartorius).
+After selection, cells were expanded and single-cell cloned by limiting dilution, plating 0.5 cells/well using 2-3 96 well plates.
+These clones were incubated until 10-30\% confluency and screened for high GFP and RFP signal using Incucyte S3 (Sartorius).
 The highest expressing monoclonal cells were selected and further expanded on 6 well plates and screened for fluorescence using the Incucyte.
 Clones were then expanded and used for subsequent experiments.
 Different cell lines received different vector-sensor combinations: HEK293T cells were infected with pLX304-CAG-Blast-iAspSnFR-RFP, HT1080 with pLenti-CMV-Hygro-iAspSnFR-RFP and HT1080, H1299 and H1299 GOT1/2 DKO cells expressing nuclear RFP were infected with pLenti-CMV-Hygro-iAspSnFR.
 
 \subsection{Generation of GOT1/2 double knockout (DKO) cells}
 Protocol and guide RNA generation was identical to that described in \cite{Hart2023-gp}.
-Briefly, three chemically synthesized 2'-O-methyl 3’phosphorothioate-modified single guide RNA (sgRNA) sequences targeting GOT1 and GOT2 were purchased (Synthego), sgRNA sequences are shown in the table below.
-A pool of six sgRNAs for GOT1 and GOT2 were resuspended in nuclease-free water, combined with SF buffer (Lonza, V4XC-2032), and sNLS-spCas9 (Aldevron, 9212). 2x105 H1299 cells were resuspended in the resulting solution containing ribonucleoprotein complexes (RNPs) and electroporated using a 4D-Nucleofector (Amaxa, Lonza).
+Briefly, three chemically synthesized 2'-O-methyl 3’phosphorothioate-modified single guide RNA (sgRNA) sequences targeting GOT1 and GOT2 were purchased (Synthego), sgRNA sequences are shown in the table below (\TABLE{guides}).
+A pool of six sgRNAs for GOT1 and GOT2 were resuspended in nuclease-free water, combined with SF buffer (Lonza, V4XC-2032), and sNLS-spCas9 (Aldevron, 9212).
+200,0000 H1299 cells were resuspended in the resulting solution containing ribonucleoprotein complexes (RNPs) and electroporated using a 4D-Nucleofector (Amaxa, Lonza).
 Nucleofected cells were then expanded and single-cell cloned by limiting dilution by plating 0.5 cells/well in a 96 well plate.
 Gene knockout was confirmed using western blots.
 
 \begin{table}[h!]
-\caption{\label{tab:guides}CRISPR guides}
+\caption{\label{tab:guides}CRISPR guides.}
 \begin{tabular}{|l|l|}
 \hline
 Gene & sgRNA   sequence (5’-3’) \\
@@ -287,18 +377,20 @@ GOT2 & \begin{tabular}[c]{@{}l@{}}\texttt{UUUCUCAUUUCAGCUCCUGG}\\\texttt{CGGACGC
 
 \subsection{Intracellular iAspSnFR measurements}
 Experiments were conducted in DMEM without pyruvate (Corning 50-013-PB) supplemented with 3.7 g/L sodium bicarbonate 10\% dialyzed fetal bovine serum (FBS) (Sigma-Aldrich, F0392) and 1\% penicillin-streptomycin solution.
-To start an experiment, cells were trypsinized (Corning, 25051CI), resuspended in media, counted using a coulter counter (Beckman Coulter, Multisizer 4) and seeded onto 24-well dishes (Nunc, 142475) with an initial seeding density of 50,000, 70,000, 70,000 or 150,000 cells/well for H1299, H1299 GOT DKO, HT1080 and HEK293T, respectively. After 24h (H1299, HT1080, HEK293T) or 48h (H1299 GOT DKO) incubation treatment was added and plates moved into an Incucyte S3 (Sartorius) live cell imaging platform inside a humidified incubator at 37°C with 5\% CO2. Rotenone (Sigma-Aldrich, R8875), metformin (Sigma-Aldrich, D150959) and antimycin A (Sigma-Aldrich, A8674) treatments were spiked-in as 20x solutions in water and the 2 mM pyruvate (Sigma-Aldrich, P8574) was added as 1000x stock.
+To start an experiment, cells were trypsinized (Corning, 25051CI), resuspended in media, counted using a coulter counter (Beckman Coulter, Multisizer 4) and seeded onto 24-well dishes (Nunc, 142475) with an initial seeding density of 50,000, 70,000, 70,000 or 150,000 cells/well for H1299, H1299 GOT1/2 DKO, HT1080 and HEK293T, respectively.
+After 24h (H1299, HT1080, HEK293T) or 48h (H1299 GOT1/2 DKO) incubation treatment was added and plates moved into an Incucyte S3 (Sartorius) live cell imaging platform inside a humidified incubator at 37°C with 5\% CO2.
+Rotenone (Sigma-Aldrich, R8875), metformin (Sigma-Aldrich, D150959) and antimycin A (Sigma-Aldrich, A8674) treatments were spiked-in as 20x solutions in water and the 2 mM pyruvate (Sigma-Aldrich, P8574) was added as 1000x stock.
 For treatments with varying media aspartate (Sigma-Aldrich, A7219) or glutamine (Sigma-Aldrich, G5792), wells were thrice washed and filled with media deplete of the given amino acid, then it was added as a spike-in at the specified concentration as 20x solutions in water.
 For plates receiving asparagine (Sigma-Aldrich, A7094), this was added to 1 mM from as 20x solution in water, with vehicle wells receiving water.
 Live cell imaging was performed on the Incucyte S3 using the GFP and RFP channels with default exposure times.
 Images were processed using the associated Incucyte software to subtract background, define areas of cell confluence and GFP/RFP signal and extract the sum of the fluorescence signal in these areas.
 The data for the GFP signal, RFP signal, GFP/RFP ratio and confluence for each well at each timepoint was exported and used for further data processing using Python code.
-The iAspSnFR signal (GFP channel) was normalized to an RFP signal, either as a stably expressed nuclear localized RFP or mRuby C-term fusion to iAspSnFR.
+The iAspSnFR signal (GFP channel) was normalized to an RFP signal, either as a stably expressed nuclear localized RFP or mRuby3 C-term fusion to iAspSnFR.
 For temporal measurements the first scan was made 30 min after treatment with subsequent scans indicated on relevant plots.
 For some experiments a pre-treatment scan was made shortly prior to treatment to normalize the data to this point.
-For comparisons of steady-state measurements of GFP/RFP versus mass spectrometry based metabolite measurements, a single scan was made 24h after treatment, the plate was then quickly moved to ice and metabolite extraction performed (see below).
+For comparisons of near steady-state measurements of GFP/RFP versus mass spectrometry based metabolite measurements, a single scan was made 24h after treatment, the plate was then quickly moved to ice and metabolite extraction performed (see below).
 Another plate was processed in parallel for cell volume determination using a coulter counter and averaging across three replicate wells.
-The normalized iAspSnFR signal as a function of intracellular aspartate concentration (c) was fitted by a modified Hill curve:
+The normalized iAspSnFR signal as a function of intracellular aspartate concentration (c) was fitted by a baseline shifted Hill curve:
 
 $$
 f(c) = t + \frac{b - t}{1 + (c/m)^s}
@@ -307,11 +399,13 @@ $$
 With $t$, $b$ being the top and bottom of the curve, respectively, describing the upper and lower asymptotes of normalized iAspSnFR signal.
 The curve slope is described by $s$, also known as Hill coefficient, and the midpoint ($m$) describes the intracellular aspartate concentration at half maximum iAspSnFR signal.
 The curve parameters were fitted to the data using the Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm with an upper bound constraint on the top of the curve of 1.2 times the maximum observed normalized iAspSnFR signal in any of the conditions on the same plot.
+Notice, that this curve is not suppose to represent a mechanistic model of the binding kinetics, rather the purpose is to infer a reasonable estimate of the intracellular aspartate concentration at half maximum iAspSnFR signal.
 
 \subsection{Metabolite extraction}
 For polar metabolite extraction, a plate was move to ice and the media was thoroughly aspirated.
 For H1299 and HT1080 cells, wells were washed once with cold saline (Fisher, 23293184).
-For HEK293T cells, washing was omitted due to weak cell adherence. Then, 1 mL 80\% HPLC grade methanol in HPLC grade water was added, cells were scraped with the back of a P1000 pipet tip and transferred to Eppendorf tubes.
+For HEK293T cells, washing was omitted due to weak cell adherence.
+Then, 1 mL 80\% HPLC grade methanol in HPLC grade water was added, cells were scraped with the back of a P1000 pipet tip and transferred to Eppendorf tubes.
 Tubes were centrifuged (17,000g, 15 mins, 4°C) and 800 µL of the supernatant containing polar metabolites was transferred to a new centrifuge tube and placed in a centrivap until dry.
 
 \subsection{Intracellular amino acid concentration measurements}
@@ -320,7 +414,9 @@ The peak area for each amino acid was divided by its labelled standard to derive
 The response ratio was then mapped to a calibration curve to infer the amino acid concentration and finally the intracellular concentration was calculated by correcting for each step introducing a dilution, including the use of the total cell volume.
 To make the calibration curves a non-labelled amino acid mixture was made from an analytical amino acid standard without glutamine and asparagine (Sigma-Aldrich, A9906-1ML) and added glutamine (Sigma-Aldrich, 76523-100MG) and asparagine (Sigma-Aldrich, 51363-100MG) to match the concentration of the other amino acids.
 Using this mix, three replicates of a 12 point 2-fold dilution series was made with a max concentration of 500 µM and a volume per dilution of 40 µL.
-These were placed in a centrivap until dry and reconstituted with 40 µL 80\% HPLC grade methanol containing 5 µM U-13C, U-15N labelled canonical amino acid mix (Cambridge Isotope Laboratories, MSK-CAA-1) and transferred to vials for measurement by LCMS. The peak area for each amino acid was divided by its labelled standard to derive the response ratio, then the best fitting calibration curves for each amino acid were chosen among either linear, power or a second-degree polynomial. Each calibration curve was manually inspected for proper fit and measurements below or above the concentration range of the dilution series were discarded.
+These were placed in a centrivap until dry and reconstituted with 40 µL 80\% HPLC grade methanol containing 5 µM U-13C, U-15N labelled canonical amino acid mix (Cambridge Isotope Laboratories, MSK-CAA-1) and transferred to vials for measurement by LCMS.
+The peak area for each amino acid was divided by its labelled standard to derive the response ratio, then the best fitting calibration curves for each amino acid were chosen among either linear, power or a second-degree polynomial.
+Each calibration curve was manually inspected for proper fit and measurements below or above the concentration range of the dilution series were discarded.
 
 \subsection{Liquid Chromatography-Mass Spectrometry (LCMS)}
 Metabolite quantitation was performed using a Q Exactive HF-X Hybrid Quadrupole-Orbitrap Mass Spectrometer equipped with an Ion Max API source and H-ESI II probe, coupled to a Vanquish Flex Binary UHPLC system (Thermo Scientific).
@@ -340,7 +436,7 @@ www.github.com/krdav/Aspartate-sensor
 
 \subsection{Plasmid availability}
 Submitted to Addgene as XYZ.
-We (Sullivan lab) have pENTR and pLenti, pLX304 w/wo mRuby fusion and w/wo MTS (~13 different plasmids).
+We (Sullivan lab) have pENTR and pLenti, pLX304 w/wo mRuby3 fusion and w/wo MTS (~13 different plasmids).
 
 
 
