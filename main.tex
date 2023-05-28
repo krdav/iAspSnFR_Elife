@@ -114,13 +114,15 @@ Error bars are s.d. of three technical replicates.
 }
 \label{fig:Fig1}
 \figsupp[Aspartate specificity and excitation/emission spectra.]{
-(A) Switching iGluSnFR3 specificity from glutamate to aspartate using S72X library (left) and S72P, S27X library (right), using bacterial lysate.
-Titrations with aspartate (solid lines) and glutamate (dashed lines).
+(A) Switching iGluSnFR3 specificity from glutamate to aspartate using S72X library (left) and S72P, S27X library (right).
+Titrations with aspartate (solid lines) and glutamate (dashed lines) using bacterial lysate.
 (B) Excitation and emission spectra of iAspSnFR.mRuby3.
 Left, 1-photon spectra.
 Excitation wavelength was varied from 400 nm to 520 nm (7.5 nm bandpass) while observing emission at 535 nm (10 nm bandpass).
+%KD: mission wavelength was varied from from 510 to 600??? Looks like from 535 to 600
 Emission wavelength was varied from 510 nm to 600 nm (10 nm bandpass) while exciting at 510 nm (7.5 nm bandpass).
 Fluorescence was measured in the both the absence (dashed lines) and presence of 10 mM aspartate (solid lines).
+%KD: Is this descriptive enough?
 Right, 2-photon cross-sections.
 Vertical bar indicates 1040 nm.
 }{\fbox{\includegraphics[width=0.7\linewidth]{figures/Fig1S1.pdf}}}\label{figsupp:f1S1}
@@ -176,6 +178,47 @@ To test this, we treated cells with two doses of each rotenone and metformin wit
 We observed that metformin was acting much slower than rotenone with 30 nM rotenone reaching steady-state after ~20h and 2 mM metformin reaching the same sensor response after almost 40h.
 
 
+
+
+\begin{figure}[ht!]
+\centering
+\fbox{\includegraphics[width=0.95\linewidth]{figures/Fig2.pdf}}
+\caption{
+iAspSnFR resolves temporal aspartate changes in live cells.
+RFP normalized iAspSnFR signal change over time following various perturbations of live cells.
+All experiments shown are normalized to a pre-treatment scan, then treated with the specified drug or amino acid and scanned 30 min following treatment.
+Grey dashed lines indicate the time of treatment.
+(A) H1299 cells treated with a rotenone titration and rescued using pyruvate.
+(B) H1299 GOT1/2 double knockout swapped into media with a titration of aspartate.
+(C) Western blot verification of H1299 GOT1/2 double knockout.
+(D) H1299 cells treated with either rotenone or metformin at the same time to compare inhibitor kinetics.
+(E) H1299 cells swapped into media with a titration of glutamine with or without 1 mM asparagine.
+Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers. AU, arbitrary unit.
+}
+\label{fig:Fig2}
+\figsupp[Rotenone titration in different cell lines.]{
+iAspSnFR temporal response after rotenone treatment.
+RFP normalized iAspSnFR signal change over time following rotenone treatment of live cells.
+Related to \FIG{Fig2}, panel A, however; these experiments are not normalized to a pre-treatment scan.
+Grey dashed lines indicate the time of treatment and the first scan occurs 30 min after this.
+(A) HT1080 cells using nuclear RFP to normalize the iAspSnFR signal.
+(B) HT1080 cells using an RFP fused to iAspSnFR (iAspSnFR.mRuby3) for normalization.
+(C) Comparison between the steady-state signal of (A) and (B) with a linear regression shown as a red dashed line to show that nuclear RFP and RFP fusion normalizations are equivalent.
+(D) HEK293t cells using an RFP fused to iAspSnFR for normalization.
+For plots (A), (B) and (D) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
+AU, arbitrary unit.
+For plot (C) markers indicate the average using available well replicates and errorbars are drawn as +/- the standard deviation of the replicates.
+}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig2S1.pdf}}}\label{figsupp:f2S1}
+\figsupp[Narrow range glutamine limitation.]{
+Aspartate depletes when glutamine is limiting.
+RFP normalized iAspSnFR signal change over time following glutamine depletion in H1299 cells.
+Identical to \FIG{Fig2}, panel E but with less glutamine concentrations and more well replicates.
+AU, arbitrary unit.
+}{\fbox{\includegraphics[width=0.65\linewidth]{figures/Fig2S2.pdf}}}\label{figsupp:f2S2}
+\end{figure}
+
+
+
 \subsubsection{Asparagine salvage diverts glutamine consumption}
 In most cancer cell lines, intracellular aspartate is derived primarily from glutamine oxidation and therefore glutamine depletion can be used as a method to target aspartate metabolism.
 It has previously been reported that asparagine, a product of aspartate metabolism, becomes essential upon glutamine starvation \citep{Pavlova2018-nl}.
@@ -185,45 +228,6 @@ Our aspartate sensor allow us to do the latter.
 We found that glutamine depletion has a rapid and drastic effect on sensor signal and that this effect was delayed by adding back increasing amounts of glutamine (\FIG{Fig2}, panel E).
 Furthermore, we found that adding 1 mM asparagine also delayed the decrease in sensor signal suggesting that when asparagine can be salvaged from the media it diverts glutamine consumption purposed for asparagine synthesis.
 We note that, as this data is produced in real-time, the method can be used to find the optimal sampling times to measure and compare intracellular levels of all the metabolites relevant to glutamine starvation.
-
-
-\begin{figure}[ht!]
-\centering
-\fbox{\includegraphics[width=0.95\linewidth]{figures/Fig2.pdf}}
-\caption{
-iAspSnFR resolves temporal aspartate changes in live cells.
-Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following various perturbations in live cells.
-All experiments shown are normalized to a pre-treatment scan, then treated with the specified drug or amino acid and scanned 30 min following treatment.
-Grey dashed lines indicate the time of treatment.
-(A) H1299 cells treated with a rotenone titration and rescued using pyruvate.
-(B) H1299 GOT1/2 double knockout swapped into a titration of media aspartate.
-(C) Western blot verification of H1299 GOT1/2 double knockout.
-(D) H1299 cells treated with either rotenone or metformin at the same time to show the faster kinetics of rotenone.
-(E) H1299 cells swapped into a titration of media glutamine with or without 1 mM asparagine to show that asparagine salvage diverts aspartate consumption.
-Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
-}
-\label{fig:Fig2}
-\figsupp[Rotenone titration in different cell lines.]{
-iAspSnFR temporal response after rotenone treatment.
-Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following rotenone treatment of live cells.
-Related to \FIG{Fig2}, panel A; however, these experiments are not normalized to a pre-treatment scan.
-First scan occurs 30 min after the treatment.
-Grey dashed lines indicate the time of treatment.
-(A) HT1080 cells using nuclear RFP to normalize the iAspSnFR signal.
-(B) HT1080 cells using an RFP fused to iAspSnFR for normalization.
-(C) Comparison between the steady-state signal of (A) and (B) with a linear regression shown as a red dashed line to show that nuclear RFP and RFP fusion normalizations are equivalent.
-(D) HEK293t cells using an RFP fused to iAspSnFR for normalization.
-For plots (A), (B) and (D) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
-For plot (C) markers indicate the average using available well replicates and errorbars are drawn as +/- the standard deviation of the replicates.
-}{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig2S1.pdf}}}\label{figsupp:f2S1}
-\figsupp[Narrow range glutamine limitation.]{
-Aspartate depletes when glutamine is limiting.
-Arbitrary unit (AU) RFP normalized iAspSnFR signal change over time following glutamine depletion in H1299 cells.
-Identical to \FIG{Fig2}, panel E but with more well replicates.
-}{\fbox{\includegraphics[width=0.65\linewidth]{figures/Fig2S2.pdf}}}\label{figsupp:f2S2}
-\end{figure}
-
-
 
 
 
@@ -251,7 +255,7 @@ This suggests that binding of aspartate by iAspSnFR is in competition with other
 \fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3.pdf}}
 \caption{
 iAspSnFR level predicts intracellular aspartate concentration.
-Arbitrary unit (AU) RFP normalized iAspSnFR signal, following various perturbations to live cells, can predict the LCMS measured intracellular aspartate concentration.
+RFP normalized iAspSnFR signal, following various perturbations to live cells, can predict the LCMS measured intracellular aspartate concentration.
 Datapoints are fitted to the Hill equation, shown by the black line, with top and bottom asymptotes, midpoint and slope as free variables.
 The intracellular aspartate concentration at the inferred half maximum of RFP normalized iAspSnFR signal is reported in the red inserts.
 (A) Rotenone titration in HEK293t cells.
@@ -259,11 +263,13 @@ The intracellular aspartate concentration at the inferred half maximum of RFP no
 (C) Rotenone, metformin and antimycin A titrations in H1299 cells.
 Markers indicate a single well from which both LCMS and iAspSnFR data was collected.
 Replicate wells have identical color and marker shape.
+AU, arbitrary unit.
 }
 \label{fig:Fig3}
-\figsupp[iAspSnFR does not correlate with glutamate concentration.]{
-Arbitrary unit (AU) RFP normalized iAspSnFR signal, following various perturbations to live cells, is not correlated with the LCMS measured intracellular glutamate concentration.
-Datapoints are fitted to a local linear regression, shown by the black line; otherwise, these plots are identical to those in \FIG{Fig3}.
+\figsupp[iAspSnFR signal does not correlate with glutamate concentration.]{
+RFP normalized iAspSnFR signal, following various perturbations to live cells, is not correlated with the LCMS measured intracellular glutamate concentration.
+Datapoints are fitted to a local linear regression, shown by the black line, otherwise, these plots are identical to those in \FIG{Fig3}.
+AU, arbitrary unit.
 }{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3S1.pdf}}}\label{figsupp:f3S1}
 \end{figure}
 
@@ -272,36 +278,22 @@ Datapoints are fitted to a local linear regression, shown by the black line; oth
 
 
 \section{Discussion}
-The importance of knowing temporal aspartate response.
-Most studies perform metabolite extraction 6-16h after treatment and therefore not at steady-state.
-This can lead to either over or under estimates of the treatment effect on aspartate levels.
-Measuring apparent concentration of intracellular aspartate might be more biologically relevant.
+A biosensor for aspartate is an important step towards improved understanding of aspartate metabolism.
+We have showed that our sensor can resolve temporal changes in intracellular aspartate to answer questions that would be very impractical using LCMS.
+In most studies involving aspartate metabolism, metabolite extraction is performed 6-16 hours after treatment with the implicit assumption that this is enough time to reach metabolic steady-state.
+Using our sensor, we have showed that steady-state can be much later and depend on the treatment.
+Future studies can use iAspSnFR to find the steady-state in real-time and first then perform metabolite extraction for LCMS.
+An aspartate sensor allows higher throughput experiments, from multiwell plates to FACS based screening of single cells, for example on a library of CRISPR knockouts.
+Another important use is to dissect compartmentalized metabolism, with mitochondria being the most important target.
 
-
-Other/future uses for the sensor.
-For FACS based screening.
-Higher throughput of experiments.
-Compartmentalization.
-
-
-Compare to other paper:
-They have different Asp/Glu affinities; higher Asp (probably higher than relevant low levels) but also very high Glu (thus great specificity).
-Temperature is not an issue with our sensor, fold change also appear higher.
-DMS screening is necessary to achieve the goal of switching substrate specificity; sensitivity and specificity can be modulated in ways predictable from crystal structure.
-Our rational design only required two mutations.
-While not necessary for switching substrate specificity in this case, DMS is in important tool for protein engineering and potentially switching the substrate specificity beyond what can be tested using low throughput rational design.
-
-Apparent Asp affinity is higher in cells than in lysate.
-Probably, Asp is bound by other proteins in the cell.
-
-General caveats of biosensors (French mito temperature sensor disaster is a good example).
-Cell line sensitive, not measuring concentration, sensitivity in a limited (smaller) concentration range, pH sensitive (mito use), generally sensitive to a plethora of possible external factors and thus should always be used with caution.
-
-Room for development:
-Sometime we encounter better expression of the non-RFP fused sensor.
-
-
-
+Recently, an aspartate sensor was reported by another group \citep{Hellweg2023}.
+%KD: Did they use iGluSnFR or iGluSnFR3?
+This sensor was built using the same template glutamate sensor (iGluSnFR) as our design but with 7 mutation, picked through a combination of targeted screening and deep mutational scanning.
+Our design has just 2 mutations, picked through rational design and testing a small set of mutations on two positions.
+Our sensor appears to have a larger signal change in both lysates and live cells and is not sensitive to 37°C which is the temperature of all our live cell imaging experiments.
+%KD: We could have tested this more carefully e.g. using SLC1A3
+On the other hand, our sensor appears to have higher glutamate and asparagine affinity; however, we found no correlation between intracellular glutamate concentration and sensor signal (\FIGSUPP[Fig3]{f3S1}).
+While repurposing iGluSnFR to an aspartate sensor did not require large library screening it could be an important tool to further improve the sensor or change the substrate specificity beyond very similar molecules amenable to rational design.
 
 
 
@@ -441,37 +433,10 @@ We (Sullivan lab) have pENTR and pLenti, pLX304 w/wo mRuby3 fusion and w/wo MTS 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \section{Acknowledgments}
+Here for acknowledgments.
 
-Additional information can be given in the template, such as to not include funder information in the acknowledgments section.
 
-\nocite{*} % This command displays all refs in the bib file. PLEASE DELETE IT BEFORE YOU SUBMIT YOUR MANUSCRIPT!
+
 \bibliography{main}
-
-
 \end{document}
