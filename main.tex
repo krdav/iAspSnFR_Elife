@@ -44,7 +44,7 @@
 Intracellular levels of the amino acid aspartate are responsive to changes in metabolism in mammalian cells and can correspondingly alter cell function, highlighting the need for robust tools to measure aspartate abundance.
 However, comprehensive understanding of aspartate metabolism has been limited by the throughput, cost, and static nature of the mass spectrometry based measurements that are typically employed to measure aspartate levels.
 To address these issues, we have developed a GFP-based sensor of aspartate (iAspSnFR2), where the fluorescence intensity corresponds to aspartate concentration.
-As a purified protein, \textit{in vitro}, the sensor has a 20-fold increase in fluorescence upon aspartate saturation, with dose dependent fluorescence changes covering a physiologically relevant intracellular aspartate concentration range and no significant off target binding.
+As a purified protein, the sensor has a 20-fold increase in fluorescence upon aspartate saturation, with dose dependent fluorescence changes covering a physiologically relevant intracellular aspartate concentration range and no significant off target binding.
 Expressed in mammalian cell lines, sensor intensity correlated with aspartate levels determined by mass spectrometry and could resolve temporal changes in intracellular aspartate using both genetic and pharmacological manipulations.
 These data demonstrate the utility of iAspSnFR2 and highlight the opportunities it provides for temporally resolved and high throughput applications of variables that affect aspartate levels.
 \end{abstract}
@@ -55,7 +55,7 @@ The primary tool used by metabolism researchers, liquid chromatography coupled w
 This approach is powerful but has significant drawbacks; it requires highly specialized equipment, it is expensive, and sample preparation by chemical extractions homogenizes metabolic differences that may occur amongst different cells in complex samples or across subcellular compartments.
 Metabolite extraction also consumes precious samples that might otherwise be desirable to analyze over time or with additional outputs.
 Development of genetically encoded protein sensors (biosensors) over the past two decades has provided new opportunities to visualize the release, production, and depletion of important signaling molecules and metabolites with subsecond and subcellular resolution (reviewed in \cite{Kostyuk2019-qc, Koveal2020-cl}).
-Thus, biosensors provide a solution to many of the problems inherent to metabolite extraction and LCMS, with the trade-off of monitoring only one metabolite per sensor.
+Thus, with the trade-off of only monitoring one metabolite per sensor, biosensors provide a solution to many of the problems inherent to metabolite extraction and LCMS.
 
 Aspartate is amongst the most concentrated metabolites in cells \citep{Park2016-ap}, yet it is one of only two amino acids that is not predominantly acquired from the environment.
 While the other, glutamate, is made from glutamine by the enzyme glutaminase, no analogous enzyme exists in humans to convert asparagine to aspartate \citep{Sullivan2018-gz}.
@@ -80,31 +80,37 @@ The resulting biosensor, iAspSnFR2, was characterized \textit{in vitro} and in c
 
 \subsection{Protein engineering}
 We observed that the original iGluSnFR bound both glutamate and aspartate, with higher affinity for the former \citep{Marvin2013-qq}.
-To shift the relative affinities of the two ligands, we looked at the structure of the binding pocket  \citep{Hu2008-nd}, and sampled all possible amino acid substitutions of residue S72, which interacts with the side-chain carboxylate of bound glutamate (\FIG{Fig1}, panel A).
+To shift the relative affinities of the two ligands, we evaluated the structure of the binding pocket  \citep{Hu2008-nd}, and sampled all possible amino acid substitutions of residue S72, which interacts with the side-chain carboxylate of bound glutamate (\FIG{Fig1}, panel A).
 %KD: So this is something we don't show in any figure, and I understand that it is not super relevant, but it would help the storyline
 By expressing mutant sensors in bacteria and measuring the fluorescence of bacterial lysate in response to aspartate and glutamate, we identified S72A and S72P as having switched specificity from glutamate to aspartate.
 S72T, identified in a faster version of iGluSnFR \citep{Helassa2018-fb}, also preferentially binds aspartate over glutamate.
 
 %KD: "a variant from that process" this is not a very specific description. I thought that iAspSnFR2 was just iGluSnFR3 with two mutations? If not Fig1 S1 needs to be relabelled.
 As an improved glutamate sensor (iGluSnFR3) was being developed \citep{Aggarwal2023-pi}, we took a variant from that process and queried the effect of S72A, S72T, and S72P on aspartate/glutamate affinity.
-In bacterial cell lysate, S72P maintained the expected shift to a preference for aspartate, and had a higher fluorescence fold increase (∆F/F) than either S72A or S72T.
+In bacterial cell lysate, S72P maintained the expected shift to a preference for aspartate, and had a higher fluorescence fold increase (∆F/F) than either S72A or S72T (\FIGSUPP[Fig1]{f1S1}, panel A).
 To further increase specificity of the S72P mutant, we sampled mutations at S27, which also interacts with the carboxylate of bound glutamate.
 One of those, S27A, had lower affinity for glutamate while mostly maintaining affinity for aspartate (\FIGSUPP[Fig1]{f1S1}, panel A).
 We then moved forward with this variant and named it iAspSnFR2.
 Since we expected to be using this sensor in cell culture studies, and potentially \textit{in vivo}, over the course of hours or even days, we added a C-terminal red fluorescence protein, mRuby3, to enable correction for expression and movement artefacts.
-All biochemical characterization is reported with iAspSnFR2.mRuby3.
-For iAspSnFR2 signal normalization in cells we used a mix of iAspSnFR2.mRuby3 and nuclear expressed RFP.
+All biochemical characterization is reported with iAspSnFR2-mRuby3.
+For iAspSnFR2 signal normalization in cells we used a mix of iAspSnFR2-mRuby3 and nuclear expressed RFP.
 
 The sensor is yellow-shifted in excitation and emission compared to typical GFP-based sensors, since its chromophore is formed by the triad of GYG and has the T203Y pi-stacking mutations of the Venus yellow fluorescent protein.
 % Does this^ need a citation or figure reference?
 This yellow-shift will facilitate observation deeper into tissues using 2-photon microscopy, as the sensor has high signal fold change and significant 2-photon cross-section at 1040 nm (\FIGSUPP[Fig1]{f1S1}, panel B).
 It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B).
-It does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
-Surprisingly, the mRuby3 component responds to amino acids at high millimolar concentrations, indicating a non-specific effect (potentially interacting with the C-terminal histidine tag) (\FIGSUPP[Fig1]{f1S2}, panel B), although this increase in fluorescence is still an order of magnitude lower than the green fluorescence response and at amino acid concentrations that are unlikely to be achieved in most cell types.
+It also does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
+Surprisingly, the mRuby3 component responds to some amino acids at high millimolar concentrations, indicating a non-specific effect, potentially interacting with the C-terminal histidine tag (\FIGSUPP[Fig1]{f1S2}, panel B). Notably, this increase in fluorescence is still an order of magnitude lower than the green fluorescence response and at amino acid concentrations that are unlikely to be achieved in most cell types.
 The sensor also does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (\FIGSUPP[Fig1]{f1S2}, panel C).
-It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescence due to changes in aspartate far exceed what one might expect from changes in fluorescence due to changes in pH (\FIGSUPP[Fig1]{f1S2}, panel E).
-A recently reported and concurrently developed sensor for aspartate is reported to be adversely effected by temperatures higher than 30˚C, causing lower maximum ∆F/F.
+%LS- Reordered the next two sentences so the panels are in sequence
+A recently reported and concurrently developed sensor for aspartate is reported to be adversely effected by temperatures higher than 30˚C, causing lower maximum ∆F/F \citep{Hellweg2023}.
 Our aspartate sensor appears unaffected by temperature up to 37°C, with the same maximum ∆F/F at 37°C as compared to 30˚C (\FIGSUPP[Fig1]{f1S2}, panel D).
+It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescence due to changes in aspartate far exceed what one might expect from changes in fluorescence due to changes in pH (\FIGSUPP[Fig1]{f1S2}, panel E).
+To determine whether it had the potential to serve as an aspartate biosensor in mammalian cells, we expressed iAspSnFR2 in H1299 cells along with nuclear-RFP. 
+Expression of iAspSnFR2 had no obvious toxic effects and H1299 iAspSnFR2 cells had visible fluorescence in the green channel (\FIG{Fig1}, panel C).
+As it is the primary substrate for aspartate production, glutamine removal is expected to deplete aspartate levels.
+Indeed we found that 24 hours of glutamine withdrawal abolished GFP signal while leaving RFP unchanged.
+These findings therefore supported the further testing of iAspSnFR2 as a method to quantify aspartate levels over time in live mammalian cells.
 
 
 
@@ -115,7 +121,7 @@ Our aspartate sensor appears unaffected by temperature up to 37°C, with the sam
 \caption{
 Protein engineering and \textit{in vitro} characterization.
 (A) Structure of the binding pocket of glutamate-bound GltI (2VHA.pdb) with residues S72 (left) and S27 (right) shown as sticks and bound glutamate as sticks inside transparent spheres.
-(B) Fluorescence response of purified iAspSnFR2.mRuby3 when titrated with aspartate (black) or glutamate or asparagine (grey tones).
+(B) Fluorescence response of purified iAspSnFR2-mRuby3 when titrated with aspartate (black) or glutamate or asparagine (grey tones).
 Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass).
 Error bars are s.d. of three technical replicates.
 (C) Live cell imaging in the phase contrast, GFP and RFP channels of H1299 Nuclear-RFP cells expressing iAspSnFR2 after 24 hours with/without glutamine.
@@ -124,7 +130,7 @@ Error bars are s.d. of three technical replicates.
 \figsupp[Aspartate specificity and excitation/emission spectra.]{
 (A) Switching specificity of an iGluSnFR3 precursor from glutamate to aspartate using S72X library (left) and S72P, S27X library (right).
 Titrations with aspartate (solid lines) and glutamate (dashed lines) in bacterial lysate.
-(B) Excitation and emission spectra of iAspSnFR2.mRuby3.
+(B) Excitation and emission spectra of iAspSnFR2-mRuby3.
 Left, 1-photon spectra.
 Excitation wavelength was varied from 400 nm to 520 nm (7.5 nm bandpass) while observing emission at 535 nm (10 nm bandpass).
 Emission wavelength was varied from 535 nm to 600 nm (10 nm bandpass) while exciting at 510 nm (7.5 nm bandpass).
@@ -133,18 +139,18 @@ Right, 2-photon cross-sections, also ± 10 mM aspartate, with an overlay of calc
 Vertical bar indicates 1040 nm.
 }{\fbox{\includegraphics[width=0.7\linewidth]{figures/Fig1S1.pdf}}}\label{figsupp:f1S1}
 \figsupp[Decoy, temperature and pH sensitivity.]{
-(A) iAspSnFR2.mRuby3 does not appreciably change its green fluorescence in response to other amino acids (alanine, phenylalanine, glycine, histidine (red line), isoleucine, leucine, methionine, proline, glutamine, arginine, serine, threonine, valine, or tryptophan).
+(A) iAspSnFR2-mRuby3 does not appreciably change its green fluorescence in response to other amino acids (alanine, phenylalanine, glycine, histidine (red line), isoleucine, leucine, methionine, proline, glutamine, arginine, serine, threonine, valine, or tryptophan).
 Insert with aspartate in black and glutamate/asparagine in grey for comparison.
 Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass), 0.2 µM purified protein in PBS.
-(B) iAspSnFR2.mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids, with apparent responses to histidine at 100 µM (red trace).
+(B) iAspSnFR2-mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids, with apparent responses to histidine at 100 µM (red trace).
 Ex. 587 nm (20 nm bandpass), Em. 662 nm (20 nm bandpass).
-(C) iAspSnFR2.mRuby3 does not respond to other decoys: citrate, lactate, pyruvate, malate, alpha-ketoglutarate, cis-aconitate, succinate, fumarate, or oxaloacetate (orange squares); nor to relevant pharmacological treatments: rotenone (green squares) or metformin.
+(C) iAspSnFR2-mRuby3 does not respond to other decoys: citrate, lactate, pyruvate, malate, alpha-ketoglutarate, cis-aconitate, succinate, fumarate, or oxaloacetate (orange squares); nor to relevant pharmacological treatments: rotenone (green squares) or metformin.
 The small increase in fluorescence from rotenone is likely due to the scattering of a visibly turbid solution; rotenone has very low solubility in water.
 Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass).
-(D) iAspSnFR2.mRuby3 is not adversely affected by temperature.
+(D) iAspSnFR2-mRuby3 is not adversely affected by temperature.
 Fluorescence as a function of aspartate titration at 23°C (light grey), 30°C (medium grey), and 37°C (black).
 Error bars are standard deviation of three technical replicates.
-(E) pH sensitivity of iAspSnFR2.mRuby3 (green component).
+(E) pH sensitivity of iAspSnFR2-mRuby3 (green component).
 Ex 485 nm (5 nm bp), Em 515 nm (10 nm bp).
 Error bars are standard deviation of 5 technical replicates.
 Solid line is with 3 mM aspartate, dashed line is without aspartate.
@@ -155,8 +161,8 @@ Solid line is with 3 mM aspartate, dashed line is without aspartate.
 
 
 \subsection{iAspSnFR2 reveals the temporal dynamics of aspartate limitation}
-Having shown that iAspSnFR2.mRuby3 protein can measure the concentration of aspartate \textit{in vitro} through standard equilibrium ligand binding titrations, we wanted to test the usefulness of the sensor in cells.
-To that end, we generated stable cell lines with constitutive expression of iAspSnFR2.mRuby3 or iAspSnFR2 and nuclear localized RFP, and generated single cell clones from each to yield cell lines with uniform expression of each construct.
+Having shown that iAspSnFR2-mRuby3 protein can measure the concentration of aspartate \textit{in vitro} through standard equilibrium ligand binding titrations, we wanted to test the usefulness of the sensor in cells.
+To that end, we generated stable cell lines with constitutive expression of iAspSnFR2-mRuby3 or iAspSnFR2 and nuclear localized RFP, and generated single cell clones from each to yield cell lines with uniform expression of each construct.
 In each case, we then normalized GFP sensor signal to RFP signal to control for expression differences within and across cell lines.
 We also noted that normalization with nuclear RFP and RFP fusion were highly correlated, enabling iAspSnFR2 sensor applications where nuclear RFP labeling is desirable (\FIGSUPP[Fig2]{f2S1}, panel C) e.g. for counting cells at multiple timepoints using live cell imaging.
 An important motivation for using a biosensor for tracking aspartate changes is to enable temporal measurements on the same subset of live cells.
@@ -206,7 +212,7 @@ RFP normalized iAspSnFR2 signal change over time following rotenone treatment of
 Related to \FIG{Fig2}, panel A; however, these experiments are not normalized to a pre-treatment scan.
 Grey dashed lines indicate the time of treatment and the first scan occurs 30 min after this.
 (A) HT1080 cells using nuclear RFP to normalize the iAspSnFR2 signal.
-(B) HT1080 cells using an RFP fused to iAspSnFR2 (iAspSnFR2.mRuby3) for normalization.
+(B) HT1080 cells using an RFP fused to iAspSnFR2 (iAspSnFR2-mRuby3) for normalization.
 (C) Comparison between the steady-state signal of (A) and (B) with a linear regression shown as a red dashed line to show that nuclear RFP and RFP fusion normalizations are equivalent.
 (D) HEK293t cells using an RFP fused to iAspSnFR2 for normalization.
 For plots (A), (B) and (D) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
@@ -312,21 +318,22 @@ Altogether, adoption of iAspSnFR2 to measure aspartate levels will therefore pro
 
 \subsection{Sensor engineering and screening}
 The starting template for iAspSnFR2 was a variant along the path of making iGluSnFR3.
+%KD: Assume this is the word document sequence. We should upload that as a supplementary file.
 Sequence information is in Supp. Figs.
 Site saturation mutagenesis at positions S72 and S27 was achieved by the uracil template method \citep{Kunkel1985-ev}.
 Mutant libraries (maximum theoretical diversity of 20 each) were transformed into T7 express cells.
 Individual colonies were picked into a 96-well plate containing auto-induction media \citep{Studier2005-ki} and shaken at 30˚C for 18-24 hours, then harvested by centrifugation.
 Cell pellets were resuspended in PBS and repelleted by centrifgugation 5 times over, then frozen as pellets overnight.
 The frozen 96-well plate was thawed by addition of room temperature PBS, agitated by vortexing to resuspend and lyse cells, and then pelleted again.
-100 µL clarified lysate was added to each of two black 96-well plates and its fluorescence read.
+100 µL clarified lysate was added to each of two black 96-well plates and its fluorescence was measured.
 Aspartate or glutamate was added (final concentration 100 µM) and fluorescence was measured again.
-Wells that had a higher ∆F/F for aspartate than glutamate were isolated, titrated with aspartate or glutamate, and sequenced.
+Wells that had a higher ∆F/F for aspartate than glutamate were isolated, titrated with aspartate and glutamate, and sequenced.
 After confirming that S72P was the most selective variant for aspartate from a library of S72X, a library of S27X was made in the background of S72P.
-The process was repeated, and S72P+S27A was identified as the "best" aspartate sensor.
-mRuby3 was subsequently cloned at the C-terminus.
+The selection process was repeated, and S72P+S27A was identified as the "best" aspartate sensor and named iAspSnFR2.
+mRuby3 was subsequently cloned at the C-terminus and this construct was named iAspSnFR2-mRuby3.
 
 \subsection{Protein expression and purification}
-For large scale protein expression and purification, iAspSnFR2.mRuby3 was transformed into T7 express cells, and a single colony was grown in 300 mL auto-induction media \citep{Studier2005-ki} at 30˚C for ~18 hours.
+For large scale protein expression and purification, iAspSnFR2-mRuby3 was transformed into T7 express cells, and a single colony was grown in 300 mL auto-induction media \citep{Studier2005-ki} at 30˚C for ~18 hours.
 Cells were pelleted by centrifugation at 6000g, resuspended in PBS and 1 M NaCl and frozen.
 The resuspended cell pellet was thawed, sonicated on ice (5 sec on, 5 sec off, 10 min), and centirfuged at 6000g to remove cellular debris.
 The lysate was further clarified by centrifugation at 350,000g for 1 hour, and then purified by IMAC on a HisTrap FF column, with a 2 mL/min flow rate and elution from 0 to 200 mM imidazole over 120 mL.
@@ -335,7 +342,7 @@ Protein concentration was determined by alkaline denaturation, and measurement a
 
 \subsection{Sensor biochemical characterization}
 \textit{In vitro} fluorescence measurements were performed on a Tecan Spark plate reading fluorimeter at ~28˚C, with the exception of the controlled temperature measurement, in which a BioTek Cytation 5 was used.
-Concentrated iAspSnFR2.mRuby3 protein was diluted to 0.2 µM in PBS for all measurements.
+Concentrated iAspSnFR2-mRuby3 protein was diluted to 0.2 µM in PBS for all measurements.
 Decoy amino acids and pharmacologues were purchased from Sigma-Aldrich and solvated as 100 mM stocks in PBS, with the exception of rotenone, which was resuspended in DMSO.
 Titrations were performed by making serial dilutions (1:2) of the stock compound into PBS, and adding 10 uL of that to 100 uL of 0.2 µM protein solution.
 Fluorescence was measured before addition of compound, and ∆F/F was calculated as (F(treatment)-F(initial))/F(initial).
@@ -350,25 +357,25 @@ Cells were incubated in a humidified incubator at 37°C with 5\% CO2.
 
 \subsection{Generation of nuclear RFP cell lines}
 Nuclear expressing cell lines were generated using 1e5 transducing units of EF1A-nuclear RFP lentivirus (Cellomics Technology, PLV-10205-50) by spinfection.
-Cells were seeded at 50\% confluency in 6 well dishes and lentivirus was added to fresh media with 8 µg/µL polybrene and added to cells followed by centrifugation (900g, 90 mins, 30°C).
+Cells were seeded at 50\% confluency in 6 well dishes, lentivirus was added to fresh media with 8 µg/µL polybrene, then added to cells and followed by centrifugation (900g, 90 mins, 30°C).
 Two days after infection, cells were sorted for high RFP expression using fluorescence-activated cell sorting (FACS).
 High RFP cells were then expanded and single-cell cloned by limiting dilution, plating 0.5 cells/well on a 96 well plate.
 Plates were then screened for RFP expression and localization using Incucyte S3 (Sartorius) and a suitable clone chosen, expanded, and used for all subsequent experiments.
 
 \subsection{Lentiviral production and stable cell line generation}
-iAspSnFR2 and iAspSnFR2-RFP (iAspSnFR2 with a C-termal fusion to mRuby3) were first cloned into entry vector pENTR1A (Fisher, A10462) using NEBuilder HiFI DNA Assembly Cloning Kit (New England BioLabs, E2621).
+iAspSnFR2 and iAspSnFR2-mRuby3 were first cloned into entry vector pENTR1A (Fisher, A10462) using NEBuilder HiFI DNA Assembly Cloning Kit (New England BioLabs, E2621).
 These donor constructs were then used to transfer their insert into destination vectors: pLX304-CMV-Blast (Addgene, 25890), pLenti-CMV-Hygro (w117-1) (Addgene, 17454 a gift from Eric Campeau \& Paul Kaufman), or pLX304-CAG-Blast using LR Clonase II (Fisher, 11791100).
 pLX304-CAG-Blast was generated in house by swapping the CMV promoter region of pLX304-CMV-Blast with a CAG promoter provided on synthetic DNA (Integrated DNA Technologies).
 Each plasmid sequence was verified by whole plasmid sequencing (Plasmidsaurus).
-Lentivirus was generated by transfection of HEK293T cells with destination vectors plasmid DNA with the packaging plasmids pMDLg/pRRE (Addgene, 12251), pRSV-Rev, (Addgene, 12253) and pMD2.G (Addgene, 12259) and FuGENE transfection reagent (Fisher, PRE2693) in DMEM (Fisher, MT10017CV) without FBS or penicillin-streptomycin.
+Lentivirus was generated by co-transfection of HEK293T cells with destination vector plasmid DNA and the packaging plasmids pMDLg/pRRE (Addgene, 12251), pRSV-Rev, (Addgene, 12253) and pMD2.G (Addgene, 12259) using FuGENE transfection reagent (Fisher, PRE2693) in DMEM (Fisher, MT10017CV) without FBS or penicillin-streptomycin.
 The supernatant containing lentiviral particles was filtered through a 0.45 µM membrane (Fisher, 9720514) and was supplemented with 8 µg/µL polybrene (Sigma, TR-1003-G) prior to infection.
 For infection, cells were seeded at 50\% confluency in 6 well dishes and centrifuged with lentivirus (900g, 90 mins, 30°C).
 After 24 hours the media was replaced with fresh media and after 48 hours cells were treated with either 1 µg/mL blasticidin (Fisher, R21001) or 150 µg/mL hygromycin (Sigma-Aldrich, H7772-1G) and maintained in selection media until all uninfected control cells died.
 After selection, cells were expanded and single-cell cloned by limiting dilution, plating 0.5 cells/well using 2-3 96 well plates.
 These clones were incubated until 10-30\% confluency and screened for high GFP and RFP signal using Incucyte S3 (Sartorius).
-The highest expressing monoclonal cells were selected and further expanded on 6 well plates and screened for fluorescence using the Incucyte.
+The highest expressing monoclonal cells were selected and further expanded on 6 well plates and again screened for fluorescence using the Incucyte.
 Clones were then expanded and used for subsequent experiments.
-Different cell lines received different vector-sensor combinations: HEK293T cells were infected with pLX304-CAG-Blast-iAspSnFR2-RFP, HT1080 with pLenti-CMV-Hygro-iAspSnFR2-RFP and HT1080, H1299 and H1299 GOT1/2 DKO cells expressing nuclear RFP were infected with pLenti-CMV-Hygro-iAspSnFR2.
+Different cell lines received different vector-sensor combinations: HEK293T cells were infected with pLX304-CAG-iAspSnFR-mRuby3 (blasticidin), HT1080 with pLenti-iAspSnFR-mRuby3 (hygromycin) and HT1080, H1299 and H1299 GOT1/2 DKO cells expressing nuclear RFP were infected with pLenti-iAspSnFR (hygromycin).
 
 \subsection{Generation of GOT1/2 double knockout (DKO) cells}
 Protocol and guide RNA generation was identical to that described in \cite{Hart2023-gp}.
