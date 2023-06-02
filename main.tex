@@ -101,7 +101,6 @@ It also does not appreciably change its green fluorescence in response to other 
 Surprisingly, the mRuby3 component responds to some amino acids at high millimolar concentrations, indicating a non-specific effect, potentially interacting with the C-terminal histidine tag (\FIGSUPP[Fig1]{f1S2}, panel B).
 Notably, this increase in fluorescence is still an order of magnitude lower than the green fluorescence response and at amino acid concentrations that are unlikely to be achieved in most cell types.
 The sensor also does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (\FIGSUPP[Fig1]{f1S2}, panel C).
-%LS- Reordered the next two sentences so the panels are in sequence
 A recently reported and concurrently developed sensor for aspartate is reported to be adversely effected by temperatures higher than 30˚C, causing lower maximum ∆F/F \citep{Hellweg2023}.
 Our aspartate sensor appears unaffected by temperature up to 37°C, with the same maximum ∆F/F at 37°C as compared to 30˚C (\FIGSUPP[Fig1]{f1S2}, panel D).
 It is sensitive to pH, as are all cpGFP-based sensors, but changes in fluorescence due to changes in aspartate far exceed what one might expect from changes in fluorescence due to changes in pH (\FIGSUPP[Fig1]{f1S2}, panel E).
@@ -166,16 +165,16 @@ In each case, we then normalized GFP sensor signal to RFP signal to control for 
 We also noted that normalization with nuclear RFP and RFP fusion were highly correlated, enabling iAspSnFR2 sensor applications where nuclear RFP labeling is desirable (\FIGSUPP[Fig2]{f2S1}, panel C) e.g. for counting cells at multiple timepoints using live cell imaging.
 An important motivation for using a biosensor for tracking aspartate changes is to enable temporal measurements on the same subset of live cells, so we used an Incucyte S3 which performs live cell imaging under native cell line growth conditions.
 
-Aspartate levels are determined, in part, by its rate of production, which is dependent on the availability of metabolic precursors and the activity of several integrated metabolic processes [overview figure ref].
-One such process is the generation of a sufficiently large intracellular NAD+/NADH ratio to drive aspartate precursor synthesis, a process normally maintained through mitochondrial respiration [overview figure ref].
+Aspartate levels are determined, in part, by its rate of production, which is dependent on the availability of metabolic precursors and the activity of several integrated metabolic processes.
+One such process is the generation of a sufficiently large intracellular NAD+/NADH ratio to drive aspartate precursor synthesis, a process normally maintained through mitochondrial respiration (\FIG{Fig2}, panel A).
 Genetic alterations and pharmacological treatments that disrupt mitochondrial respiration can decrease NAD+/NADH and aspartate levels, both of which can be partially restored by supplementation with alternative electron acceptors, molecules that restore NAD+/NADH independent of mitochondrial respiration \citep{Sullivan2015-xf, Birsoy2015-pg}.
 We thus tested the ability of iAspSnFR2 to quantify depletion of intracellular aspartate abundance upon treatment with the mitochondrial complex I inhibitor rotenone and the partial rescue of aspartate by additionally supplementing cells with the the alternative electron acceptor pyruvate.
-Titrating rotenone in H1299 cells, we observed a dose dependent decrease in sensor fluorescence with increased rotenone, corresponding to the expected decrease in aspartate synthesis capacity (\FIG{Fig2}, panel A).
+Titrating rotenone in H1299 cells, we observed a dose dependent decrease in sensor fluorescence with increased rotenone, corresponding to the expected decrease in aspartate synthesis capacity (\FIG{Fig2}, panel B).
 This observation was extended to different cell lines with different rotenone sensitivities, corroborating the observation of decreased sensor fluorescence upon rotenone treatment and rescue by pyruvate supplementation (\FIGSUPP[Fig2]{f2S1}, panel A, B and D).
 
 We next evaluated the ability of the sensor to measure changes in aspartate without requiring treatment with a mitochondrial inhibitor.
 To this aim, we used CRISPR/Cas9 to generate an H1299 cell line with a double knockout (DKO) of the genes glutamic oxalacetic transaminases 1 and 2 (GOT1/2 DKO), which renders cells unable to synthesize aspartate and therefore dependent on aspartate uptake from the media \citep{Garcia-Bermudez2022-qn}.
-Using these H1299 GOT1/2 DKO cells, we titrated media aspartate and observed that sensor fluorescence decreased upon aspartate withdrawal and approached a steady-state after approximately 11 hours that corresponded to aspartate availability in the media (\FIG{Fig2}, panel B).
+Using these H1299 GOT1/2 DKO cells, we titrated media aspartate and observed that sensor fluorescence decreased upon aspartate withdrawal and approached a steady-state after approximately 11 hours that corresponded to aspartate availability in the media (\FIG{Fig2}, panel C).
 We note that 10 mM media aspartate, a higher concentration than any other amino acid in media, is still unable to rescue sensor signal significantly above aspartate depleted media, confirming previous observations that aspartate has poor cell permeability and often requires 20 mM aspartate or more to robustly contribute to intracellular aspartate pools \citep{Sullivan2018-gz}.
 
 
@@ -183,23 +182,29 @@ We note that 10 mM media aspartate, a higher concentration than any other amino 
 Metformin is a commonly used diabetes treatment that has been shown to act as a mitochondrial complex I inhibitor \citep{Owen2000-ri, El-Mir2000-qm, Andrzejewski2014-wm, Wheaton2014-ka} and can decrease intracellular aspartate levels in a dose responsive way \citep{Gui2016-ca}.
 Whereas rotenone is a lipophilic molecule that can cross the cell membrane and act rapidly, metformin is hydrophilic and poorly permeable to most cells, resulting in comparatively delayed kinetics for metformin to decrease mitochondrial respiration in intact cells.
 As rotenone and metformin are often used interchangeably as complex I inhibitors, we wondered whether they have an equivalent temporal effect on aspartate or if the delayed effects of metformin on mitochondrial inhibition would similarly delay its effects on aspartate levels.
-To test this, we treated cells with two doses each of rotenone and metformin with roughly equivalent aspartate lowering effects and followed the sensor signal over time (\FIG{Fig2}, panel D).
+To test this, we treated cells with two doses each of rotenone and metformin with roughly equivalent aspartate lowering effects and followed the sensor signal over time (\FIG{Fig2}, panel E).
 We observed that the aspartate depleting effects of metformin acted more slowly than rotenone, with 30 nM rotenone reaching steady-state after ~20h and 2 mM metformin reaching a similar sensor response after almost 40h.
 These data therefore provide orthogonal confirmation of the differential kinetics of these drugs on cell metabolism and highlight the temporal opportunities enabled by measuring aspartate levels by iAspSnFR2.
+
+
+
 
 \begin{figure}[ht!]
 \centering
 \fbox{\includegraphics[width=0.95\linewidth]{figures/Fig2.pdf}}
 \caption{
 iAspSnFR2 resolves temporal aspartate changes in live cells.
-RFP normalized iAspSnFR2 signal change over time following various perturbations of live cells.
+(A) Overview of aspartate metabolism and the effect of glutamine depletion, mitochondrial inhibition, GOT1/2 knockout and pyruvate/asparagine supplementation.
+ETC, electron transport chain.
+LDH, lactate dehydrogenase.
+For (B), (C), (E) and (F), sensor signal over time shown as RFP normalized iAspSnFR2 signal following various perturbations of live cells.
 All experiments shown are normalized to a pre-treatment scan, then treated with the specified drug or amino acid and scanned 30 min following treatment.
 Grey dashed lines indicate the time of treatment.
-(A) H1299 cells treated with a rotenone titration and rescued by co-treatment with pyruvate.
-(B) H1299 GOT1/2 double knockout cells grown in media with 40 mM aspartate, washed thrice in media without aspartate and then changed into media with a titration of aspartate.
-(C) Western blot verification of H1299 GOT1/2 double knockout.
-(D) H1299 cells treated with either rotenone or metformin at the same time to compare inhibitor kinetics.
-(E) H1299 cells changed into media with a titration of glutamine with or without 1 mM asparagine.
+(B) H1299 cells treated with a rotenone titration and rescued by co-treatment with pyruvate.
+(C) H1299 GOT1/2 double knockout cells grown in media with 40 mM aspartate, washed thrice in media without aspartate and then changed into media with a titration of aspartate.
+(D) Western blot verification of H1299 GOT1/2 double knockout.
+(E) H1299 cells treated with either rotenone or metformin at the same time to compare inhibitor kinetics.
+(F) H1299 cells changed into media with a titration of glutamine with or without 1 mM asparagine.
 Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
 AU, arbitrary unit.
 }
@@ -207,7 +212,7 @@ AU, arbitrary unit.
 \figsupp[Rotenone titration in different cell lines.]{
 iAspSnFR2 temporal response after rotenone treatment.
 RFP normalized iAspSnFR2 signal change over time following rotenone treatment of live cells.
-Related to \FIG{Fig2}, panel A; however, these experiments are not normalized to a pre-treatment scan.
+Related to \FIG{Fig2}, panel B; however, these experiments are not normalized to a pre-treatment scan.
 Grey dashed lines indicate the time of treatment and the first scan occurs 30 min after this.
 (A) HT1080 cells using nuclear RFP to normalize the iAspSnFR2 signal.
 (B) HT1080 cells using an RFP fused to iAspSnFR2 (iAspSnFR2-mRuby3) for normalization.
@@ -220,10 +225,11 @@ AU, arbitrary unit.
 \figsupp[Narrow range glutamine limitation.]{
 Aspartate depletes when glutamine is limiting.
 RFP normalized iAspSnFR2 signal change over time following glutamine depletion in H1299 cells.
-Identical to \FIG{Fig2}, panel E but with fewer glutamine concentrations and more well replicates.
+Identical to \FIG{Fig2}, panel F but with fewer glutamine concentrations and more well replicates.
 AU, arbitrary unit.
 }{\fbox{\includegraphics[width=0.65\linewidth]{figures/Fig2S2.pdf}}}\label{figsupp:f2S2}
 \end{figure}
+
 
 
 
@@ -233,11 +239,10 @@ It has previously been reported that asparagine, a product of aspartate metaboli
 We hypothesize that asparagine becomes essential in these conditions because glutamine starvation decreases synthesis of aspartate, slowing asparagine production, and because asparagine supplementation spares aspartate consumption, allowing it to be redirected into other essential fates.
 However, it has been difficult to measure metabolic changes during glutamine limitation because continuous glutamine consumption during the course of the experiment will result in progressive glutamine depletion and further developing metabolic effects.
 One solution to this problem is to measure the temporal changes in aspartate levels over the course of glutamine starvation, a possibility enabled by fluorescence based measurements of aspartate using iAspSnFR2.
-Indeed, we found that full glutamine depletion has a rapid and drastic effect on sensor signal and that this effect was delayed by adding back glutamine (\FIG{Fig2}, panel E).
+Indeed, we found that full glutamine depletion has a rapid and drastic effect on sensor signal and that this effect was delayed by adding back glutamine (\FIG{Fig2}, panel F).
 Aspartate signal did not robustly correlate with the concentration of glutamine in the media in the short term, but instead we found that higher amounts of glutamine in the media delayed the time until aspartate depletion, presumably corresponding to the time at which glutamine is fully depleted and unable to support further aspartate synthesis.
 Furthermore, we found that adding 1 mM asparagine delayed the decrease in sensor signal, suggesting that when asparagine can be salvaged from the media it diverts glutamine consumption that would otherwise be purposed for asparagine synthesis via aspartate consumption.
 We note that, as this data is produced in real-time, the method can be used to dynamically find the optimal sampling times to measure and compare intracellular levels of all the metabolites relevant to glutamine starvation.
-
 
 
 
