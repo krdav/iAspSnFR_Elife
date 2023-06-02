@@ -68,8 +68,6 @@ Therefore, our understanding of metabolism in multiple biological systems could 
 
 We have previously developed a biosensor for glutamate (iGluSnFR) using the \textit{E.coli} glutamate/aspartate binding domain (GltI) linked to circularly permutated GFP \citep{Marvin2013-qq}, and subsequently optimized it by modulating its affinity, kinetics, color, and total fluorescence change (SF-iGluSnFR and iGluSnFR3) \citep{Marvin2018-ks, Aggarwal2023-pi}.
 Since the GltI domain also binds aspartate, albeit at lower affinity than glutamate  \citep{Hu2008-nd}, we reasoned that subtle modifications to the ligand binding site could switch the relative aspartate/glutamate specificity.
-%KD: Do I understand this correctly: The S72X mutation screen was done on a precursor to iGluSnFR3, then iGluSnFR3 was developed and the best S72X mutations was transplated onto this scaffold and that is what is plotted in Fig1 S1?
-%KD: If this^ is not right we need to explain it better
 We achieved this using a small mutagenesis screen on a precursor to iGluSnFR3 (Supplementary file 1), guided by the crystal structure of glutamate-bound GltI.
 The resulting biosensor, iAspSnFR2, was characterized \textit{in vitro} and in cells with matched LCMS determined aspartate levels, showing that it accurately reports genetic and pharmacological manipulation of intracellular aspartate.
 
@@ -283,8 +281,7 @@ AU, arbitrary unit.
 }{\fbox{\includegraphics[width=0.98\linewidth]{figures/Fig3S1.pdf}}}\label{figsupp:f3S1}
 \end{figure}
 
-%LS - Which cell lines are using which iAspSnFR2 construct? Normalized to nuclear RFP or tagged RFP?
-%KD: See y-axis title. It should be consistent throughout. Still think it should be added to figure text?
+
 
 
 
@@ -295,7 +292,6 @@ In most studies involving aspartate metabolism, metabolite extraction is perform
 Using our sensor, we have shown that the time to reach steady-state can be much longer and depends on the pharmacological treatment.
 Future studies seeking to understand the effects of treatments affecting aspartate levels can therefore use real-time measurements using iAspSnFR2 to determine when cells have reached steady-state and then perform metabolite extraction for LCMS.
 
-%KD: Theirs is based on SF-iGluSnFR ours is based on iGluSnFR3 (right?). Maybe we should make that clear.
 Recently, a concurrently developed aspartate sensor based on SF-iGluSnFR was reported by another group \citep{Hellweg2023}.
 That aspartate sensor started with the S72A mutation, which was shown to preferentially bind aspartate over glutamate, but then included 6 additional mutations identified by a combination of targeted screening and deep mutational scanning.
 The starting point of our sensor was a variant along the path to the construction of an improved glutamate sensor (iGluSnFR3), with higher ∆F/F response in bacterial lysate screens of error-prone PCR libraries.
@@ -304,7 +300,6 @@ Our design differs from the one by \cite{Hellweg2023} by 25 mutations (Supplemen
 These mutations primarily derive from the iGluSnFR3 precursor and were selected because of an increase in ∆F/F compared to iGluSnFR.
 Indeed, our sensor appears to have a larger signal change both \textit{in vitro} and in live cells, although head-to-head comparisons have not been performed.
 Importantly, while the sensor from \cite{Hellweg2023} is adversely affected by temperatures of 37°C, our sensor is not effected, thus allowing us to perform cell culture experiments at standard incubation conditions.
-%KD: We could have tested this more carefully e.g. using SLC1A3
 Another difference is that our iAspSnFR2 sensor has a higher affinity for all three relevant ligands (aspartate, asparagine, and glutamate) compared the one reported by \cite{Hellweg2023}; however, we found no discernible effect of treatment with 1 mM asparagine on sensor signal in cell culture experiments and found no correlation between intracellular glutamate concentration and sensor fluorescence across treatment conditions (\FIGSUPP[Fig3]{f3S1}).
 Collectively, we conclude that the iAspSnFR2 aspartate sensor reported here has biochemical features that make it ideal for measuring intracellular aspartate levels in live cells.
 
