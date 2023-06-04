@@ -83,7 +83,7 @@ To shift the relative affinities of the two ligands, we evaluated the structure 
 By expressing mutant sensors in bacteria and measuring the fluorescence of bacterial lysate in response to aspartate and glutamate, we identified S72A and S72P as having switched specificity from glutamate to aspartate.
 S72T, identified in a faster version of iGluSnFR \citep{Helassa2018-fb}, also preferentially binds aspartate over glutamate.
 
-%KD: "a variant from that process" this is not a very specific description. I thought that iAspSnFR2 was just iGluSnFR3 with two mutations? If not Fig1 S1 needs to be relabelled.
+%KD: "a variant from that process" this is not a very specific description. I thought that jAspSnFR2 was just iGluSnFR3 with two mutations? If not Fig1 S1 needs to be relabelled.
 As an improved glutamate sensor (iGluSnFR3) was being developed \citep{Aggarwal2023-pi}, we took a variant from that process and queried the effect of S72A, S72T, and S72P on aspartate/glutamate affinity.
 In bacterial cell lysate, S72P maintained the expected shift to a preference for aspartate, and had a higher fluorescence fold increase (∆F/F) than either S72A or S72T (\FIGSUPP[Fig1]{f1S1}, panel A).
 To further increase specificity of the S72P mutant, we sampled mutations at S27, which also interacts with the carboxylate of bound glutamate.
@@ -246,7 +246,7 @@ We note that, as this data is produced in real-time, the method can be used to d
 
 
 
-\subsubsection{jAspSnFR2 signal correlates with intracellular aspartate concentration}
+\subsection{jAspSnFR2 signal correlates with intracellular aspartate concentration}
 It is an important requirement for an aspartate sensor that it reflects the intracellular concentration of aspartate over a biologically relevant range for several cell lines.
 Reference points for the intracellular aspartate concentration can be generated using metabolite extraction and LCMS, but it is important to note that this technique reports the total amount of aspartate summed across all compartments, which can differ in their aspartate concentration \citep{Chen2016-mf}.
 The LCMS derived concentration also does not reflect protein crowding, aspartate binding to enzymes or others factors that would effect the free aspartate concentration.
@@ -376,7 +376,7 @@ After selection, cells were expanded and single-cell cloned by limiting dilution
 These clones were incubated until 10-30\% confluency and screened for high GFP and RFP signal using Incucyte S3 (Sartorius).
 The highest expressing monoclonal cells were selected and further expanded on 6 well plates and again screened for fluorescence using the Incucyte.
 Clones were then expanded and used for subsequent experiments.
-Different cell lines received different vector-sensor combinations: HEK293T cells were infected with pLX304-CAG-iAspSnFR-mRuby3 (blasticidin), HT1080 with pLenti-iAspSnFR-mRuby3 (hygromycin) and HT1080, H1299 and H1299 GOT1/2 DKO cells expressing nuclear RFP were infected with pLenti-iAspSnFR (hygromycin).
+Different cell lines received different vector-sensor combinations: HEK293T cells were infected with pLX304-CAG-jAspSnFR2-mRuby3 (blasticidin), HT1080 with pLenti-jAspSnFR2-mRuby3 (hygromycin) and HT1080, H1299 and H1299 GOT1/2 DKO cells expressing nuclear RFP were infected with pLenti-jAspSnFR2 (hygromycin).
 
 \subsection{Generation of GOT1/2 double knockout (DKO) cells}
 Protocol and guide RNA generation was identical to that described in \cite{Hart2023-gp}.
@@ -410,7 +410,7 @@ For plates receiving asparagine (Sigma-Aldrich, A7094), this was added to 1 mM f
 Live cell imaging was performed on the Incucyte S3 using the GFP and RFP channels with default exposure times.
 Images were processed using the associated Incucyte software to subtract background, define areas of cell confluence and GFP/RFP signal and extract the sum of the fluorescence signal in these areas.
 The data for the GFP signal, RFP signal, GFP/RFP ratio and confluence for each well at each timepoint was exported and used for further data processing using Python code.
-The jAspSnFR2 signal (GFP channel) was normalized to an RFP signal, either as a stably expressed nuclear localized RFP (Nuc-RFP) or mRuby3 C-term fusion to iAspSnFR2.
+The jAspSnFR2 signal (GFP channel) was normalized to an RFP signal, either as a stably expressed nuclear localized RFP (Nuc-RFP) or mRuby3 C-term fusion to jAspSnFR2.
 For temporal measurements the first scan was made 30 min after treatment with subsequent scans indicated on relevant plots.
 For some experiments a pre-treatment scan was made shortly prior to treatment to normalize the data to this point.
 For comparisons of near steady-state measurements of GFP/RFP versus mass spectrometry based metabolite measurements, a single scan was made 24h after treatment, the plate was then quickly moved to ice and metabolite extraction performed (see below).
@@ -461,6 +461,9 @@ All data processing, curve fitting, plotting and statistics for experiments invo
 
 \subsection{Plasmid availability}
 Submitted to Addgene under article ID 28238106.
+
+\section{Acknowledgement}
+We would like to acknowledge Kaspar Podgorski for pre-publication plasmid access to iGluSnFR2 variants and Ronak Patel for the 2P spectral analysis.
 
 \section{Funding}
 This research was supported by the Proteomics \& Metabolomics Shared Resource of the Fred Hutch/University of Washington/Seattle Children’s Cancer Consortium (P30 CA015704).
