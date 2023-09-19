@@ -29,7 +29,7 @@
 \affil[3]{Howard Hughes Medical Institute (HHMI), Janelia Research Campus, Ashburn, VA, USA}
 
 \corr{marvinj@janelia.hhmi.org}{JSM}
-\corr{sullivan@fredhutch.org}{LBS}
+\corr{lucas@fredhutch.org}{LBS}
 
 \contrib[\authfn{1}]{These authors contributed equally to this work}
 
@@ -171,11 +171,15 @@ Genetic alterations and pharmacological treatments that disrupt mitochondrial re
 We thus tested the ability of jAspSnFR3 to quantify depletion of intracellular aspartate abundance upon treatment with the mitochondrial complex I inhibitor rotenone and the partial rescue of aspartate by supplementing cells with pyruvate.
 Titrating rotenone in H1299 cells, we observed a dose dependent decrease in sensor fluorescence with increased rotenone, corresponding to the expected decrease in aspartate synthesis capacity, and a partial restoration of fluorescence in cells co-treated with pyruvate (\FIG{Fig2}, panel B).
 This observation was extended to different cell lines with different rotenone sensitivities, corroborating the observation of decreased sensor fluorescence upon rotenone treatment and rescue by pyruvate supplementation (\FIGSUPP[Fig2]{f2S1}, panel A, B and D).
+% Furthermore, we tested and confirmed the ability of pyruvate to rescue aspartate levels after an initial depletion phase (suppl. figure).
 
 We next evaluated the ability of the sensor to measure changes in aspartate without requiring treatment with a mitochondrial inhibitor.
 To this aim, we used CRISPR/Cas9 to generate an H1299 cell line with a double knockout (DKO) of the genes glutamic oxalacetic transaminases 1 and 2 (GOT1/2 DKO), which renders cells unable to synthesize aspartate and therefore dependent on aspartate uptake from the media \citep{Garcia-Bermudez2022-qn}.
 Using these H1299 GOT1/2 DKO cells, we titrated media aspartate and observed that sensor fluorescence decreased upon aspartate withdrawal, approaching a steady-state after approximately 11 hours that corresponded to the aspartate availability in the media (\FIG{Fig2}, panel C).
 We note that 10 mM media aspartate, a higher concentration than any other amino acid in media, is still unable to rescue sensor signal significantly above aspartate depleted media, confirming previous observations that aspartate has poor cell permeability and often requires 20 mM aspartate or more to robustly contribute to intracellular aspartate pools \citep{Sullivan2018-gz}.
+
+% Finally, we evaluated the ability of limiting synthesis to cause Asp depletion (Gln) [figure]
+
 
 
 \subsubsection{Metformin has slower inhibitor kinetics compared to rotenone}
@@ -236,6 +240,8 @@ AU, arbitrary unit.
 \end{figure}
 
 
+% \subsubsection{Oligomycin induced decrease in aspartate can be rescued by uncoupling the mitochondrial embrane potential}
+% blaa, new figure
 
 
 \subsubsection{Asparagine salvage diverts glutamine consumption}
@@ -248,6 +254,7 @@ Indeed, we found that full glutamine depletion has a rapid and drastic effect on
 Aspartate signal did not robustly correlate with the concentration of glutamine in the media in the short term, but instead we found that higher amounts of glutamine in the media delayed the time until aspartate depletion, presumably corresponding to the time at which glutamine is fully depleted and unable to support further aspartate synthesis.
 Furthermore, we found that adding 1 mM asparagine delayed the decrease in sensor signal, suggesting that when asparagine can be salvaged from the media it diverts glutamine consumption that would otherwise be purposed for asparagine synthesis via aspartate consumption.
 We note that, as this data is produced in real-time, the method can be used to dynamically find the optimal sampling times to measure and compare intracellular levels of all the metabolites relevant to glutamine starvation using mass spectrometry.
+
 
 
 
