@@ -94,7 +94,6 @@ All biochemical characterization is reported with jAspSnFR3-mRuby3.
 For jAspSnFR3 signal normalization in cells we used a mix of jAspSnFR3-mRuby3 and nuclear localized RFP.
 
 Further characterization of the sensor found it is yellow-shifted in excitation and emission compared to typical GFP-based sensors, since its chromophore is formed by the triad of GYG and has the T203Y pi-stacking mutations of the Venus yellow fluorescent protein.
-% Does this^ need a citation or figure reference?
 This yellow-shift facilitates observation deeper into tissues using 2-photon microscopy, as the sensor has high signal fold change and significant 2-photon cross-section at 1040 nm (\FIGSUPP[Fig1]{f1S1}, panel B).
 It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B).
 It also does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
@@ -162,7 +161,7 @@ Solid line is with 3 mM aspartate, dashed line is without aspartate.
 Having shown that jAspSnFR3-mRuby3 protein can measure the concentration of aspartate \textit{in vitro}, we wanted to test the usefulness of the sensor in cells.
 To that end, we generated stable cell lines with constitutive expression of jAspSnFR3-mRuby3 or jAspSnFR3 and nuclear localized RFP, and generated single cell clones from each to yield cell lines with uniform expression.
 In each case, we then normalized GFP sensor signal to RFP signal to control for expression differences within and across cell lines.
-We also noted that normalization with nuclear RFP and RFP fusion were highly correlated, enabling jAspSnFR3 sensor applications where nuclear RFP labeling is desirable e.g. for counting cells at multiple timepoints using live cell imaging (\FIGSUPP[Fig2]{f2S1}, panel C).
+We also noted that normalization with nuclear RFP and RFP fusion were highly correlated, enabling jAspSnFR3 sensor applications where nuclear RFP labeling is desirable e.g. for counting cells at multiple timepoints using live cell imaging (\FIGSUPP[Fig2]{f2S1}, panel D).
 An important motivation for using a biosensor for tracking aspartate changes is to enable temporal measurements on the same subset of live cells, therefore we used an Incucyte S3 which performs live cell imaging under native cell line growth conditions.
 
 Cellular aspartate levels depend on the availability of metabolic precursors and the activity of several metabolic processes.
@@ -170,15 +169,24 @@ One such process is the generation of a sufficiently large intracellular NAD+/NA
 Genetic alterations and pharmacological treatments that disrupt mitochondrial respiration can decrease NAD+/NADH and aspartate levels, both of which can be partially restored by supplementation with pyruvate \citep{Sullivan2015-xf, Birsoy2015-pg}.
 We thus tested the ability of jAspSnFR3 to quantify depletion of intracellular aspartate abundance upon treatment with the mitochondrial complex I inhibitor rotenone and the partial rescue of aspartate by supplementing cells with pyruvate.
 Titrating rotenone in H1299 cells, we observed a dose dependent decrease in sensor fluorescence with increased rotenone, corresponding to the expected decrease in aspartate synthesis capacity, and a partial restoration of fluorescence in cells co-treated with pyruvate (\FIG{Fig2}, panel B).
-This observation was extended to different cell lines with different rotenone sensitivities, corroborating the observation of decreased sensor fluorescence upon rotenone treatment and rescue by pyruvate supplementation (\FIGSUPP[Fig2]{f2S1}, panel A, B and D).
-% Furthermore, we tested and confirmed the ability of pyruvate to rescue aspartate levels after an initial depletion phase (suppl. figure).
+This observation was extended to different cell lines with different rotenone sensitivities, corroborating the observation of decreased sensor fluorescence upon rotenone treatment and rescue by pyruvate supplementation (\FIGSUPP[Fig2]{f2S1}, panel A, B and E).
+Furthermore, we tested and confirmed the ability of pyruvate to rescue aspartate levels after an initial depletion phase with rotenone, thus confirming that the sensor is also able to measure the reverse kinetics of aspartate restoration (\FIGSUPP[Fig2]{f2S1}, panel C).
 
 We next evaluated the ability of the sensor to measure changes in aspartate without requiring treatment with a mitochondrial inhibitor.
 To this aim, we used CRISPR/Cas9 to generate an H1299 cell line with a double knockout (DKO) of the genes glutamic oxalacetic transaminases 1 and 2 (GOT1/2 DKO), which renders cells unable to synthesize aspartate and therefore dependent on aspartate uptake from the media \citep{Garcia-Bermudez2022-qn}.
-Using these H1299 GOT1/2 DKO cells, we titrated media aspartate and observed that sensor fluorescence decreased upon aspartate withdrawal, approaching a steady-state after approximately 11 hours that corresponded to the aspartate availability in the media (\FIG{Fig2}, panel C).
+Using these H1299 GOT1/2 DKO cells, we titrated media aspartate and observed that sensor fluorescence decreased upon aspartate withdrawal, approaching a steady-state after approximately 11 hours, that corresponded to the aspartate availability in the media (\FIG{Fig2}, panel C).
 We note that 10 mM media aspartate, a higher concentration than any other amino acid in media, is still unable to rescue sensor signal significantly above aspartate depleted media, confirming previous observations that aspartate has poor cell permeability and often requires 20 mM aspartate or more to robustly contribute to intracellular aspartate pools \citep{Sullivan2018-gz}.
 
-% Finally, we evaluated the ability of limiting synthesis to cause Asp depletion (Gln) [figure]
+Finally, we evaluated the ability of the sensor to measure rapid decreases/increases in aspartate levels.
+In most cancer cell lines, intracellular aspartate is derived primarily from glutamine oxidation, thus making glutamine depletion and restoration an entry point for affecting aspartate levels.
+Glutamine withdrawal from H1299 cells showed a rapid depletion in sensor fluorescence with a low level steady-state reached after approximately 12-16 h (\FIG{Fig2}, panel E).
+In the same cells, glutamine repletion, after different times of glutamine depletion, caused an initial rapid increase in sensor fluorescence followed by a slower adjustment phase before reaching baseline.
+Particularly interesting is the sensor readings for cells repleted with glutamine 6 h after withdrawal showing a rapid increase followed by a decrease before a slow increase to baseline.
+We concurrently measured the cell count over time by counting RFP positive nuclei and the cell confluency (\FIGSUPP[Fig2]{f2S2}, panel A and B).
+These data confirm that cells remain viable 12 h after glutamine withdrawal and that proliferation rates are first fully recovered when aspartate levels reach baseline.
+Interestingly, the proliferation rate undergoes a similar multi-phase recovery as the aspartate sensor signal.
+We suspect these phases to be driven by low aspartate causing S-phase arrest during glutamine deprivation \citep{Patel2016-ms}, and although more evidence is necessary to prove this suspicion, our data shows that an aspartate sensor is an excellent tool towards this end.
+
 
 
 
@@ -187,7 +195,7 @@ Metformin is a commonly used diabetes treatment that has been shown to act as a 
 %KD: We know this to be true from Seahorse experiments but have no good refence.
 Whereas rotenone is a lipophilic molecule that can cross the cell membrane and act rapidly, metformin is hydrophilic and poorly permeable to most cells, resulting in comparatively delayed kinetics for metformin to decrease mitochondrial respiration in intact cells.
 As rotenone and metformin are often used interchangeably as complex I inhibitors, we wondered whether they have an equivalent temporal effect on aspartate or if the delayed effects of metformin on mitochondrial inhibition would similarly delay its effects on aspartate levels.
-To test this, we treated cells with two doses each of rotenone and metformin with roughly equivalent aspartate lowering effects and followed the sensor signal over time (\FIG{Fig2}, panel E).
+To test this, we treated cells with two doses each of rotenone and metformin with roughly equivalent aspartate lowering effects and followed the sensor signal over time (\FIG{Fig2}, panel F).
 We observed that the aspartate depleting effects of metformin acted slower than rotenone, with 30 nM rotenone reaching steady-state after ~20h and 2 mM metformin reaching a similar sensor response after almost 40h.
 These data therefore provide orthogonal confirmation of the differential kinetics of these drugs on cell metabolism and highlight the temporal opportunities enabled by measuring aspartate levels by jAspSnFR3.
 
@@ -205,43 +213,46 @@ These data therefore provide orthogonal confirmation of the differential kinetic
 \ContinuedFloat
 \caption{
 jAspSnFR3 resolves temporal aspartate changes in live cells.
-(A) Overview of aspartate metabolism and the effect of glutamine depletion, mitochondrial inhibition, GOT1/2 knockout and pyruvate/asparagine supplementation.
+(A) Overview of aspartate metabolism, highlighting how glutamine depletion, mitochondrial inhibition, GOT1/2 knockout and pyruvate/asparagine supplementation can impact aspartate levels.
+(B) H1299 cells treated with a rotenone titration and rescued by co-treatment with pyruvate.
+(C) H1299 GOT1/2 double knockout cells grown in media with 40 mM aspartate, washed thrice in media without aspartate and then changed into media with a titration of aspartate.
+(D) Western blot verification of H1299 GOT1/2 double knockout.
+(E) H1299 cells changed into media without glutamine and then glutamine repleted (repl.) at the different timepoints.
+(F) H1299 cells treated with either rotenone or metformin to compare inhibitor kinetics.
+(G) HT1080 cells treated with oligomycin A and after 22 h rescued with a titration of mitochondrial uncoupler BAM15.
+(H) H1299 cells changed into media with a titration of glutamine with or without 1 mM asparagine.
 GLN, glutamine.
 ETC, electron transport chain.
 LDH, lactate dehydrogenase.
 OAA, oxaloacetic acid.
 ASP, aspartate.
 ASN, asparagine.
-For (B), (C), (E) and (F), sensor signal over time shown as RFP normalized jAspSnFR3 signal following various perturbations of live cells.
-All experiments shown are normalized to a pre-treatment scan, then treated with the specified drug or amino acid and scanned 30 min following treatment.
+For (B), (C), (E), (F), (G) and (H) sensor signal over time shown as RFP normalized jAspSnFR3 signal following various perturbations of live cells.
+All experiments shown are normalized to a pre-treatment scan and then treated with the specified drug or amino acid.
 Grey dashed lines indicate the time of treatment.
-(B) H1299 cells treated with a rotenone titration and rescued by co-treatment with pyruvate.
-(C) H1299 GOT1/2 double knockout cells grown in media with 40 mM aspartate, washed thrice in media without aspartate and then changed into media with a titration of aspartate.
-(D) Western blot verification of H1299 GOT1/2 double knockout.
-(E) H1299 cells treated with either rotenone or metformin to compare inhibitor kinetics.
-(F) H1299 cells changed into media with a titration of glutamine with or without 1 mM asparagine.
+Colored dashed lines indicate the time of treatment for multiple treatments in the same plot.
 Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
 AU, arbitrary unit.
 }
 \label{fig:Fig2}
 \figsupp[Rotenone titration in different cell lines.]{
 jAspSnFR3 temporal response after rotenone treatment.
-RFP normalized jAspSnFR3 signal change over time following rotenone treatment of live cells.
-Related to \FIG{Fig2}, panel B; however, these experiments are not normalized to a pre-treatment scan.
-Grey dashed lines indicate the time of treatment and the first scan occurs 30 min after this.
-(A) HT1080 cells using nuclear RFP to normalize the jAspSnFR3 signal.
-(B) HT1080 cells using an RFP fused to jAspSnFR3 (jAspSnFR3-mRuby3) for normalization.
-(C) Comparison between the steady-state signal of (A) and (B) with a linear regression shown as a red dashed line to show that nuclear RFP and RFP fusion normalizations are equivalent.
-(D) HEK293t cells using an RFP fused to jAspSnFR3 for normalization.
-For plots (A), (B) and (D) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
-For plot (C) markers indicate the average using available well replicates and errorbars are drawn as +/- the standard deviation of the replicates.
+(A) HT1080 cells using nuclear RFP to normalize the jAspSnFR3 signal, treated with a rotenone titration.
+(B) HT1080 cells using an RFP fused to jAspSnFR3 (jAspSnFR3-mRuby3) for normalization, treated with a rotenone titration.
+(C) HT1080 cells treated with 100 nM rotenone at the start of the experiment (0 h) and then rescued with pyruvate at start, 22 h or never.
+(D) Comparison between the steady-state signal of (A) and (B) with a linear regression shown as a red dashed line to show that nuclear RFP and RFP fusion normalizations are equivalent.
+(E) HEK293t cells using an RFP fused to jAspSnFR3 for normalization, treated with a rotenone titration.
+For plots (A), (B), (C) and (E) markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
+For plot (D) markers indicate the average using available well replicates and errorbars are drawn as +/- the standard deviation of the replicates.
+Grey dashed lines indicate the time of treatment.
+Orange dashed line in panel (C) indicates time of pyruvate addition.
 AU, arbitrary unit.
 }{\fbox{\includegraphics[width=0.98\linewidth]{Fig2S1.pdf}}}\label{figsupp:f2S1}
-\figsupp[Narrow range glutamine limitation.]{
-Aspartate depletes when glutamine is limiting.
-RFP normalized jAspSnFR3 signal change over time following glutamine depletion in H1299 cells.
-Identical to \FIG{Fig2}, panel F but with fewer glutamine concentrations and more well replicates.
-AU, arbitrary unit.
+\figsupp[Plots related to glutamine limitation.]{
+(A) Nuclei count over time for conditions displayed in \FIG{Fig2}, panel E.
+(B) Cell confluency over time for conditions displayed in \FIG{Fig2}, panel E.
+(C) H1299 cells changed into media with a titration of glutamine with or without 1 mM asparagine.
+Identical to \FIG{Fig2}, panel H but with fewer glutamine concentrations and more well replicates.
 }{\fbox{\includegraphics[width=0.8\linewidth]{Fig2S2.pdf}}}\label{figsupp:f2S2}
 \end{figure}
 
@@ -249,21 +260,21 @@ AU, arbitrary unit.
 
 
 
+\subsubsection{Oligomycin induced decrease in aspartate can be rescued by uncoupling the mitochondrial membrane potential}
+Oligomycin A binds to and inhibits the proton coupled rotation of ATP synthase \citep{Symersky2012-dv}.
+This inhibition leads to a slowing of the electron transfer in the mitochondrial electron transport chain by hyperpolarizing the membrane potential \citep{Brand2011-ms} and it has previously been shown that the cellular effects of oligomycin can be rescued by partial uncoupling of the mitochondrial membrane potential \citep{Sullivan2015-xf}. 
+%Add reference for BAM15 rescuing oligomycin: PMID: 31730859
+We used our aspartate sensor to show that oligomycin induces a decrease in aspartate and that the mitochondrial membrane potential specific uncoupler BAM15 \citep{Kenwood2014-ni} can partially restore these aspartate levels (\FIG{Fig2}, panel G), thus confirming previous observation and illustrating the versatility of the our sensor.
 
 
-
-% \subsubsection{Oligomycin induced decrease in aspartate can be rescued by uncoupling the mitochondrial embrane potential}
-% blaa, new figure
 
 
 \subsubsection{Asparagine salvage diverts glutamine consumption}
-In most cancer cell lines, intracellular aspartate is derived primarily from glutamine oxidation, thus making glutamine depletion an entry point for affecting aspartate metabolism.
 It has previously been reported that asparagine, a product of aspartate metabolism, becomes essential upon glutamine starvation \citep{Pavlova2018-nl, Zhang2014-zz}.
 We hypothesize that asparagine becomes essential in these conditions because glutamine starvation decreases synthesis of aspartate, slowing asparagine production, and because asparagine supplementation spares aspartate consumption, allowing it to be redirected into other essential fates.
 However, it has been difficult to measure metabolic changes during glutamine limitation because continuous glutamine consumption during the course of the experiment will result in progressive glutamine depletion and further developing metabolic effects.
-One solution to this problem is to measure the temporal changes in aspartate levels over the course of glutamine starvation, a possibility enabled by fluorescence based measurements of aspartate using jAspSnFR3.
-Indeed, we found that full glutamine depletion has a rapid and drastic effect on sensor signal and that this effect was delayed by adding back glutamine (\FIG{Fig2}, panel F).
-Aspartate signal did not robustly correlate with the concentration of glutamine in the media in the short term, but instead we found that higher amounts of glutamine in the media delayed the time until aspartate depletion, presumably corresponding to the time at which glutamine is fully depleted and unable to support further aspartate synthesis.
+One solution to this problem is to measure the temporal changes in aspartate levels over the course of glutamine starvation and, indeed, we found that full glutamine depletion has a rapid and drastic effect on sensor signal (\FIG{Fig2}, panels E and H and \FIGSUPP[Fig2]{f2S2}, panel C).
+Interestingly, aspartate signal did not robustly correlate with the concentration of glutamine in the media in the short term, but instead we found that higher amounts of glutamine in the media delayed the time until aspartate depletion, presumably corresponding to the time at which glutamine is fully depleted and unable to support further aspartate synthesis.
 Furthermore, we found that adding 1 mM asparagine delayed the decrease in sensor signal, suggesting that when asparagine can be salvaged from the media it diverts glutamine consumption that would otherwise be purposed for asparagine synthesis via aspartate consumption.
 We note that, as this data is produced in real-time, the method can be used to dynamically find the optimal sampling times to measure and compare intracellular levels of all the metabolites relevant to glutamine starvation using mass spectrometry.
 
@@ -426,16 +437,18 @@ GOT2 & \begin{tabular}[c]{@{}l@{}}\texttt{UUUCUCAUUUCAGCUCCUGG}\\\texttt{CGGACGC
 Experiments were conducted in DMEM without pyruvate (Corning 50-013-PB) supplemented with 3.7 g/L sodium bicarbonate 10\% dialyzed fetal bovine serum (FBS) (Sigma-Aldrich, F0392) and 1\% penicillin-streptomycin solution.
 To start an experiment, cells were trypsinized (Corning, 25051CI), resuspended in media, counted using a coulter counter (Beckman Coulter, Multisizer 4) and seeded onto 24-well dishes (Nunc, 142475) with an initial seeding density of 50,000, 70,000, 70,000 or 150,000 cells/well for H1299, H1299 GOT1/2 DKO, HT1080 and HEK293T, respectively.
 After 24h (H1299, HT1080, HEK293T) or 48h (H1299 GOT1/2 DKO) incubation, treatment was added and plates moved into an Incucyte S3 (Sartorius) live cell imaging platform inside a humidified incubator at 37°C with 5\% CO2.
-Rotenone (Sigma-Aldrich, R8875), metformin (Sigma-Aldrich, D150959) and antimycin A (Sigma-Aldrich, A8674) treatments were spiked-in as 20x solutions in water and the 2 mM pyruvate (Sigma-Aldrich, P8574) was added as 500x stock in water.
+Rotenone (Sigma-Aldrich, R8875), metformin (Sigma-Aldrich, D150959), antimycin A (Sigma-Aldrich, A8674), oligomycin A (Sigma-Aldrich, 495455) and BAM15 (Cayman Chemical, 17811) treatments were spiked-in as 20x solutions in water and the 2 mM pyruvate (Sigma-Aldrich, P8574) was added as 500x stock in water.
 For treatments with varying media aspartate (Sigma-Aldrich, A7219) or glutamine (Sigma-Aldrich, G5792), wells were thrice washed and filled with media deplete of the given amino acid, then it was added as a spike-in at the specified concentration from a 20x solutions in water.
 For plates receiving asparagine (Sigma-Aldrich, A7094), this was added to 1 mM from a 20x solution in water, with vehicle wells receiving water.
 Live cell imaging was performed on the Incucyte S3 using the GFP and RFP channels with default exposure times.
 Images were processed using the associated Incucyte software to subtract background, define areas of cell confluence and GFP/RFP signal and extract the sum of the fluorescence signal in these areas.
 The data for the GFP signal, RFP signal, GFP/RFP ratio and confluence for each well at each timepoint was exported and used for further data processing using Python code.
 The jAspSnFR3 signal (GFP channel) was normalized to an RFP signal, either as a stably expressed nuclear localized RFP (Nuc-RFP) or mRuby3 C-term fusion to jAspSnFR3.
-For temporal measurements the first scan was made 30 min after treatment with subsequent scans indicated on relevant plots.
+For some experiments the Nuc-RFP was used to estimate cell counts per well by counting the number of nuclear foci in each field of view when scanning in the RFP channel.
+Cell confluency was determined with the phase contrast scans using the associated Incucyte software.
 For some experiments a pre-treatment scan was made shortly prior to treatment to normalize the data to this point.
-For comparisons of near steady-state measurements of GFP/RFP versus mass spectrometry based metabolite measurements, a single scan was made 24h after treatment, the plate was then quickly moved to ice and metabolite extraction performed (see below).
+For temporal measurements without a pre-treatment scan, the first scan was made 30 min after treatment with subsequent scans indicated on relevant plots.
+For comparisons of near steady-state measurements of GFP/RFP versus mass spectrometry based metabolite measurements, a single scan was made 24 h after treatment, the plate was then quickly moved to ice and metabolite extraction performed (see below).
 Another plate was processed in parallel for cell volume determination using a coulter counter and averaging across three replicate wells.
 The normalized jAspSnFR3 signal as a function of intracellular aspartate concentration, $f(c)$, was fitted by a baseline shifted Hill curve:
 
@@ -469,10 +482,10 @@ Each calibration curve was manually inspected for proper fit and measurements be
 Metabolite quantitation was performed using a Q Exactive HF-X Hybrid Quadrupole-Orbitrap Mass Spectrometer equipped with an Ion Max API source and H-ESI II probe, coupled to a Vanquish Flex Binary UHPLC system (Thermo Scientific).
 Mass calibrations were completed at a minimum of every 5 days in both the positive and negative polarity modes using LTQ Velos ESI Calibration Solution (Pierce).
 Polar Samples were chromatographically separated by injecting a sample volume of 1 μL into a SeQuant ZIC-pHILIC Polymeric column (2.1 x 150 mm 5 mM, EMD Millipore).
-The flow rate was set to 150 mL/min, autosampler temperature set to 10 °C, and column temperature set to 30 °C.
-Mobile Phase A consisted of 20 mM ammonium carbonate and 0.1 \% (v/v) ammonium hydroxide, and Mobile Phase B consisted of 100\% acetonitrile.
+The flow rate was set to 150 mL/min, autosampler temperature set to 10 °C, and column temperature set to 30°C.
+Mobile Phase A consisted of 20 mM ammonium carbonate and 0.1\% (v/v) ammonium hydroxide, and Mobile Phase B consisted of 100\% acetonitrile.
 The sample was gradient eluted (\%B) from the column as follows: 0-20 min.: linear gradient from 85\% to 20\% B; 20-24 min.: hold at 20\% B; 24-24.5 min.: linear gradient from 20\% to 85\% B; 24.5 min.-end: hold at 85\% B until equilibrated with ten column volumes.
-Mobile Phase was directed into the ion source with the following parameters: sheath gas = 45, auxiliary gas = 15, sweep gas = 2, spray voltage = 2.9 kV in the negative mode or 3.5 kV in the positive mode, capillary temperature = 300 °C, RF level = 40 \%, auxiliary gas heater temperature = 325°C.
+Mobile Phase was directed into the ion source with the following parameters: sheath gas = 45, auxiliary gas = 15, sweep gas = 2, spray voltage = 2.9 kV in the negative mode or 3.5 kV in the positive mode, capillary temperature = 300°C, RF level = 40\%, auxiliary gas heater temperature = 325°C.
 Mass detection was conducted with a resolution of 240,000 in full scan mode, with an AGC target of 3,000,000 and maximum injection time of 250 msec.
 Metabolites were detected over a mass range of 70-850 m/z.
 Quantitation of all metabolites was performed using Tracefinder 4.1 (Thermo Scientific) referencing an in-house metabolite standards library using ≤ 5 ppm mass error.
