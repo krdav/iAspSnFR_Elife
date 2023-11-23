@@ -89,9 +89,9 @@ In bacterial cell lysate, S72P maintained the expected shift to a preference for
 To further increase specificity of the S72P mutant, we sampled mutations at S27, which also interacts with the carboxylate of bound glutamate.
 One of those, S27A, had lower affinity for glutamate while mostly maintaining affinity for aspartate (\FIGSUPP[Fig1]{f1S1}, panel A).
 We then moved forward with this variant, and since it is built from a precursor of iGluSnFR3, named it Janelia-developed Aspartate-Sensing Fluorescent Reporter (jAspSnFR3).
-Since we expected to be using this sensor in cell culture studies, and potentially \textit{in vivo}, over the course of hours or even days, we added a C-terminal red fluorescence protein, mRuby3, to enable correction for expression and movement artefacts.
+Since we expected to be using this sensor in cell culture studies, and potentially \textit{in vivo}, over the course of hours or even days, we added a C-terminal red fluorescence protein, mRuby3, to enable correction for expression.
 All biochemical characterization is reported with jAspSnFR3-mRuby3.
-For jAspSnFR3 signal normalization in cells we used a mix of jAspSnFR3-mRuby3 and nuclear localized RFP.
+For jAspSnFR3 signal normalization in cells we used a mix of jAspSnFR3-mRuby3 and nuclear localized mRuby2.
 
 Further characterization of the sensor found it is yellow-shifted in excitation and emission compared to typical GFP-based sensors, since its chromophore is formed by the triad of GYG and has the T203Y pi-stacking mutations of the Venus yellow fluorescent protein.
 This yellow-shift facilitates observation deeper into tissues using 2-photon microscopy, as the sensor has high signal fold change and significant 2-photon cross-section at 1040 nm (\FIGSUPP[Fig1]{f1S1}, panel B).
@@ -345,7 +345,7 @@ Collectively, we conclude that the jAspSnFR3 aspartate sensor reported here has 
 In summary, we report a novel fluorescence based biosensor that enables dynamic measurements of aspartate.
 This tool is free of significant interference from relevant metabolites in physiological intracellular systems and can resolve changes in aspartate from diverse treatment conditions in live cells over time.
 This approach to measuring aspartate will also have advantages compared to LCMS based metabolomics, including enabling high throughput experiments to identify variables that affect aspartate levels, such as testing the effects of a drug library on cells in multiwell plates or using FACS based selection during genetic screens.
-Another potential use for this sensor would be to dissect compartmentalized metabolism, with mitochondria being a critical target.
+Another potential use for this sensor would be to dissect compartmentalized metabolism, with mitochondria being a critical target, although incorporating the influence of pH on sensor fluorescence will be an important consideration in this context.
 Altogether, adoption of jAspSnFR3 to measure aspartate levels will therefore provide novel opportunities to understand this critical node of cell metabolism.
 
 
@@ -383,6 +383,16 @@ Fluorescence was measured before addition of compound, and ∆F/F was calculated
 
 Two-photon cross sections were collected for 1 µM solutions of protein in PBS with or without 10 mM aspartate, excited by pulses from a mode-locked Ti:Sapphire laser (Chameleon Ultra, Coherent, 80 MHz, 140-fs pulse width, 1 mW power at the focus).
 Emission was detected by an avalanche photodiode (PDM Series, Micro Photon Devices) with a 550 nm filter (88-nm bandpass).
+
+Stopped-flow kinetics of binding were determined by mixing equal volumes of 0.2 µM jAspSnFR3 protein (in PBS, pH 7.4) with varying concentrations of aspartate in an Applied Photophysics SX20 stopped flow fluorimeter with 490 nm LED excitation and 510 nm long pass filter at room temperature (22°C).
+The increase in fluorescence upon mixing was observed with 1000 data points over the course of 1 sec (1 msec per data point) and equilibrium was reached within 100 msec.
+Each mixing was repeated five times and averaged.
+Standard deviations are excluded from the plots as the errorbars are nearly the same size as the data markers.
+The first 3 observations were discarded to remove mixing artefacts and account for the dead time of the instrument.
+Data were plotted and time courses were fit to a single rising exponential (y - intercept + total rise * (1 - exp(-kobs*t))) using Kaleidagraph (version 5.01).
+To estimate the Kd, kobs was plotted as a function of aspartate concentration and the linear portion of that graph was fit.
+The slope corresponding to the on-rate k1 (0.8 µM-1 sec-1) and the y-intercept corresponding to the off-rate k-1 (26 sec-1), resulting in a Kd of 33 µM.
+
 
 \subsection{Cell culture}
 Cell lines were acquired from ATCC (HEK293T, H1299, HT1080) and tested to be free from mycoplasma (MycoProbe, R\&D Systems).
