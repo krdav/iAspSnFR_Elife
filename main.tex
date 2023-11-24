@@ -94,27 +94,16 @@ For jAspSnFR3 signal normalization in cells we used a mix of jAspSnFR3-mRuby3 an
 
 Further characterization of the sensor found it is yellow-shifted in excitation and emission compared to typical GFP-based sensors, since its chromophore is formed by the triad of GYG and has the T203Y pi-stacking mutations of the Venus yellow fluorescent protein.
 This yellow-shift facilitates observation deeper into tissues using 2-photon microscopy, as the sensor has high signal fold change and significant 2-photon cross-section at 1040 nm (\FIGSUPP[Fig1]{f1S1}, panel B).
-It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B) and does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
+It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B).
+The sensor also does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A) or to other decoys considered relevant to aspartate metabolism, including pharmacological treatments (\FIGSUPP[Fig1]{f1S2}, panel B).
 We performed rapid-mixing stopped-flow fluorescence spectroscopy to determine the aspartate binding kinetics and measured an on-rate of 0.8 µM-1 sec-1 and an off-rate of 26 sec-1, resulting in a $K_D$ of 33 µM in agreement with equilibrium measurements (\FIGSUPP[Fig1]{f1S3}).
-The off-rate corresponds to a time to equilibrium of 130 msec. using five half-lives to define equilibrium \cite{Jarmoskaite2020-pj}.
+The off-rate corresponds to a time to equilibrium of 130 msec. when defined using five half-lives \citep{Jarmoskaite2020-pj}.
 
 Surprisingly, the mRuby3 fluorescence of affinity-purified jAspSnFR3.mRuby3 responds to some amino acids at high millimolar concentrations, indicating a non-specific effect (\FIGSUPP[Fig1]{f1S4}, panel A).
-This was determined to be due to an unexpected interaction with the C-terminal histidine tag and could be reproduced with other proteins containing mRuby3, purified via the same C-terminal histidine tag.
+This was determined to be due to an unexpected interaction with the C-terminal histidine tag and could be reproduced with other proteins containing mRuby3 and purified via the same C-terminal histidine tag (\FIGSUPP[Fig1]{f1S4}, panel B and C).
+Interestingly, a structurally related, non-amino acid compound, GABA, does not elicit a change in red fluorescence; indicating, that only amino acids are interacting with the histidine tag (\FIGSUPP[Fig1]{f1S4}, panel D).
+Nevertheless, most of our cell culture experiments were performed with nuclear localized mRuby2, which lack a C-terminal histidine tag, and these measurements correlated with those using the histidine tagged jAspSnFR3-mRuby3 construct (\FIGSUPP[Fig1]{f2S1}, panel D).
 
-
-
-showed similar increases in red fluorescence upon addition of millimolar concentrations of amino acids, particularly histidine.
-The attribution of the increase in red-fluorescence to the histidine tag is supported by the fact that mRuby2 and mRuby3 proteins lacking histidine tags, fail to change red fluorescence upon addition of aspartate or histidine.
-A structurally related, but non-amino acid compound, GABA, does not elicit a change in red fluorescence either.
-% The nuclear localized RFP used for cell culture experiments lack a C-terminal histidine tag, making the artefact moot.
-
-
-%It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B).
-%It also does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
-%Surprisingly, the mRuby3 component responds to some amino acids at high millimolar concentrations, indicating a non-specific effect, potentially interactions with the C-terminal histidine tag (\FIGSUPP[Fig1]{f1S4}, panel A).
-
-Notably, this increase in fluorescence is still an order of magnitude lower than the green fluorescence response and it occurs at amino acid concentrations that are unlikely to be achieved in most cell types.
-The sensor also does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (\FIGSUPP[Fig1]{f1S2}, panel B).
 A recently described and concurrently developed biosensor for aspartate is reported to be adversely affected by temperatures higher than 30°C, causing lower maximum ∆F/F \citep{Hellweg2023}.
 Our aspartate sensor appears unaffected by temperature up to 37°C, with the same maximum ∆F/F at 37°C as compared to 30°C (\FIGSUPP[Fig1]{f1S2}, panel C).
 Like all cpGFP-based sensors, it is sensitive to pH but changes in fluorescence due to aspartate far exceed what one might expect from changes in fluorescence due to physiologically attainable changes in intracellular pH (\FIGSUPP[Fig1]{f1S2}, panel D).
@@ -168,12 +157,12 @@ Solid line is with 3 mM aspartate, dashed line is without aspartate.
 \figsupp[Stopped-flow kinetics.]{
 (A) Stopped-flow kinetics of jAspSnFR3 using different aspartate concentrations for injection.
 Measurements were performed at a frequency of 1 per msec. and indicated by dots.
-To these measurements an exponential fit is shown in matching color as a solid line.
-(B) $k_{obs}$ as a function of aspartate concentration shown for two stopped-flow experiments.
-The line represents the linear function fitted to the linear range to extract the kinetic rates.
+To each time-series an exponential function was fit, shown as a solid line with matching color.
+(B) $k_{obs}$ as a function of aspartate concentration shown for two independent stopped-flow experiments.
+The line represents the linear function, fitted to the linear range to extract the kinetic rates.
 }{\fbox{\includegraphics[width=0.85\linewidth]{Fig1S3.pdf}}}\label{figsupp:f1S3}
 \figsupp[mRuby3 interaction with histidine tag.]{
-(A) jAspSnFR3-mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids, with apparent responses to histidine at 100 µM (red trace).
+(A) jAspSnFR3-mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids amino acids (alanine, phenylalanine, glycine, histidine, isoleucine, leucine, methionine, proline, glutamine, arginine, serine, threonine, valine, or tryptophan), with apparent responses to histidine at 100 µM (red line).
 (B) Increased red fluorescence of mRuby3 in response to histidine requires a C-terminal histidine tag.
 (C) Increased red fluorescence of mRuby3 in response to millimolar concentrations of aspartate requires a C-terminal histidine tag.
 (D) mRuby, with or without histidine tag, does not increase in fluorescence upon treatment with amino acid related compound gamma-aminobutyric acid (GABA).
@@ -205,17 +194,18 @@ Furthermore, we tested and confirmed the ability of pyruvate to rescue aspartate
 We next evaluated the ability of the sensor to measure changes in aspartate without requiring treatment with a mitochondrial inhibitor.
 To this aim, we used CRISPR/Cas9 to generate an H1299 cell line with a double knockout (DKO) of the genes glutamic oxalacetic transaminases 1 and 2 (GOT1/2 DKO), which renders cells unable to synthesize aspartate and therefore dependent on aspartate uptake from the media \citep{Garcia-Bermudez2022-qn}.
 Using these H1299 GOT1/2 DKO cells, we titrated media aspartate and observed that sensor fluorescence decreased upon aspartate withdrawal, approaching a steady-state after approximately 11 hours, that corresponded to the aspartate availability in the media (\FIG{Fig2}, panel C).
-We note that 10 mM media aspartate, a higher concentration than any other amino acid in media, is still unable to rescue sensor signal significantly above aspartate depleted media, confirming previous observations that aspartate has poor cell permeability and often requires 20 mM aspartate or more to robustly contribute to intracellular aspartate pools \citep{Sullivan2018-gz}.
+We note that 10 mM media aspartate, a higher concentration than any other amino acid in media, is still unable to rescue sensor signal significantly above aspartate depleted media.
+This confirm previous observations that aspartate has poor cell permeability and often requires concentrations of 20 mM or more to robustly contribute to intracellular aspartate pools \citep{Sullivan2018-gz}.
 
 Finally, we evaluated the ability of the sensor to measure rapid decreases/increases in aspartate levels.
 In most cancer cell lines, intracellular aspartate is derived primarily from glutamine oxidation, thus making glutamine depletion and restoration an entry point for affecting aspartate levels.
 Glutamine withdrawal from H1299 cells showed a rapid depletion in sensor fluorescence with a low level steady-state reached after approximately 12-16 h (\FIG{Fig2}, panel E).
 In the same cells, glutamine repletion, after different times of glutamine depletion, caused an initial rapid increase in sensor fluorescence followed by a slower adjustment phase before reaching baseline.
-Particularly interesting is the sensor readings for cells repleted with glutamine 6 h after withdrawal showing a rapid increase followed by a decrease before a slow increase to baseline.
-We concurrently measured the cell count over time by counting RFP positive nuclei and the cell confluency (\FIGSUPP[Fig2]{f2S2}, panel A and B).
+Particularly interesting is the sensor readings for cells repleted with glutamine 6 h after withdrawal, showing a rapid increase followed by a decrease, before a slow increase to baseline.
+We concurrently measured the cell count over time by counting RFP fluorescent nuclei and the cell confluency (\FIGSUPP[Fig2]{f2S2}, panel A and B).
 These data confirm that cells remain viable 12 h after glutamine withdrawal and that proliferation rates are first fully recovered when aspartate levels reach baseline.
 Interestingly, the proliferation rate undergoes a similar multi-phase recovery as the aspartate sensor signal.
-We suspect these phases to be driven by low aspartate causing S-phase arrest during glutamine deprivation \citep{Patel2016-ms}, and although more evidence is necessary to prove this suspicion, our data shows that an aspartate sensor is an excellent tool towards this end.
+We suspect these phases to be driven by low aspartate causing S-phase arrest during glutamine deprivation \citep{Patel2016-ms}, and although more evidence is necessary to prove this suspicion, our data show that an aspartate sensor is an excellent tool towards this end.
 
 
 
@@ -226,7 +216,7 @@ Metformin is a commonly used diabetes treatment that has been shown to act as a 
 Whereas rotenone is a lipophilic molecule that can cross the cell membrane and act rapidly, metformin is hydrophilic and poorly permeable to most cells, resulting in comparatively delayed kinetics for metformin to decrease mitochondrial respiration in intact cells.
 As rotenone and metformin are often used interchangeably as complex I inhibitors, we wondered whether they have an equivalent temporal effect on aspartate or if the delayed effects of metformin on mitochondrial inhibition would similarly delay its effects on aspartate levels.
 To test this, we treated cells with two doses each of rotenone and metformin with roughly equivalent aspartate lowering effects and followed the sensor signal over time (\FIG{Fig2}, panel F).
-We observed that the aspartate depleting effects of metformin acted slower than rotenone, with 30 nM rotenone reaching steady-state after ~20h and 2 mM metformin reaching a similar sensor response after almost 40h.
+We observed that the aspartate depleting effects of metformin acted slower than rotenone, with 30 nM rotenone reaching steady-state after $\sim$20 hours and 2 mM metformin reaching a similar sensor response after almost 40 hours.
 These data therefore provide orthogonal confirmation of the differential kinetics of these drugs on cell metabolism and highlight the temporal opportunities enabled by measuring aspartate levels by jAspSnFR3.
 
 
@@ -251,17 +241,17 @@ jAspSnFR3 resolves temporal aspartate changes in live cells.
 (F) H1299 cells treated with either rotenone or metformin to compare inhibitor kinetics.
 (G) HT1080 cells treated with oligomycin A and after 22 h rescued with a titration of mitochondrial uncoupler BAM15.
 (H) H1299 cells changed into media with a titration of glutamine with or without 1 mM asparagine.
+For (B), (C), (E), (F), (G) and (H) sensor signal over time shown as RFP normalized jAspSnFR3 signal following various perturbations of live cells.
+All experiments shown are normalized to a pre-treatment scan and then treated with the specified drug or amino acid.
+Grey dashed lines indicate the time of treatment.
+Colored dashed lines indicate the time of treatment for multiple treatments in the same plot.
+Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
 GLN, glutamine.
 ETC, electron transport chain.
 LDH, lactate dehydrogenase.
 OAA, oxaloacetic acid.
 ASP, aspartate.
 ASN, asparagine.
-For (B), (C), (E), (F), (G) and (H) sensor signal over time shown as RFP normalized jAspSnFR3 signal following various perturbations of live cells.
-All experiments shown are normalized to a pre-treatment scan and then treated with the specified drug or amino acid.
-Grey dashed lines indicate the time of treatment.
-Colored dashed lines indicate the time of treatment for multiple treatments in the same plot.
-Markers indicate the average using available well replicates and are superimposed on a bootstrapped 95\% confidence interval colored using the same color code as the markers.
 AU, arbitrary unit.
 }
 \label{fig:Fig2}
@@ -292,9 +282,8 @@ Identical to \FIG{Fig2}, panel H but with fewer glutamine concentrations and mor
 
 \subsubsection{Oligomycin induced decrease in aspartate can be rescued by uncoupling the mitochondrial membrane potential}
 Oligomycin A binds to and inhibits the proton coupled rotation of ATP synthase \citep{Symersky2012-dv}.
-This inhibition leads to a slowing of the electron transfer in the mitochondrial electron transport chain by hyperpolarizing the membrane potential \citep{Brand2011-ms} and it has previously been shown that the cellular effects of oligomycin can be rescued by partial uncoupling of the mitochondrial membrane potential \citep{Sullivan2015-xf}. 
-%Add reference for BAM15 rescuing oligomycin: PMID: 31730859
-We used our aspartate sensor to show that oligomycin induces a decrease in aspartate and that the mitochondrial membrane potential specific uncoupler BAM15 \citep{Kenwood2014-ni} can partially restore these aspartate levels (\FIG{Fig2}, panel G), thus confirming previous observation and illustrating the versatility of the our sensor.
+This inhibition leads to a slowing of the electron transfer in the mitochondrial electron transport chain by hyperpolarizing the membrane potential \citep{Brand2011-ms} and it has previously been shown that the cellular effects of oligomycin can be rescued by partial uncoupling of the mitochondrial membrane potential \citep{Sullivan2015-xf, To2019-sg}.
+We used our aspartate sensor to show that oligomycin induces a decrease in aspartate and that the mitochondrial membrane potential specific uncoupler BAM15 \citep{Kenwood2014-ni} can partially restore this aspartate level (\FIG{Fig2}, panel G), thus confirming previous observations and illustrating the versatility of the our sensor.
 
 
 
@@ -306,7 +295,7 @@ However, it has been difficult to measure metabolic changes during glutamine lim
 One solution to this problem is to measure the temporal changes in aspartate levels over the course of glutamine starvation and, indeed, we found that full glutamine depletion has a rapid and drastic effect on sensor signal (\FIG{Fig2}, panels E and H and \FIGSUPP[Fig2]{f2S2}, panel C).
 Interestingly, aspartate signal did not robustly correlate with the concentration of glutamine in the media in the short term, but instead we found that higher amounts of glutamine in the media delayed the time until aspartate depletion, presumably corresponding to the time at which glutamine is fully depleted and unable to support further aspartate synthesis.
 Furthermore, we found that adding 1 mM asparagine delayed the decrease in sensor signal, suggesting that when asparagine can be salvaged from the media it diverts glutamine consumption that would otherwise be purposed for asparagine synthesis via aspartate consumption.
-We note that, as this data is produced in real-time, the method can be used to dynamically find the optimal sampling times to measure and compare intracellular levels of all the metabolites relevant to glutamine starvation using mass spectrometry.
+We note that, as this data is produced in real-time, the method can be used to dynamically find the optimal sampling times to measure and compare intracellular levels of other metabolites relevant to glutamine starvation using mass spectrometry.
 
 
 
@@ -368,7 +357,7 @@ That aspartate sensor started with the S72A mutation, but then included 6 additi
 Our design differs from the one by \cite{Hellweg2023} by 25 mutations (Supplementary file 1).
 Notably, we achieved aspartate selectivity by generating only two mutations in the binding pocket of its precursor, and so the majority of these amino acid differences derive from us building off the next generation precursor for iGluSnFR3, which has increased ∆F/F compared to iGluSnFR.
 Indeed, the sensor described here appears to have a larger signal change both \textit{in vitro} and in live cells, although head-to-head comparisons have not been performed.
-Importantly, while the sensor from \cite{Hellweg2023} is adversely affected by temperature at 37°C, our sensor is not affected, allowing us to perform cell culture experiments at standard incubation conditions.
+Importantly, while the sensor from \cite{Hellweg2023} is adversely affected by temperature at 37°C, our sensor is not, allowing us to perform cell culture experiments at standard incubation conditions.
 Another difference is that our jAspSnFR3 sensor has a higher affinity for all three relevant ligands (aspartate, asparagine, and glutamate); however, we found no discernible effect of treatment with 1 mM asparagine on sensor signal in cell culture experiments and found no correlation between intracellular glutamate concentration and sensor fluorescence across treatment conditions (\FIGSUPP[Fig3]{f3S1}).
 Collectively, we conclude that the jAspSnFR3 aspartate sensor reported here has biochemical features that makes it ideal for measuring intracellular aspartate levels in live cells.
 
@@ -397,7 +386,7 @@ The selection process was repeated, and S72P+S27A was identified as the "best" a
 mRuby3 was subsequently cloned at the C-terminus and this construct was named jAspSnFR3-mRuby3.
 
 \subsection{Protein expression and purification}
-For large scale protein expression and purification, jAspSnFR3-mRuby3 was transformed into T7 express cells and a single colony was grown in 300 mL auto-induction media \citep{Studier2005-ki} at 30°C for ~18 hours.
+For large scale protein expression and purification, jAspSnFR3-mRuby3 was transformed into T7 express cells and a single colony was grown in 300 mL auto-induction media \citep{Studier2005-ki} at 30°C for $\sim$18 hours.
 Cells were pelleted by centrifugation at 6000g, resuspended in PBS and 1 M NaCl and frozen.
 The resuspended cell pellet was thawed, sonicated on ice (5 sec on, 5 sec off, 10 min), and centrifuged at 6000g to remove cellular debris.
 The lysate was further clarified by centrifugation at 350,000g for 1 hour, and then purified by IMAC on a HisTrap FF column, with a 2 mL/min flow rate and elution from 0 to 200 mM imidazole over 120 mL.
@@ -406,7 +395,7 @@ Fluorescent fractions were pooled, concentrated by ultrafiltration, and dialyzed
 Protein concentration was determined by alkaline denaturation, and measurement at A447 (Ext. Coeff. 44,000 M-1 cm-1).
 
 \subsection{Sensor biochemical characterization}
-\textit{In vitro} fluorescence measurements were performed on a Tecan Spark plate reading fluorimeter at ~28°C, with the exception of the controlled temperature measurement, in which a BioTek Cytation 5 was used.
+\textit{In vitro} fluorescence measurements were performed on a Tecan Spark plate reading fluorimeter at $\sim$28°C, with the exception of the controlled temperature measurement, in which a BioTek Cytation 5 was used.
 Concentrated jAspSnFR3-mRuby3 protein was diluted to 0.2 µM in PBS for all measurements.
 Decoy amino acids and pharmacologues were purchased from Sigma-Aldrich and solvated as 100 mM stocks in PBS, with the exception of rotenone, which was resuspended in DMSO.
 Titrations were performed by making serial dilutions (1:2) of the stock compound into PBS, and adding 10 µL of that to 100 µL of 0.2 µM protein solution.
@@ -421,8 +410,8 @@ Each mixing was repeated five times and averaged.
 Standard deviations are excluded from the plots as the errorbars are nearly the same size as the data markers.
 The first 3 observations were discarded to remove mixing artefacts and account for the dead time of the instrument.
 Data were plotted and time courses were fit to a single rising exponential (y - intercept + total rise * (1 - exp(-$k_{obs}$*t))) using Kaleidagraph (version 5.01).
-To determine the kinetic rates, $k_{obs}$ was plotted as a function of aspartate concentration and the linear portion of that graph was fit.
-The slope corresponding to the on-rate $k_1$ (0.8 µM-1 sec-1) and the y-intercept corresponding to the off-rate $k_{-1}$ (26 sec-1), resulting in a $K_D$ of 33 µM.
+To determine the kinetic rates, $k_{obs}$ was plotted as a function of aspartate concentration and the linear portion of that graph was fitted.
+The slope, corresponding to the on-rate $k_1$, was found to be 0.8 µM-1 sec-1 and the y-intercept, corresponding to the off-rate $k_{-1}$, was found to be 26 sec-1, resulting in a $K_D$ of 33 µM.
 
 
 \subsection{Cell culture}
@@ -479,7 +468,7 @@ Experiments were conducted in DMEM without pyruvate (Corning 50-013-PB) suppleme
 To start an experiment, cells were trypsinized (Corning, 25051CI), resuspended in media, counted using a coulter counter (Beckman Coulter, Multisizer 4) and seeded onto 24-well dishes (Nunc, 142475) with an initial seeding density of 50,000, 70,000, 70,000 or 150,000 cells/well for H1299, H1299 GOT1/2 DKO, HT1080 and HEK293T, respectively.
 After 24h (H1299, HT1080, HEK293T) or 48h (H1299 GOT1/2 DKO) incubation, treatment was added and plates moved into an Incucyte S3 (Sartorius) live cell imaging platform inside a humidified incubator at 37°C with 5\% CO2.
 Rotenone (Sigma-Aldrich, R8875), metformin (Sigma-Aldrich, D150959), antimycin A (Sigma-Aldrich, A8674), oligomycin A (Sigma-Aldrich, 495455) and BAM15 (Cayman Chemical, 17811) treatments were spiked-in as 20x solutions in water and the 2 mM pyruvate (Sigma-Aldrich, P8574) was added as 500x stock in water.
-For treatments with varying media aspartate (Sigma-Aldrich, A7219) or glutamine (Sigma-Aldrich, G5792), wells were thrice washed and filled with media deplete of the given amino acid, then it was added as a spike-in at the specified concentration from a 20x solutions in water.
+For treatments with varying media aspartate (Sigma-Aldrich, A7219) or glutamine (Sigma-Aldrich, G5792), wells were washed thrice and filled with media deplete of the given amino acid, then it was added as a spike-in at the specified concentration from a 20x solutions in water.
 For plates receiving asparagine (Sigma-Aldrich, A7094), this was added to 1 mM from a 20x solution in water, with vehicle wells receiving water.
 Live cell imaging was performed on the Incucyte S3 using the GFP and RFP channels with default exposure times.
 Images were processed using the associated Incucyte software to subtract background, define areas of cell confluence and GFP/RFP signal and extract the sum of the fluorescence signal in these areas.
