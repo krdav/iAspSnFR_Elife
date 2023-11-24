@@ -80,7 +80,6 @@ The resulting biosensor, jAspSnFR3, was characterized \textit{in vitro} and in c
 \subsection{Protein engineering}
 We observed that the glutamate sensor, iGluSnFR, binds both glutamate and aspartate, with higher affinity for the former \citep{Marvin2013-qq}.
 To shift the relative affinities of the two ligands, we evaluated the structure of the binding pocket  \citep{Hu2008-nd}, and sampled all possible amino acid substitutions of residue S72, which interacts with the side-chain carboxylate of bound glutamate (\FIG{Fig1}, panel A).
-%KD: So this is something we don't show in any figure, and I understand that it is not super relevant, but it would help the storyline
 By expressing mutant sensors in bacteria and measuring the fluorescence of bacterial lysate in response to aspartate and glutamate, we identified S72A and S72P as having switched specificity from glutamate to aspartate.
 S72T, identified in a faster version of iGluSnFR \citep{Helassa2018-fb}, also preferentially binds aspartate over glutamate.
 
@@ -95,14 +94,30 @@ For jAspSnFR3 signal normalization in cells we used a mix of jAspSnFR3-mRuby3 an
 
 Further characterization of the sensor found it is yellow-shifted in excitation and emission compared to typical GFP-based sensors, since its chromophore is formed by the triad of GYG and has the T203Y pi-stacking mutations of the Venus yellow fluorescent protein.
 This yellow-shift facilitates observation deeper into tissues using 2-photon microscopy, as the sensor has high signal fold change and significant 2-photon cross-section at 1040 nm (\FIGSUPP[Fig1]{f1S1}, panel B).
-It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B).
-It also does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
-Surprisingly, the mRuby3 component responds to some amino acids at high millimolar concentrations, indicating a non-specific effect, potentially interactions with the C-terminal histidine tag (\FIGSUPP[Fig1]{f1S2}, panel B).
+It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B) and does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
+We performed rapid-mixing stopped-flow fluorescence spectroscopy to determine the aspartate binding kinetics and measured an on-rate of 0.8 µM-1 sec-1 and an off-rate of 26 sec-1, resulting in a $K_D$ of 33 µM in agreement with equilibrium measurements (\FIGSUPP[Fig1]{f1S3}).
+The off-rate corresponds to a time to equilibrium of 130 msec. using five half-lives to define equilibrium \cite{Jarmoskaite2020-pj}.
+
+Surprisingly, the mRuby3 fluorescence of affinity-purified jAspSnFR3.mRuby3 responds to some amino acids at high millimolar concentrations, indicating a non-specific effect (\FIGSUPP[Fig1]{f1S4}, panel A).
+This was determined to be due to an unexpected interaction with the C-terminal histidine tag and could be reproduced with other proteins containing mRuby3, purified via the same C-terminal histidine tag.
+
+
+
+showed similar increases in red fluorescence upon addition of millimolar concentrations of amino acids, particularly histidine.
+The attribution of the increase in red-fluorescence to the histidine tag is supported by the fact that mRuby2 and mRuby3 proteins lacking histidine tags, fail to change red fluorescence upon addition of aspartate or histidine.
+A structurally related, but non-amino acid compound, GABA, does not elicit a change in red fluorescence either.
+% The nuclear localized RFP used for cell culture experiments lack a C-terminal histidine tag, making the artefact moot.
+
+
+%It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B).
+%It also does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A).
+%Surprisingly, the mRuby3 component responds to some amino acids at high millimolar concentrations, indicating a non-specific effect, potentially interactions with the C-terminal histidine tag (\FIGSUPP[Fig1]{f1S4}, panel A).
+
 Notably, this increase in fluorescence is still an order of magnitude lower than the green fluorescence response and it occurs at amino acid concentrations that are unlikely to be achieved in most cell types.
-The sensor also does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (\FIGSUPP[Fig1]{f1S2}, panel C).
+The sensor also does not respond to other decoys considered relevant to aspartate metabolism nor to relevant pharmacological treatments (\FIGSUPP[Fig1]{f1S2}, panel B).
 A recently described and concurrently developed biosensor for aspartate is reported to be adversely affected by temperatures higher than 30°C, causing lower maximum ∆F/F \citep{Hellweg2023}.
-Our aspartate sensor appears unaffected by temperature up to 37°C, with the same maximum ∆F/F at 37°C as compared to 30°C (\FIGSUPP[Fig1]{f1S2}, panel D).
-Like all cpGFP-based sensors, it is sensitive to pH but changes in fluorescence due to aspartate far exceed what one might expect from changes in fluorescence due to physiologically attainable changes in intracellular pH (\FIGSUPP[Fig1]{f1S2}, panel E).
+Our aspartate sensor appears unaffected by temperature up to 37°C, with the same maximum ∆F/F at 37°C as compared to 30°C (\FIGSUPP[Fig1]{f1S2}, panel C).
+Like all cpGFP-based sensors, it is sensitive to pH but changes in fluorescence due to aspartate far exceed what one might expect from changes in fluorescence due to physiologically attainable changes in intracellular pH (\FIGSUPP[Fig1]{f1S2}, panel D).
 To determine whether it had the potential to serve as an aspartate biosensor in mammalian cells, we expressed jAspSnFR3 in H1299 cells along with nuclear-RFP.
 Expression of jAspSnFR3 had no obvious toxic effects and H1299 jAspSnFR3 cells had visible fluorescence in the green channel (\FIG{Fig1}, panel C).
 As it is the primary substrate for aspartate production, glutamine removal is expected to deplete aspartate levels.
@@ -150,15 +165,20 @@ Ex 485 nm (5 nm bp), Em 515 nm (10 nm bp).
 Error bars are standard deviation of 5 technical replicates.
 Solid line is with 3 mM aspartate, dashed line is without aspartate.
 }{\fbox{\includegraphics[width=0.7\linewidth]{Fig1S2.pdf}}}\label{figsupp:f1S2}
-
-\figsupp[gggg.]{
-(A) gggg
+\figsupp[Stopped-flow kinetics.]{
+(A) Stopped-flow kinetics of jAspSnFR3 using different aspartate concentrations for injection.
+Measurements were performed at a frequency of 1 per msec. and indicated by dots.
+To these measurements an exponential fit is shown in matching color as a solid line.
+(B) $k_{obs}$ as a function of aspartate concentration shown for two stopped-flow experiments.
+The line represents the linear function fitted to the linear range to extract the kinetic rates.
 }{\fbox{\includegraphics[width=0.85\linewidth]{Fig1S3.pdf}}}\label{figsupp:f1S3}
-
-\figsupp[gggg.]{
-(A) gggg
+\figsupp[mRuby3 interaction with histidine tag.]{
+(A) jAspSnFR3-mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids, with apparent responses to histidine at 100 µM (red trace).
+(B) Increased red fluorescence of mRuby3 in response to histidine requires a C-terminal histidine tag.
+(C) Increased red fluorescence of mRuby3 in response to millimolar concentrations of aspartate requires a C-terminal histidine tag.
+(D) mRuby, with or without histidine tag, does not increase in fluorescence upon treatment with amino acid related compound gamma-aminobutyric acid (GABA).
+For all plots Ex. 587 nm (20 nm bandpass), Em. 662 nm (20 nm bandpass).
 }{\fbox{\includegraphics[width=0.7\linewidth]{Fig1S4.pdf}}}\label{figsupp:f1S4}
-
 \end{figure}
 
 
@@ -166,10 +186,6 @@ Solid line is with 3 mM aspartate, dashed line is without aspartate.
 
 
 
-
-
-% (B) jAspSnFR3-mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids, with apparent responses to histidine at 100 µM (red trace).
-% Ex. 587 nm (20 nm bandpass), Em. 662 nm (20 nm bandpass).
 
 \subsection{jAspSnFR3 reveals the temporal dynamics of aspartate limitation}
 Having shown that jAspSnFR3-mRuby3 protein can measure the concentration of aspartate \textit{in vitro}, we wanted to test the usefulness of the sensor in cells.
@@ -385,6 +401,7 @@ For large scale protein expression and purification, jAspSnFR3-mRuby3 was transf
 Cells were pelleted by centrifugation at 6000g, resuspended in PBS and 1 M NaCl and frozen.
 The resuspended cell pellet was thawed, sonicated on ice (5 sec on, 5 sec off, 10 min), and centrifuged at 6000g to remove cellular debris.
 The lysate was further clarified by centrifugation at 350,000g for 1 hour, and then purified by IMAC on a HisTrap FF column, with a 2 mL/min flow rate and elution from 0 to 200 mM imidazole over 120 mL.
+Untagged mRuby2 and mRuby3 were partially purified by DEAE anion exchange.
 Fluorescent fractions were pooled, concentrated by ultrafiltration, and dialyzed in PBS to remove endogenously bound ligands.
 Protein concentration was determined by alkaline denaturation, and measurement at A447 (Ext. Coeff. 44,000 M-1 cm-1).
 
@@ -395,17 +412,17 @@ Decoy amino acids and pharmacologues were purchased from Sigma-Aldrich and solva
 Titrations were performed by making serial dilutions (1:2) of the stock compound into PBS, and adding 10 µL of that to 100 µL of 0.2 µM protein solution.
 Fluorescence was measured before addition of compound, and ∆F/F was calculated as (F(treatment)-F(initial))/F(initial).
 
-Two-photon cross sections were collected for 1 µM solutions of protein in PBS with or without 10 mM aspartate, excited by pulses from a mode-locked Ti:Sapphire laser (Chameleon Ultra, Coherent, 80 MHz, 140-fs pulse width, 1 mW power at the focus).
-Emission was detected by an avalanche photodiode (PDM Series, Micro Photon Devices) with a 550 nm filter (88-nm bandpass).
+Two-photon cross sections were collected for 1 µM solutions of protein in PBS with or without 10 mM aspartate, excited by pulses from a mode-locked Ti:Sapphire laser (Chameleon Ultra, Coherent, 80 MHz, 140 fs pulse width, 1 mW power at the focus).
+Emission was detected by an avalanche photodiode (PDM Series, Micro Photon Devices) with a 550 nm filter (88 nm bandpass).
 
 Stopped-flow kinetics of binding were determined by mixing equal volumes of 0.2 µM jAspSnFR3 protein (in PBS, pH 7.4) with varying concentrations of aspartate in an Applied Photophysics SX20 stopped flow fluorimeter with 490 nm LED excitation and 510 nm long pass filter at room temperature (22°C).
 The increase in fluorescence upon mixing was observed with 1000 data points over the course of 1 sec (1 msec per data point) and equilibrium was reached within 100 msec.
 Each mixing was repeated five times and averaged.
 Standard deviations are excluded from the plots as the errorbars are nearly the same size as the data markers.
 The first 3 observations were discarded to remove mixing artefacts and account for the dead time of the instrument.
-Data were plotted and time courses were fit to a single rising exponential (y - intercept + total rise * (1 - exp(-kobs*t))) using Kaleidagraph (version 5.01).
-To estimate the Kd, kobs was plotted as a function of aspartate concentration and the linear portion of that graph was fit.
-The slope corresponding to the on-rate k1 (0.8 µM-1 sec-1) and the y-intercept corresponding to the off-rate k-1 (26 sec-1), resulting in a Kd of 33 µM.
+Data were plotted and time courses were fit to a single rising exponential (y - intercept + total rise * (1 - exp(-$k_{obs}$*t))) using Kaleidagraph (version 5.01).
+To determine the kinetic rates, $k_{obs}$ was plotted as a function of aspartate concentration and the linear portion of that graph was fit.
+The slope corresponding to the on-rate $k_1$ (0.8 µM-1 sec-1) and the y-intercept corresponding to the off-rate $k_{-1}$ (26 sec-1), resulting in a $K_D$ of 33 µM.
 
 
 \subsection{Cell culture}
