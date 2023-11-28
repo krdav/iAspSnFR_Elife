@@ -19,8 +19,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{An engineered biosensor enables dynamic aspartate measurements in living cells}
 
-\author[1,2,\authfn{1}]{Kristian Davidsen}
-\author[3,\authfn{1}*]{Jonathan S Marvin}
+\author[1,2]{Kristian Davidsen}
+\author[3*]{Jonathan S Marvin}
 \author[3]{Abhi Aggarwal}
 \author[3]{Timothy A Brown}
 \author[1*]{Lucas B Sullivan}
@@ -31,7 +31,7 @@
 \corr{marvinj@janelia.hhmi.org}{JSM}
 \corr{lucas@fredhutch.org}{LBS}
 
-\contrib[\authfn{1}]{These authors contributed equally to this work}
+%\contrib[\authfn{1}]{These authors contributed equally to this work}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ARTICLE START
@@ -84,7 +84,7 @@ By expressing mutant sensors in bacteria and measuring the fluorescence of bacte
 S72T, identified in a faster version of iGluSnFR \citep{Helassa2018-fb}, also preferentially binds aspartate over glutamate.
 
 As an improved glutamate sensor (iGluSnFR3) was being developed \citep{Aggarwal2023-pi}, we took a variant from that process and queried the effect of S72A, S72T, and S72P on aspartate/glutamate affinity.
-In bacterial cell lysate, S72P maintained the expected shift to a preference for aspartate when inserted into a iGluSnFR3 precursor, and had a higher fluorescence fold increase (∆F/F) than either S72A or S72T (\FIGSUPP[Fig1]{f1S1}, panel A).
+In bacterial cell lysate, S72P maintained the expected shift to a preference for aspartate when inserted into a iGluSnFR3 precursor, and had a higher fluorescence fold increase ($\Delta$F/F) than either S72A or S72T (\FIGSUPP[Fig1]{f1S1}, panel A).
 To further increase specificity of the S72P mutant, we sampled mutations at S27, which also interacts with the carboxylate of bound glutamate.
 One of those, S27A, had lower affinity for glutamate while mostly maintaining affinity for aspartate (\FIGSUPP[Fig1]{f1S1}, panel A).
 We then moved forward with this variant, and since it is built from a precursor of iGluSnFR3, named it Janelia-developed Aspartate-Sensing Fluorescent Reporter (jAspSnFR3).
@@ -94,18 +94,18 @@ For jAspSnFR3 signal normalization in cells we used a mix of jAspSnFR3-mRuby3 an
 
 Further characterization of the sensor found it is yellow-shifted in excitation and emission compared to typical GFP-based sensors, since its chromophore is formed by the triad of GYG and has the T203Y pi-stacking mutations of the Venus yellow fluorescent protein.
 This yellow-shift facilitates observation deeper into tissues using 2-photon microscopy, as the sensor has high signal fold change and significant 2-photon cross-section at 1040 nm (\FIGSUPP[Fig1]{f1S1}, panel B).
-It has a $K_D$ for aspartate of about 50 µM and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B).
+It has a $K_D$ for aspartate of about 50 $\mu$M and binds glutamate and asparagine with $K_D$ greater than 5 mM (\FIG{Fig1}, panel B).
 The sensor also does not appreciably change its green fluorescence in response to other amino acids (\FIGSUPP[Fig1]{f1S2}, panel A) or to other decoys considered relevant to aspartate metabolism, including pharmacological treatments (\FIGSUPP[Fig1]{f1S2}, panel B).
-We performed rapid-mixing stopped-flow fluorescence spectroscopy to determine the aspartate binding kinetics and measured an on-rate of 0.8 µM-1 sec-1 and an off-rate of 26 sec-1, resulting in a $K_D$ of 33 µM in agreement with equilibrium measurements (\FIGSUPP[Fig1]{f1S3}).
+We performed rapid-mixing stopped-flow fluorescence spectroscopy to determine the aspartate binding kinetics and measured an on-rate of 0.8 $\mu$M-1 sec-1 and an off-rate of 26 sec-1, resulting in a $K_D$ of 33 $\mu$M in agreement with equilibrium measurements (\FIGSUPP[Fig1]{f1S3}).
 The off-rate corresponds to a time to equilibrium of 130 msec. when defined using five half-lives \citep{Jarmoskaite2020-pj}.
 
 Surprisingly, the mRuby3 fluorescence of affinity-purified jAspSnFR3.mRuby3 responds to some amino acids at high millimolar concentrations, indicating a non-specific effect (\FIGSUPP[Fig1]{f1S4}, panel A).
 This was determined to be due to an unexpected interaction with the C-terminal histidine tag and could be reproduced with other proteins containing mRuby3 and purified via the same C-terminal histidine tag (\FIGSUPP[Fig1]{f1S4}, panel B and C).
 Interestingly, a structurally related, non-amino acid compound, GABA, does not elicit a change in red fluorescence; indicating, that only amino acids are interacting with the histidine tag (\FIGSUPP[Fig1]{f1S4}, panel D).
-Nevertheless, most of our cell culture experiments were performed with nuclear localized mRuby2, which lack a C-terminal histidine tag, and these measurements correlated with those using the histidine tagged jAspSnFR3-mRuby3 construct (\FIGSUPP[Fig1]{f2S1}, panel D).
+Nevertheless, most of our cell culture experiments were performed with nuclear localized mRuby2, which lacks a C-terminal histidine tag, and these measurements correlated with those using the histidine tagged jAspSnFR3-mRuby3 construct (\FIGSUPP[Fig1]{f2S1}, panel D).
 
-A recently described and concurrently developed biosensor for aspartate is reported to be adversely affected by temperatures higher than 30°C, causing lower maximum ∆F/F \citep{Hellweg2023}.
-Our aspartate sensor appears unaffected by temperature up to 37°C, with the same maximum ∆F/F at 37°C as compared to 30°C (\FIGSUPP[Fig1]{f1S2}, panel C).
+A recently described and concurrently developed biosensor for aspartate is reported to be adversely affected by temperatures higher than 30°C, causing lower maximum $\Delta$F/F \citep{Hellweg2023}.
+Our aspartate sensor appears unaffected by temperature up to 37°C, with the same maximum $\Delta$F/F at 37°C as compared to 30°C (\FIGSUPP[Fig1]{f1S2}, panel C).
 Like all cpGFP-based sensors, it is sensitive to pH but changes in fluorescence due to aspartate far exceed what one might expect from changes in fluorescence due to physiologically attainable changes in intracellular pH (\FIGSUPP[Fig1]{f1S2}, panel D).
 To determine whether it had the potential to serve as an aspartate biosensor in mammalian cells, we expressed jAspSnFR3 in H1299 cells along with nuclear-RFP.
 Expression of jAspSnFR3 had no obvious toxic effects and H1299 jAspSnFR3 cells had visible fluorescence in the green channel (\FIG{Fig1}, panel C).
@@ -136,13 +136,13 @@ Left, 1-photon spectra.
 Excitation wavelength was varied from 400 nm to 520 nm (7.5 nm bandpass) while observing emission at 535 nm (10 nm bandpass).
 Emission wavelength was varied from 535 nm to 600 nm (10 nm bandpass) while exciting at 510 nm (7.5 nm bandpass).
 Fluorescence was measured both in the absence (dashed lines) and presence of 10 mM aspartate (solid lines).
-Right, 2-photon cross-sections, also ± 10 mM aspartate, with an overlay of calculated ∆F/F (green).
+Right, 2-photon cross-sections, also ± 10 mM aspartate, with an overlay of calculated $\Delta$F/F (green).
 Vertical bar indicates 1040 nm.
 }{\fbox{\includegraphics[width=0.7\linewidth]{Fig1S1.pdf}}}\label{figsupp:f1S1}
 \figsupp[Decoy, temperature and pH sensitivity.]{
 (A) jAspSnFR3-mRuby3 does not appreciably change its green fluorescence in response to other amino acids (alanine, phenylalanine, glycine, histidine (red line), isoleucine, leucine, methionine, proline, glutamine, arginine, serine, threonine, valine, or tryptophan).
 Insert with aspartate in black and glutamate/asparagine in grey for comparison.
-Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass), 0.2 µM purified protein in PBS.
+Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass), 0.2 $\mu$M purified protein in PBS.
 (B) jAspSnFR3-mRuby3 does not respond to other decoys: citrate, lactate, pyruvate, malate, alpha-ketoglutarate, cis-aconitate, succinate, fumarate, or oxaloacetate (orange squares); nor to relevant pharmacological treatments: rotenone (green squares) or metformin.
 The small increase in fluorescence from rotenone is likely due to the scattering of a visibly turbid solution; rotenone has very low solubility in water.
 Ex. 485 nm (20 nm bandpass), Em. 535 nm (20 nm bandpass).
@@ -162,11 +162,11 @@ To each time-series an exponential function was fit, shown as a solid line with 
 The line represents the linear function, fitted to the linear range to extract the kinetic rates.
 }{\fbox{\includegraphics[width=0.85\linewidth]{Fig1S3.pdf}}}\label{figsupp:f1S3}
 \figsupp[mRuby3 interaction with histidine tag.]{
-(A) jAspSnFR3-mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids amino acids (alanine, phenylalanine, glycine, histidine, isoleucine, leucine, methionine, proline, glutamine, arginine, serine, threonine, valine, or tryptophan), with apparent responses to histidine at 100 µM (red line).
+(A) jAspSnFR3-mRuby3 shows increased red fluorescence at millimolar concentrations of all amino acids amino acids (alanine, phenylalanine, glycine, histidine, isoleucine, leucine, methionine, proline, glutamine, arginine, serine, threonine, valine, or tryptophan), with apparent responses to histidine at 100 $\mu$M (red line).
 (B) Increased red fluorescence of mRuby3 in response to histidine requires a C-terminal histidine tag.
 (C) Increased red fluorescence of mRuby3 in response to millimolar concentrations of aspartate requires a C-terminal histidine tag.
 (D) mRuby, with or without histidine tag, does not increase in fluorescence upon treatment with amino acid related compound gamma-aminobutyric acid (GABA).
-For all plots Ex. 587 nm (20 nm bandpass), Em. 662 nm (20 nm bandpass).
+For all plots Ex. 555 nm (20 nm bandpass), Em. 600 nm (20 nm bandpass).
 }{\fbox{\includegraphics[width=0.7\linewidth]{Fig1S4.pdf}}}\label{figsupp:f1S4}
 \end{figure}
 
@@ -355,7 +355,7 @@ Future studies seeking to understand the effects of treatments affecting asparta
 Recently, a concurrently developed aspartate sensor based on SF-iGluSnFR was reported by another group \citep{Hellweg2023}.
 That aspartate sensor started with the S72A mutation, but then included 6 additional mutations identified by a combination of targeted screening and deep mutational scanning.
 Our design differs from the one by \cite{Hellweg2023} by 25 mutations (Supplementary file 1).
-Notably, we achieved aspartate selectivity by generating only two mutations in the binding pocket of its precursor, and so the majority of these amino acid differences derive from us building off the next generation precursor for iGluSnFR3, which has increased ∆F/F compared to iGluSnFR.
+Notably, we achieved aspartate selectivity by generating only two mutations in the binding pocket of its precursor, and so the majority of these amino acid differences derive from us building off the next generation precursor for iGluSnFR3, which has increased $\Delta$F/F compared to iGluSnFR.
 Indeed, the sensor described here appears to have a larger signal change both \textit{in vitro} and in live cells, although head-to-head comparisons have not been performed.
 Importantly, while the sensor from \cite{Hellweg2023} is adversely affected by temperature at 37°C, our sensor is not, allowing us to perform cell culture experiments at standard incubation conditions.
 Another difference is that our jAspSnFR3 sensor has a higher affinity for all three relevant ligands (aspartate, asparagine, and glutamate); however, we found no discernible effect of treatment with 1 mM asparagine on sensor signal in cell culture experiments and found no correlation between intracellular glutamate concentration and sensor fluorescence across treatment conditions (\FIGSUPP[Fig3]{f3S1}).
@@ -378,9 +378,9 @@ Mutant libraries (maximum theoretical diversity of 20 each) were transformed int
 Individual colonies were picked into a 96-well plate containing auto-induction media \citep{Studier2005-ki} and shaken at 30°C for 18-24 hours, then harvested by centrifugation.
 Cell pellets were resuspended in PBS and repelleted by centrifugation 5 times over, then frozen as pellets overnight.
 The frozen 96-well plate was thawed by addition of room temperature PBS, agitated by vortexing to resuspend and lyse cells, and then pelleted again.
-100 µL clarified lysate was added to each of two black 96-well plates and its fluorescence was measured.
-Aspartate or glutamate was added (final concentration 100 µM) and fluorescence was measured again.
-Wells that had a higher ∆F/F for aspartate than glutamate were isolated, titrated with aspartate and glutamate, and sequenced.
+100 $\mu$L clarified lysate was added to each of two black 96-well plates and its fluorescence was measured.
+Aspartate or glutamate was added (final concentration 100 $\mu$M) and fluorescence was measured again.
+Wells that had a higher $\Delta$F/F for aspartate than glutamate were isolated, titrated with aspartate and glutamate, and sequenced.
 After confirming that S72P was the most selective variant for aspartate from a library of S72X, a library of S27X was made in the background of S72P.
 The selection process was repeated, and S72P+S27A was identified as the "best" aspartate sensor and named jAspSnFR3.
 mRuby3 was subsequently cloned at the C-terminus and this construct was named jAspSnFR3-mRuby3.
@@ -389,29 +389,29 @@ mRuby3 was subsequently cloned at the C-terminus and this construct was named jA
 For large scale protein expression and purification, jAspSnFR3-mRuby3 was transformed into T7 express cells and a single colony was grown in 300 mL auto-induction media \citep{Studier2005-ki} at 30°C for $\sim$18 hours.
 Cells were pelleted by centrifugation at 6000g, resuspended in PBS and 1 M NaCl and frozen.
 The resuspended cell pellet was thawed, sonicated on ice (5 sec on, 5 sec off, 10 min), and centrifuged at 6000g to remove cellular debris.
-The lysate was further clarified by centrifugation at 350,000g for 1 hour, and then purified by IMAC on a HisTrap FF column, with a 2 mL/min flow rate and elution from 0 to 200 mM imidazole over 120 mL.
+The lysate was further clarified by centrifugation at 35,000g for 1 hour, and then purified by IMAC on a HisTrap FF column, with a 2 mL/min flow rate and elution from 0 to 200 mM imidazole over 120 mL.
 Untagged mRuby2 and mRuby3 were partially purified by DEAE anion exchange.
 Fluorescent fractions were pooled, concentrated by ultrafiltration, and dialyzed in PBS to remove endogenously bound ligands.
 Protein concentration was determined by alkaline denaturation, and measurement at A447 (Ext. Coeff. 44,000 M-1 cm-1).
 
 \subsection{Sensor biochemical characterization}
 \textit{In vitro} fluorescence measurements were performed on a Tecan Spark plate reading fluorimeter at $\sim$28°C, with the exception of the controlled temperature measurement, in which a BioTek Cytation 5 was used.
-Concentrated jAspSnFR3-mRuby3 protein was diluted to 0.2 µM in PBS for all measurements.
+Concentrated jAspSnFR3-mRuby3 protein was diluted to 0.2 $\mu$M in PBS for all measurements.
 Decoy amino acids and pharmacologues were purchased from Sigma-Aldrich and solvated as 100 mM stocks in PBS, with the exception of rotenone, which was resuspended in DMSO.
-Titrations were performed by making serial dilutions (1:2) of the stock compound into PBS, and adding 10 µL of that to 100 µL of 0.2 µM protein solution.
-Fluorescence was measured before addition of compound, and ∆F/F was calculated as (F(treatment)-F(initial))/F(initial).
+Titrations were performed by making serial dilutions (1:2) of the stock compound into PBS, and adding 10 $\mu$L of that to 100 $\mu$L of 0.2 $\mu$M protein solution.
+Fluorescence was measured before addition of compound, and $\Delta$F/F was calculated as (F(treatment)-F(initial))/F(initial).
 
-Two-photon cross sections were collected for 1 µM solutions of protein in PBS with or without 10 mM aspartate, excited by pulses from a mode-locked Ti:Sapphire laser (Chameleon Ultra, Coherent, 80 MHz, 140 fs pulse width, 1 mW power at the focus).
+Two-photon cross sections were collected for 1 $\mu$M solutions of protein in PBS with or without 10 mM aspartate, excited by pulses from a mode-locked Ti:Sapphire laser (Chameleon Ultra, Coherent, 80 MHz, 140 fs pulse width, 1 mW power at the focus).
 Emission was detected by an avalanche photodiode (PDM Series, Micro Photon Devices) with a 550 nm filter (88 nm bandpass).
 
-Stopped-flow kinetics of binding were determined by mixing equal volumes of 0.2 µM jAspSnFR3 protein (in PBS, pH 7.4) with varying concentrations of aspartate in an Applied Photophysics SX20 stopped flow fluorimeter with 490 nm LED excitation and 510 nm long pass filter at room temperature (22°C).
+Stopped-flow kinetics of binding were determined by mixing equal volumes of 0.2 $\mu$M jAspSnFR3 protein (in PBS, pH 7.4) with varying concentrations of aspartate in an Applied Photophysics SX20 stopped flow fluorimeter with 490 nm LED excitation and 515 nm long pass filter at room temperature (22°C).
 The increase in fluorescence upon mixing was observed with 1000 data points over the course of 1 sec (1 msec per data point) and equilibrium was reached within 100 msec.
 Each mixing was repeated five times and averaged.
-Standard deviations are excluded from the plots as the errorbars are nearly the same size as the data markers.
+Standard deviations are excluded from the plots as the error bars are nearly the same size as the data markers.
 The first 3 observations were discarded to remove mixing artefacts and account for the dead time of the instrument.
 Data were plotted and time courses were fit to a single rising exponential (y - intercept + total rise * (1 - exp(-$k_{obs}$*t))) using Kaleidagraph (version 5.01).
 To determine the kinetic rates, $k_{obs}$ was plotted as a function of aspartate concentration and the linear portion of that graph was fitted.
-The slope, corresponding to the on-rate $k_1$, was found to be 0.8 µM-1 sec-1 and the y-intercept, corresponding to the off-rate $k_{-1}$, was found to be 26 sec-1, resulting in a $K_D$ of 33 µM.
+The slope, corresponding to the on-rate $k_1$, was found to be 0.8 $\mu$M-1 sec-1 and the y-intercept, corresponding to the off-rate $k_{-1}$, was found to be 26 sec-1, resulting in a $K_D$ of 33 $\mu$M.
 
 
 \subsection{Cell culture}
@@ -421,7 +421,7 @@ Cells were incubated in a humidified incubator at 37°C with 5\% CO2.
 
 \subsection{Generation of nuclear RFP cell lines}
 Nuclear RFP cell lines were generated using 1e5 transducing units of EF1A-nuclear RFP lentivirus (Cellomics Technology, PLV-10205-50) by spinfection.
-Cells were seeded at 50\% confluency in 6 well dishes, lentivirus was added to fresh media with 8 µg/µL polybrene, then added to cells and followed by centrifugation (900g, 90 mins, 30°C).
+Cells were seeded at 50\% confluency in 6 well dishes, lentivirus was added to fresh media with 8 $\mu$g/$\mu$L polybrene, then added to cells and followed by centrifugation (900g, 90 mins, 30°C).
 Two days after infection, cells were sorted for high RFP expression using fluorescence-activated cell sorting (FACS).
 High RFP cells were then expanded and single-cell cloned by limiting dilution, plating 0.5 cells/well on a 96 well plate.
 Plates were then screened for RFP expression and localization using Incucyte S3 (Sartorius) and a suitable clone chosen, expanded, and used for all subsequent experiments.
@@ -432,9 +432,9 @@ These donor constructs were then used to transfer their insert into destination 
 pLX304-CAG-Blast was generated in house by swapping the CMV promoter region of pLX304-CMV-Blast with a CAG promoter provided on synthetic DNA (Integrated DNA Technologies).
 Each plasmid sequence was verified by whole plasmid sequencing (Plasmidsaurus).
 Lentivirus was generated by co-transfection of HEK293T cells with destination vector plasmid DNA and the packaging plasmids pMDLg/pRRE (Addgene, 12251), pRSV-Rev, (Addgene, 12253) and pMD2.G (Addgene, 12259) using FuGENE transfection reagent (Fisher, PRE2693) in DMEM (Fisher, MT10017CV) without FBS or penicillin-streptomycin.
-The supernatant containing lentiviral particles was filtered through a 0.45 µM membrane (Fisher, 9720514) and was supplemented with 8 µg/µL polybrene (Sigma, TR-1003-G) prior to infection.
+The supernatant containing lentiviral particles was filtered through a 0.45 $\mu$M membrane (Fisher, 9720514) and was supplemented with 8 $\mu$g/$\mu$L polybrene (Sigma, TR-1003-G) prior to infection.
 For infection, cells were seeded at 50\% confluency in 6 well dishes and centrifuged with lentivirus (900g, 90 mins, 30°C).
-After 24 hours the media was replaced with fresh media and after 48 hours cells were treated with either 1 µg/mL blasticidin (Fisher, R21001) or 150 µg/mL hygromycin (Sigma-Aldrich, H7772-1G) and maintained in selection media until all uninfected control cells died.
+After 24 hours the media was replaced with fresh media and after 48 hours cells were treated with either 1 $\mu$g/mL blasticidin (Fisher, R21001) or 150 $\mu$g/mL hygromycin (Sigma-Aldrich, H7772-1G) and maintained in selection media until all uninfected control cells died.
 After selection, cells were expanded and single-cell cloned by limiting dilution, plating 0.5 cells/well using 2-3 96 well plates.
 These clones were incubated until 10-30\% confluency and screened for high GFP and RFP signal using Incucyte S3 (Sartorius).
 The highest expressing monoclonal cells were selected and further expanded on 6 well plates and again screened for fluorescence using the Incucyte.
@@ -496,29 +496,29 @@ For polar metabolite extraction, a plate was move to ice and the media was thoro
 For H1299 and HT1080 cells, wells were washed once with cold saline (Fisher, 23293184).
 For HEK293T cells, washing was omitted due to weak cell adherence.
 Then, 1 mL 80\% HPLC grade methanol in HPLC grade water was added, cells were scraped with the back of a P1000 pipet tip and transferred to Eppendorf tubes.
-Tubes were centrifuged (17,000g, 15 mins, 4°C) and 800 µL of the supernatant containing polar metabolites was transferred to a new centrifuge tube and placed in a centrivap until dry.
+Tubes were centrifuged (17,000g, 15 mins, 4°C) and 800 $\mu$L of the supernatant containing polar metabolites was transferred to a new centrifuge tube and placed in a centrivap until dry.
 
 \subsection{Intracellular amino acid concentration measurements by isotope dilution}
-Dried samples were reconstituted with 40 µL 80\% HPLC grade methanol containing 5 µM U-13C, U-15N labelled canonical amino acid mix (Cambridge Isotope Laboratories, MSK-CAA-1) and transferred to vials for measurement by LCMS.
+Dried samples were reconstituted with 40 $\mu$L 80\% HPLC grade methanol containing 5 $\mu$M U-13C, U-15N labelled canonical amino acid mix (Cambridge Isotope Laboratories, MSK-CAA-1) and transferred to vials for measurement by LCMS.
 The peak area for each amino acid was divided by its labelled standard to derive the response ratio.
 The response ratio was then mapped to a calibration curve to infer the amino acid concentration and finally the intracellular concentration was calculated by correcting for each step introducing a dilution, including the use of the total cell volume.
 To make the calibration curves a non-labelled amino acid mixture was made from an analytical amino acid standard without glutamine and asparagine (Sigma-Aldrich, A9906-1ML) and added glutamine (Sigma-Aldrich, 76523-100MG) and asparagine (Sigma-Aldrich, 51363-100MG) to match the concentration of the other amino acids.
-Using this mix, three replicates of a 12 point 2-fold dilution series was made with a max concentration of 500 µM and a volume per dilution of 40 µL.
-These were placed in a centrivap until dry and reconstituted with 40 µL 80\% HPLC grade methanol containing 5 µM U-13C, U-15N labelled canonical amino acid mix (Cambridge Isotope Laboratories, MSK-CAA-1) and transferred to vials for measurement by LCMS.
+Using this mix, three replicates of a 12 point 2-fold dilution series was made with a max concentration of 500 $\mu$M and a volume per dilution of 40 $\mu$L.
+These were placed in a centrivap until dry and reconstituted with 40 $\mu$L 80\% HPLC grade methanol containing 5 $\mu$M U-13C, U-15N labelled canonical amino acid mix (Cambridge Isotope Laboratories, MSK-CAA-1) and transferred to vials for measurement by LCMS.
 The peak area for each amino acid was divided by its labelled standard to derive the response ratio, then the best fitting calibration curves for each amino acid were chosen among either linear, power or a second-degree polynomial.
 Each calibration curve was manually inspected for proper fit and measurements below or above the concentration range of the dilution series were discarded.
 
 \subsection{Liquid Chromatography-Mass Spectrometry (LCMS)}
 Metabolite quantitation was performed using a Q Exactive HF-X Hybrid Quadrupole-Orbitrap Mass Spectrometer equipped with an Ion Max API source and H-ESI II probe, coupled to a Vanquish Flex Binary UHPLC system (Thermo Scientific).
 Mass calibrations were completed at a minimum of every 5 days in both the positive and negative polarity modes using LTQ Velos ESI Calibration Solution (Pierce).
-Polar Samples were chromatographically separated by injecting a sample volume of 1 μL into a SeQuant ZIC-pHILIC Polymeric column (2.1 x 150 mm 5 mM, EMD Millipore).
+Polar Samples were chromatographically separated by injecting a sample volume of 1 $\mu$L into a SeQuant ZIC-pHILIC Polymeric column (2.1 x 150 mm 5 mM, EMD Millipore).
 The flow rate was set to 150 mL/min, autosampler temperature set to 10 °C, and column temperature set to 30°C.
 Mobile Phase A consisted of 20 mM ammonium carbonate and 0.1\% (v/v) ammonium hydroxide, and Mobile Phase B consisted of 100\% acetonitrile.
 The sample was gradient eluted (\%B) from the column as follows: 0-20 min.: linear gradient from 85\% to 20\% B; 20-24 min.: hold at 20\% B; 24-24.5 min.: linear gradient from 20\% to 85\% B; 24.5 min.-end: hold at 85\% B until equilibrated with ten column volumes.
 Mobile Phase was directed into the ion source with the following parameters: sheath gas = 45, auxiliary gas = 15, sweep gas = 2, spray voltage = 2.9 kV in the negative mode or 3.5 kV in the positive mode, capillary temperature = 300°C, RF level = 40\%, auxiliary gas heater temperature = 325°C.
 Mass detection was conducted with a resolution of 240,000 in full scan mode, with an AGC target of 3,000,000 and maximum injection time of 250 msec.
 Metabolites were detected over a mass range of 70-850 m/z.
-Quantitation of all metabolites was performed using Tracefinder 4.1 (Thermo Scientific) referencing an in-house metabolite standards library using ≤ 5 ppm mass error.
+Quantitation of all metabolites was performed using Tracefinder 4.1 (Thermo Scientific) referencing an in-house metabolite standards library using $\leq$ 5 ppm mass error.
 
 \subsection{Data analysis and plotting}
 All data processing, curve fitting, plotting and statistics for experiments involving jAspSnFR3 expressed in cell lines was made using Python code and data available on Github:
